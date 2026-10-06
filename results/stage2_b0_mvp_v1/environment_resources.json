@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-10-06T12:56:55.625319+00:00",
+  "interpreter": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Scripts\\python.exe",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "torch": "2.11.0+cu130",
+  "torch_file": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Lib\\site-packages\\torch\\__init__.py",
+  "cuda": "13.0",
+  "cuda_available": true,
+  "cpu_logical_cores": 12,
+  "torch_num_threads": 6,
+  "ram": {
+    "total_bytes": 33460420608,
+    "available_bytes": 8146190336
+  },
+  "gpu": "NVIDIA GeForce RTX 5060, 596.21, 8151 MiB, 2327 MiB",
+  "nvidia_smi_exit_code": 0,
+  "free_disk_bytes": 45001064448,
+  "replay_bytes_per_transition": 1923,
+  "replay500k_raw_bytes": 961500000,
+  "replay300k_chunk_bytes": 582868992,
+  "log_budget_bytes_estimate": 1073741824,
+  "storage_note": "ESTIMATE: three latest 300k resumes plus one atomic temporary; small actors and <=1GiB logs; no exact runtime forecast",
+  "gpu_name": "NVIDIA GeForce RTX 5060",
+  "device_capability": [
+    12,
+    0
+  ],
+  "cuda_tensor_check": "PASS"
+}

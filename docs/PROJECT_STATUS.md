@@ -277,3 +277,13 @@ remote_confirmation.txt。此回执记录该时间点，随后回执本身的提
 登记/代码测试前和真实训练前，Stage2科研状态均为NOT RUN，不因入口可执行就记GO。
 上轮397/461测试、非学习可达性和旧throughput blocker保留原历史结论。
 旧39项docstring、3条英文注释及词法告警不借本轮全面重构；新代码执行既有Ruff规则。
+
+## 本轮验收与实际科研启动回执
+
+实验源码提交：`45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898`（已推送任务分支）。
+本轮最终全仓561passed、0failed/errors/skipped；外置PhaseA13passed；Ruff/compileall exit0。
+测试命令实际在前驱34f2d4a加本轮工作树执行；相同被测源/配置/测试随后提交为45f3cc8，未在验收后改变算法或测试。
+此前一个定向入口命令因新basetemp父目录未建立产生11 setup errors，创建本轮目录后19pass；原失败日志保留，科学断言未改。
+批次已于2026-10-06T12:56:55.891120+00:00实际启动，真实worker PID `43736`。固定代码版本不随结果/文档提交改变。
+当前Stage2科研状态RUNNING，未完成整批、未作GO判断。实时事实读取 `results/stage2_b0_mvp_v1/batch_state.json`，不要把本回执的瞬时步数当最终预算。
+完成后自动写统计、固定策略诊断与图；科研判断和公开结果提交仍须依据实际完整证据。旧throughput blocker未改PASS。

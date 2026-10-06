@@ -1,0 +1,72 @@
+{
+  "task": "STAGE2_B0_MVP_BATCH_V1",
+  "status": "ACCEPTANCE_PASSED_BATCH_RUNNING",
+  "recorded_at_utc": "2026-10-06T12:59:42.248097+00:00",
+  "experiment_code_commit": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+  "acceptance": {
+    "repository_tests": {
+      "passed": 561,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "junit": "pytest_all.xml"
+    },
+    "phase_a": {
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "junit": "pytest_phase_a.xml"
+    },
+    "ruff_exit_code": 0,
+    "compileall_exit_code": 0
+  },
+  "test_version_note": "Commands ran on parent34f2d4a plus this task working-tree changes; the identical tested source/config/tests were then committed as45f3cc8. Only documentation receipts changed afterward.",
+  "initial_setup_error": {
+    "command": "entry_targeted",
+    "passed": 8,
+    "errors": 11,
+    "root_cause": "New basetemp parent not created",
+    "retry": "entry_targeted_retry:19pass; final561pass; no test assertions changed"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.11.0+cu130",
+    "gpu": "NVIDIA GeForce RTX 5060",
+    "pip_check_exit_code": 0,
+    "reinstalled": false
+  },
+  "current_snapshot": {
+    "worker_pid": 43736,
+    "seed": 11,
+    "profile": "obstacle_free",
+    "scientific_training_transitions": 20500,
+    "scientific_full_sac_updates": 10501,
+    "timestamp": "2026-10-06T12:59:41.470965+00:00"
+  },
+  "counters_before_scientific_launch": {
+    "final_regression_observation": {
+      "ordinary_update_calls": 89,
+      "adam_calls": 400,
+      "adam_returns": 400,
+      "ordinary_update_returns": 84,
+      "explicit_batch_complete_update_returns": 62,
+      "world_calls": 2131,
+      "world_returns": 2124,
+      "b0_env_calls": 28,
+      "b0_env_returns": 23,
+      "finite_env_calls": 1049,
+      "finite_env_returns": 1047,
+      "sgd_calls": 1,
+      "sgd_returns": 1
+    },
+    "note": "Unit/integration computations; nested counts cannot be added. Additional preliminary targeted runs are separately recorded and not scientific training."
+  },
+  "scientific_stage2": "RUNNING_NOT_YET_JUDGED",
+  "mvp_batch_completed": false,
+  "stage3_started": false,
+  "extra_hash_sealing": false,
+  "throughput_benchmark_run": false
+}

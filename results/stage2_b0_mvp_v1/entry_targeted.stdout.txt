@@ -1,0 +1,169 @@
+.EEEEEEEEE..EE.....                                                      [100%]
+=================================== ERRORS ====================================
+___ ERROR at setup of test_bad_registration_rejected[training_seeds-value0] ___
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+_ ERROR at setup of test_bad_registration_rejected[transition_budget_per_seed-500000] _
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+_ ERROR at setup of test_bad_registration_rejected[run_kind-engineering_smoke] _
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+__ ERROR at setup of test_bad_registration_rejected[method-CONSTRAINED_SAC] ___
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+________ ERROR at setup of test_bad_registration_rejected[device-cpu] _________
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+_ ERROR at setup of test_explicit_execution_identity[None-900000-results/stage2_b0_mvp_v1] _
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+_ ERROR at setup of test_explicit_execution_identity[scientific_training-300000-results/stage2_b0_mvp_v1] _
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+_ ERROR at setup of test_explicit_execution_identity[scientific_training-900000-wrong] _
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+______________ ERROR at setup of test_missing_document_rejected _______________
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+_____________ ERROR at setup of test_live_lock_rejects_duplicate ______________
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+___________ ERROR at setup of test_log_resume_preserves_failed_tail ___________
+
+self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_b0_mvp_entry.py::test_bad_registration_rejected[training_seeds-value0]
+ERROR tests/test_b0_mvp_entry.py::test_bad_registration_rejected[transition_budget_per_seed-500000]
+ERROR tests/test_b0_mvp_entry.py::test_bad_registration_rejected[run_kind-engineering_smoke]
+ERROR tests/test_b0_mvp_entry.py::test_bad_registration_rejected[method-CONSTRAINED_SAC]
+ERROR tests/test_b0_mvp_entry.py::test_bad_registration_rejected[device-cpu]
+ERROR tests/test_b0_mvp_entry.py::test_explicit_execution_identity[None-900000-results/stage2_b0_mvp_v1]
+ERROR tests/test_b0_mvp_entry.py::test_explicit_execution_identity[scientific_training-300000-results/stage2_b0_mvp_v1]
+ERROR tests/test_b0_mvp_entry.py::test_explicit_execution_identity[scientific_training-900000-wrong]
+ERROR tests/test_b0_mvp_entry.py::test_missing_document_rejected - FileNotFou...
+ERROR tests/test_b0_mvp_entry.py::test_live_lock_rejects_duplicate - FileNotF...
+ERROR tests/test_b0_mvp_entry.py::test_log_resume_preserves_failed_tail - Fil...
+8 passed, 11 errors in 2.28s

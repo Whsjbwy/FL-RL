@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="11" failures="0" skipped="0" tests="19" time="2.279" timestamp="2026-10-06T20:38:44.055948+08:00" hostname="BrasseBobi"><testcase classname="tests.test_b0_mvp_entry" name="test_mvp_default_preflight" time="0.055" /><testcase classname="tests.test_b0_mvp_entry" name="test_bad_registration_rejected[training_seeds-value0]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_bad_registration_rejected[transition_budget_per_seed-500000]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_bad_registration_rejected[run_kind-engineering_smoke]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_bad_registration_rejected[method-CONSTRAINED_SAC]" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_bad_registration_rejected[device-cpu]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_explicit_execution_identity[None-900000-results/stage2_b0_mvp_v1]" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_explicit_execution_identity[scientific_training-300000-results/stage2_b0_mvp_v1]" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_explicit_execution_identity[scientific_training-900000-wrong]" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_missing_document_rejected" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_legal_entry_dispatches_batch" time="0.005" /><testcase classname="tests.test_b0_mvp_entry" name="test_independent_seed_production_configs" time="0.001" /><testcase classname="tests.test_b0_mvp_entry" name="test_live_lock_rejects_duplicate" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_mvp_entry" name="test_log_resume_preserves_failed_tail" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'&quot;">self = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/development/pytest_entry')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry'
+
+F:\Anaconda3\Lib\pathlib\_local.py:722: FileNotFoundError</error></testcase><testcase classname="tests.test_b0_entry" name="test_default_entry_preflight_only" time="0.047" /><testcase classname="tests.test_b0_entry" name="test_scientific_and_engineering_configs_separate" time="0.004" /><testcase classname="tests.test_b0_entry" name="test_unregistered_or_mismatched_execution_rejected[arguments0]" time="0.046" /><testcase classname="tests.test_b0_entry" name="test_unregistered_or_mismatched_execution_rejected[arguments1]" time="0.047" /><testcase classname="tests.test_b0_entry" name="test_unregistered_or_mismatched_execution_rejected[arguments2]" time="0.047" /></testsuite></testsuites>
