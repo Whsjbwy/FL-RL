@@ -1,0 +1,21 @@
+{
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5060",
+  "torch_version": "2.11.0+cu130",
+  "cuda_build": "13.0",
+  "complete_synthetic_updates": 1,
+  "optimizer_steps": 4,
+  "metrics": {
+    "q1_gradient_norm": 0.7057415246963501,
+    "q1_loss": 0.10414549708366394,
+    "q2_gradient_norm": 0.9075844883918762,
+    "q2_loss": 0.16636358201503754,
+    "actor_loss": -0.39770567417144775,
+    "actor_gradient_norm": 0.09273678064346313,
+    "alpha_gradient_norm": 1.006525993347168,
+    "alpha_loss": 1.006525993347168,
+    "alpha": 0.19993998110294342
+  },
+  "scientific_training_steps": 0,
+  "scientific_training_updates": 0
+}

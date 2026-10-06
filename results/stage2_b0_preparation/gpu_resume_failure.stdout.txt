@@ -1,0 +1,39 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+__________ test_same_device_checkpoint_preserves_adam_step_location ___________
+
+project_config = ProjectConfig(protocol_version='v2.0', config_version='stage0_v2', stage='S0', environment=EnvironmentConfig(position_..., pitch_rate_grid_rad_s=(-0.25, 0.0, 0.25)), cost=CostConfig(discount_gamma=0.999, planned_horizon_control_steps=1000))
+tmp_path = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_preparation/development/gpu_resume_failure_tmp/test_same_device_checkpoint_pr0')
+
+    def test_same_device_checkpoint_preserves_adam_step_location(project_config, tmp_path) -> None:
+        """非capturable Adam步数保持CPU，网络及一二阶矩保持目标设备。"""
+        from auv_risk_rl.env.scenario_generator import load_training_scenario_config
+    
+        device = os.environ.get("AUV_TARGET_DEVICE", "cpu")
+        scenario = load_training_scenario_config(
+            Path(__file__).resolve().parents[1] / "configs/train_scenario_v1.yaml")
+        config = B0HarnessConfig(run_kind="engineering_smoke", transition_budget=8,
+                                 sac=replace(SACConfig(), device=device))
+        left = B0TrainingHarness(config, project_config, scenario, code_version="device-fixture")
+        batch = dict(obs=np.zeros((256, 234), np.float32),
+                     next_obs=np.full((256, 234), 0.1, np.float32),
+                     nominal_action=np.full((256, 3), 0.2, np.float32),
+                     reward=np.ones((256, 1), np.float32),
+                     terminated=np.zeros((256, 1), np.float32))
+        left.agent.update(batch)
+        path = tmp_path / "trusted_device_checkpoint.pt"
+        left.save_checkpoint(path)
+        right = B0TrainingHarness(config, project_config, scenario, code_version="device-fixture")
+        right.load_checkpoint(path, trusted_local=True)
+        for optimizer in right.agent.optimizers.values():
+            for state in optimizer.state.values():
+>               assert state["step"].device.type == "cpu"
+E               AssertionError: assert 'cuda' == 'cpu'
+E                 
+E                 - cpu
+E                 + cuda
+
+tests\test_b0_device.py:85: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_b0_device.py::test_same_device_checkpoint_preserves_adam_step_location
+1 failed in 2.35s

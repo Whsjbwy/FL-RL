@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_preparation\run_engineering_smoke.py", line 156, in main
+    discrepancies = compare_state(continuous.state_dict(), final.state_dict())
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_preparation\run_engineering_smoke.py", line 42, in compare_state
+    mismatches.extend(compare_state(left[key], right[key], f"{path}.{key}"))
+                      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_preparation\run_engineering_smoke.py", line 42, in compare_state
+    mismatches.extend(compare_state(left[key], right[key], f"{path}.{key}"))
+                      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_preparation\run_engineering_smoke.py", line 42, in compare_state
+    mismatches.extend(compare_state(left[key], right[key], f"{path}.{key}"))
+                      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 3 more times]
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_preparation\run_engineering_smoke.py", line 26, in compare_state
+    same = (torch.allclose(left, right, rtol=1e-6, atol=1e-7, equal_nan=True)
+            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!

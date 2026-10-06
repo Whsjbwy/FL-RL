@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "ordinary_update_calls": 1,
+    "adam_calls": 4,
+    "adam_returns": 4,
+    "ordinary_update_returns": 1,
+    "explicit_batch_complete_update_returns": 1
+  },
+  "explicit_batch_update_nodes": {
+    "tests/test_b0_device.py::test_target_device_tensor_and_complete_sac_update": 1
+  },
+  "pytest_exit_code": 0,
+  "purpose": "unit/integration tests, not scientific training",
+  "nested_counts_must_not_be_added": true,
+  "scientific_training_steps": 0,
+  "scientific_training_updates": 0
+}

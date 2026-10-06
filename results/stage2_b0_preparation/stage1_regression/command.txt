@@ -1,0 +1,2 @@
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\.venv-b1\Scripts\python.exe scripts/run_stage1_acceptance.py --output-dir results/stage2_b0_preparation/stage1_regression

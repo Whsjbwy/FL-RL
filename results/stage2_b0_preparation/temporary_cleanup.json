@@ -1,0 +1,86 @@
+{
+  "removed": [
+    {
+      "bytes": 955162,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\compile_acceptance_fixed",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 949210,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\compile_cache",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 954967,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\compile_cache_acceptance",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 26236957,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\entry_test_tmp",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 5625880,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\gpu_resume_failure_tmp",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 5625880,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\gpu_resume_fixed_tmp",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 26236637,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\harness_dev_001",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 26236829,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\harness_dev_002",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 26236957,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\harness_dev_003",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 1915220980,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\install_tmp",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 288249020,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\pytest_acceptance_6840",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 288249020,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\pytest_final_039d",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    },
+    {
+      "bytes": 472,
+      "historical_or_user_data_deleted": false,
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\development\\reachability_pytest_tmp",
+      "purpose": "Task-generated wheel, disposable pytest checkpoint fixture or compiler cache"
+    }
+  ],
+  "important_original_models_preserved": true,
+  "created_at_utc": "2026-10-06T11:06:01.2887825Z",
+  "removed_bytes": 2610777971.0,
+  "historical_reports_preserved": true
+}

@@ -1,0 +1,3 @@
+REACHABILITY_CONFIRMED
+Nonlearning B0 transitions: 1488
+Scientific training steps/updates: 0/0; LOCAL Stage2: NOT RUN

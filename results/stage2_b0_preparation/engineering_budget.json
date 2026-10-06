@@ -1,0 +1,9 @@
+{
+  "env_transition_attempts": 1120,
+  "env_transitions": 1120,
+  "complete_update_attempts": 36,
+  "complete_updates": 36,
+  "world_step_returns": 1280,
+  "env_transition_ceiling": 2048,
+  "complete_update_ceiling": 128
+}

@@ -1,0 +1,599 @@
+{
+  "created_at_utc": "2026-10-06T11:11:49.827940+00:00",
+  "status": "STAGED_CONTENT_REVIEW_PASS",
+  "staged_files": [
+    {
+      "path": "docs/PROJECT_STATUS.md",
+      "bytes": 22277
+    },
+    {
+      "path": "results/stage2_b0_preparation/PREPARATION_RESULT.json",
+      "bytes": 3547
+    },
+    {
+      "path": "results/stage2_b0_preparation/acceptance_recorder_commit.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/acceptance_recorder_commit.stdout.txt",
+      "bytes": 158
+    },
+    {
+      "path": "results/stage2_b0_preparation/agent_identity_failure.json",
+      "bytes": 321
+    },
+    {
+      "path": "results/stage2_b0_preparation/agent_identity_pre_fix_failure.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/agent_identity_pre_fix_failure.stdout.txt",
+      "bytes": 321
+    },
+    {
+      "path": "results/stage2_b0_preparation/b0_interface_initial.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/b0_interface_initial.stdout.txt",
+      "bytes": 716
+    },
+    {
+      "path": "results/stage2_b0_preparation/b0_interface_initial.xml",
+      "bytes": 2394
+    },
+    {
+      "path": "results/stage2_b0_preparation/b0_interface_ruff.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/b0_interface_ruff.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_preparation/checkpoint_fix_commit.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/checkpoint_fix_commit.stdout.txt",
+      "bytes": 154
+    },
+    {
+      "path": "results/stage2_b0_preparation/code_commit.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/code_commit.stdout.txt",
+      "bytes": 1281
+    },
+    {
+      "path": "results/stage2_b0_preparation/commands.jsonl",
+      "bytes": 31581
+    },
+    {
+      "path": "results/stage2_b0_preparation/compileall_acceptance.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/compileall_acceptance.stdout.txt",
+      "bytes": 490
+    },
+    {
+      "path": "results/stage2_b0_preparation/compileall_acceptance_scoped.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/compileall_acceptance_scoped.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/compileall_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/compileall_final.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/current_quality_diagnostic.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/current_quality_diagnostic.stdout.txt",
+      "bytes": 4828
+    },
+    {
+      "path": "results/stage2_b0_preparation/current_quality_diagnostic_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/current_quality_diagnostic_final.stdout.txt",
+      "bytes": 4785
+    },
+    {
+      "path": "results/stage2_b0_preparation/default_preflight_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/default_preflight_final.stdout.txt",
+      "bytes": 1029
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_budget.json",
+      "bytes": 232
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke.stderr.txt",
+      "bytes": 1537
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/continuous/episode.jsonl",
+      "bytes": 53422
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/continuous/update.jsonl",
+      "bytes": 5719
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/continuous/validation.jsonl",
+      "bytes": 8207
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/failure.json",
+      "bytes": 1965
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/resumed_256/update.jsonl",
+      "bytes": 2535
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/resumed_260/episode.jsonl",
+      "bytes": 4323
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/resumed_260/update.jsonl",
+      "bytes": 2552
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/split/episode.jsonl",
+      "bytes": 49099
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/split/update.jsonl",
+      "bytes": 632
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/split/validation.jsonl",
+      "bytes": 8207
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/continuous/episode.jsonl",
+      "bytes": 53422
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/continuous/update.jsonl",
+      "bytes": 5719
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/continuous/validation.jsonl",
+      "bytes": 8207
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/resumed_256/update.jsonl",
+      "bytes": 2535
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/resumed_260/episode.jsonl",
+      "bytes": 4323
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/resumed_260/update.jsonl",
+      "bytes": 2552
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/smoke_resume.json",
+      "bytes": 2420
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/split/episode.jsonl",
+      "bytes": 49099
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/split/update.jsonl",
+      "bytes": 632
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/split/validation.jsonl",
+      "bytes": 8207
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_L1_retry.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_L1_retry.stdout.txt",
+      "bytes": 2420
+    },
+    {
+      "path": "results/stage2_b0_preparation/entry_harness_development.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/entry_harness_development.stdout.txt",
+      "bytes": 101
+    },
+    {
+      "path": "results/stage2_b0_preparation/entry_harness_development.xml",
+      "bytes": 3502
+    },
+    {
+      "path": "results/stage2_b0_preparation/environment_after.json",
+      "bytes": 1434
+    },
+    {
+      "path": "results/stage2_b0_preparation/environment_after.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/environment_after.stdout.txt",
+      "bytes": 1434
+    },
+    {
+      "path": "results/stage2_b0_preparation/environment_before.json",
+      "bytes": 2498
+    },
+    {
+      "path": "results/stage2_b0_preparation/environment_before.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_initial.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_initial.stdout.txt",
+      "bytes": 100
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_initial.xml",
+      "bytes": 462
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_initial_counts.json",
+      "bytes": 523
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_failure.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_failure.stdout.txt",
+      "bytes": 2557
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_failure.xml",
+      "bytes": 2603
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_failure_counts.json",
+      "bytes": 530
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_fixed.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_fixed.stdout.txt",
+      "bytes": 100
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_fixed.xml",
+      "bytes": 368
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_resume_fixed_counts.json",
+      "bytes": 532
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_validation_acceptance.json",
+      "bytes": 657
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_validation_final.json",
+      "bytes": 657
+    },
+    {
+      "path": "results/stage2_b0_preparation/gpu_validation_initial.json",
+      "bytes": 657
+    },
+    {
+      "path": "results/stage2_b0_preparation/identity_commit.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/identity_commit.stdout.txt",
+      "bytes": 151
+    },
+    {
+      "path": "results/stage2_b0_preparation/identity_ruff.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/identity_ruff.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_preparation/preflight_development.txt",
+      "bytes": 1029
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all.stdout.txt",
+      "bytes": 589
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all.xml",
+      "bytes": 51029
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all_acceptance.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all_acceptance.stdout.txt",
+      "bytes": 589
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all_acceptance.xml",
+      "bytes": 52039
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all_acceptance_counts.json",
+      "bytes": 8206
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_all_counts.json",
+      "bytes": 3947
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_phase_a.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_phase_a.stdout.txt",
+      "bytes": 101
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_phase_a.xml",
+      "bytes": 2210
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_phase_a_acceptance.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_phase_a_acceptance.stdout.txt",
+      "bytes": 101
+    },
+    {
+      "path": "results/stage2_b0_preparation/pytest_phase_a_acceptance.xml",
+      "bytes": 2210
+    },
+    {
+      "path": "results/stage2_b0_preparation/quality/code_quality_audit.csv",
+      "bytes": 3711
+    },
+    {
+      "path": "results/stage2_b0_preparation/quality_final/code_quality_audit.csv",
+      "bytes": 3668
+    },
+    {
+      "path": "results/stage2_b0_preparation/reachability.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/reachability.stdout.txt",
+      "bytes": 121
+    },
+    {
+      "path": "results/stage2_b0_preparation/reachability/obstacles.csv",
+      "bytes": 76793
+    },
+    {
+      "path": "results/stage2_b0_preparation/reachability/reachability.json",
+      "bytes": 19757
+    },
+    {
+      "path": "results/stage2_b0_preparation/reachability/trajectories.csv",
+      "bytes": 431373
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_L1_fixed.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_L1_fixed.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_acceptance.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_acceptance.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_development.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_development.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/ruff_final.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage0_interface.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage0_interface.stdout.txt",
+      "bytes": 289
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression.stdout.txt",
+      "bytes": 159
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression/command.txt",
+      "bytes": 214
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression/events.json",
+      "bytes": 1339
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression/sensor_records.csv",
+      "bytes": 34506
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression/stage1_acceptance.json",
+      "bytes": 286617
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression/trajectories.csv",
+      "bytes": 48903
+    },
+    {
+      "path": "results/stage2_b0_preparation/storage_before.json",
+      "bytes": 119
+    },
+    {
+      "path": "results/stage2_b0_preparation/storage_measurement.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/storage_measurement.stdout.txt",
+      "bytes": 686
+    },
+    {
+      "path": "results/stage2_b0_preparation/storage_usage.json",
+      "bytes": 686
+    },
+    {
+      "path": "results/stage2_b0_preparation/summarize_acceptance.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/summarize_acceptance.stdout.txt",
+      "bytes": 358
+    },
+    {
+      "path": "results/stage2_b0_preparation/temporary_cleanup.json",
+      "bytes": 4237
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_install.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_install.stdout.txt",
+      "bytes": 1656
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_install_verified_wheel.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_install_verified_wheel.stdout.txt",
+      "bytes": 1847
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_official_package_download.stderr.txt",
+      "bytes": 1262
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_official_package_download.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_official_package_download_2.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_preparation/torch_official_package_download_2.stdout.txt",
+      "bytes": 2958
+    }
+  ],
+  "staged_total_bytes": 1414137,
+  "largest_files": [
+    {
+      "path": "results/stage2_b0_preparation/reachability/trajectories.csv",
+      "bytes": 431373
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression/stage1_acceptance.json",
+      "bytes": 286617
+    },
+    {
+      "path": "results/stage2_b0_preparation/reachability/obstacles.csv",
+      "bytes": 76793
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/continuous/episode.jsonl",
+      "bytes": 53422
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/continuous/episode.jsonl",
+      "bytes": 53422
+    }
+  ],
+  "secret_pattern_flags": [],
+  "code_commit_files": [
+    ".gitignore",
+    "AGENTS.md",
+    "configs/stage2_b0.yaml",
+    "configs/stage2_b0_engineering.yaml",
+    "docs/STAGE2_B0_PREPARATION.md",
+    "results/stage2_b0_preparation/environment_probe.py",
+    "results/stage2_b0_preparation/fetch_official_torch.py",
+    "results/stage2_b0_preparation/pytest_counts.py",
+    "results/stage2_b0_preparation/record_command.py",
+    "results/stage2_b0_preparation/run_engineering_smoke.py",
+    "scripts/run_b0_reachability.py",
+    "scripts/run_b0_training.py",
+    "src/auv_risk_rl/env/b0_navigation.py",
+    "src/auv_risk_rl/training/__init__.py",
+    "src/auv_risk_rl/training/config.py",
+    "src/auv_risk_rl/training/harness.py",
+    "src/auv_risk_rl/training/scenarios.py",
+    "tests/test_b0_device.py",
+    "tests/test_b0_entry.py",
+    "tests/test_b0_harness.py",
+    "tests/test_b0_interface.py",
+    "tests/test_b0_reachability.py"
+  ],
+  "excluded": "project venv, protocol Word/private context, development/temp, engineering checkpoints",
+  "remote": "https://github.com/Whsjbwy/FL-RL.git",
+  "branch": "codex/stage2-b0-preparation",
+  "main_merge": false,
+  "force_push": false
+}

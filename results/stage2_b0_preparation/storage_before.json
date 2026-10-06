@@ -1,0 +1,5 @@
+{
+  "torch_preinstall_bytes": 471910630,
+  "initial_git_bytes": 593499,
+  "initial_torch_version": "2.14.0+cpu"
+}

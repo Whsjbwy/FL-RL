@@ -1,4 +1,126 @@
-# 项目状态：B5.1 迁入 Git 与 LOCAL Stage 0／Stage 1 训练前验收
+# 项目状态：STAGE2_B0_PREPARATION
+
+2026-10-06 最新工程结论：**PREPARATION_READY**。LOCAL Stage2 科研仍为 **NOT RUN**。
+没有启动300k/500k/1.5M、多seed科研训练、正式throughput、OOD、Stage3或联邦工作。
+本轮从上轮已验收提交 `a836922b2e1f81689d09e811c29be3badf2462aa` 继续，未回退main重建。
+实际目录仍为 `D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE`。
+工作分支 `codex/stage2-b0-preparation`；最终被测代码提交
+`6840dfbbf151ff38009487a1e8f13ac74d40c4c1`。后续证据/回执提交不改变被测代码。
+实际远端发布结果记录在本轮 `PUBLICATION.json`，未成功push前不视为上传。
+
+## 本轮工程准备及科学边界
+
+| 工程字段 | 当前结果 | 依据 |
+| --- | --- | --- |
+| ENVIRONMENT_READY | READY | 同一项目venv实际Torch2.11.0+cu130、RTX5060；GPU张量、前反向/Adam/目标更新和完整恢复测试通过；pip check exit0 |
+| B0_INTERFACE_READY | READY | 当前真值234D、零协方差、无未来、无风险训练/执行过滤；17项接口测试和8项方法身份防误用测试通过 |
+| HARNESS_READY | READY | 固定两环境轮转/连续场景索引、10000起步、25000触发、独立验证、完整checkpoint/恢复、身份守卫；31项harness测试通过 |
+| REACHABILITY_CONFIRMED | READY，限登记案例 | 6个固定非学习案例各1次尝试找到合法到达见证；1488次正式环境转移，不证明整个随机训练分布可达 |
+| PREPARATION_READY | READY | 最终461项全仓、外置13项、Stage0/1必要回归和静态检查通过；科研运行仍待下一次授权及预登记 |
+
+冻结规格：`docs/STAGE2_B0_PREPARATION.md`。已直接读取本机LOCAL原件相关章节，Word及
+私人上下文仍留本机，不上传。工程B5.1、论文方法B5、科学Stage0/1/2继续分别记录。
+原Stage0/1数值、几何、信息边界断言和TRAIN_SCENARIO_V1采样律完整保留。
+
+## 本轮实现与环境修复
+
+新增 `env/b0_navigation.py`，独立于有限感知/过滤环境。目标槽读取当前World位置和NED
+地速，以Body表达，协方差零、年龄0，当前距离/稳定ID排序；位置25m和速度1m/s尺度
+按本轮工程选择登记。自身/任务/射线复用原编码，不读取真未来/KF预测目标。
+动作直接经过原映射与World，nominal=executed指令；执行器滞后/变化率、碰撞/边界、
+reward和终止仍有效。成本字段只记物理失败诊断，普通SAC损失不读取成本；风险/验证指标
+使用None/禁用语义。运行时异常spy确认没有风险筛选、候选或fallback，原有限感知测试仍通过。
+
+新增 `training/` 组合式harness、`run_b0_training.py` 和两份版本化配置；没有重写SAC、
+动力学、KF或风险核。原 `rl/`、`LocalNavigationEnv`、`ObservationBuilder`、场景生成器、
+stage0/train-v1配置及pyproject与上轮基点由Git diff确认无修改。科研入口默认preflight，
+未授权scientific_training执行仍被拒绝；工程产物与科研配置不能静默互换。
+两个任务profile区分无障碍与原1—4障碍CV，训练/验证/工程随机流独立。
+验证直接比较Agent/Replay/训练环境/观察/场景索引和随机流；不靠“没backward”代替隔离验证。
+完整恢复覆盖模型/targets/优化器/alpha、Replay/随机流、全部环境与感知历史、待reset、
+累积日志/上一指令、场景发行/轮转/评估和保存触发位置、配置/run_kind/Git/Torch身份。
+仅接受本项目明确可信本机checkpoint，原B3/B4/B5接口未修改。
+
+项目解释器 `.venv-b1/Scripts/python.exe`，Python3.13.5；只在此venv将误装Torch2.14.0+cpu
+修复为声明的2.11.0 cu130。官方源直接pip下载停滞及首个下载失败均保留，随后从官方源
+取得兼容wheel、校验官方包完整性并本地安装成功；没有关闭依赖安全校验、改全局Python、
+驱动、CUDA Toolkit或顺带安装vision/audio。RTX5060能力12.0、驱动596.21、CUDA构建13.0。
+网络float32，环境/几何/KF原精度不变；没引入AMP/compile或性能优化。
+
+## 本轮实际运行及失败处理
+
+所有相对证据路径均位于 `results/stage2_b0_preparation/`；原始命令/cwd/UTC/解释器、
+Git版本、退出码及stdout/stderr保存在 `commands.jsonl`，没有用历史PASS冒充当前结果。
+
+| 检查 | 当前真实结果 | 证据 |
+| --- | --- | --- |
+| 最终全仓pytest | **461 passed，0 failed/errors/skipped；exit0** | pytest_all_acceptance.xml、stdout、counts.json；被测6840dfb |
+| 外置PhaseA | **13 passed，0 failed/errors/skipped；exit0** | pytest_phase_a_acceptance.xml；被测6840dfb |
+| 新增64项 | B0接口17、harness31、reachability纯单测8、入口5、设备3；均包含在461中 | 同一JUnit，未与全仓重复相加 |
+| Stage1固定非学习回归 | **19案例PASS，231次World转移；exit0** | stage1_regression/轨迹、传感记录、事件及JSON |
+| Stage0真实env/validator接口 | **1次控制周期；exit0** | stage0_interface.stdout.txt |
+| Ruff0.6.0 | **exit0**；无新增ignore、无批量fix | ruff_acceptance.stdout.txt |
+| compileall | **src/tests/scripts及本轮真实Python记录程序exit0** | compileall_acceptance_scoped.stdout/stderr.txt |
+| 旧风格诊断 | **exit1，保留FAIL** | quality_final/code_quality_audit.csv、current_quality_diagnostic_final输出 |
+| CUDA恢复对照 | **PASS，完整状态直接比较精确一致** | engineering_smoke_2/smoke_resume.json、实际更新/episode/验证日志 |
+| 非学习可达性 | **6/6合法见证；每例1次；exit0** | reachability/reachability.json、trajectories.csv、obstacles.csv |
+
+必要修复及真实失败均留存：首次CUDA恢复把Adam的CPU步数标量映射到CUDA，
+`gpu_resume_failure.xml` 和首个 `engineering_smoke/failure.json` 记录失败。
+最小修复仅为可信checkpoint先CPU反序列化，模型与矩仍恢复CUDA；未改变数学或容差。
+修复后的独立失败案例回归、连续264与256保存/260再保存恢复至264均通过；
+两环境的场景、RNG、Replay、计数器及浮点状态实际精确一致，不声称跨设备/Torch版本一致。
+代码审核还发现可注入成本/约束Agent冒名B0；`agent_identity_failure.json` 在旧Git代码上
+实际复现，0环境/0梯度；现已拒绝非普通Agent及过滤环境，8项无推进拒绝测试通过。
+先前453项通过记录保留；新增8项检查后完整重跑为461，不把它们当成第一次已测。
+一次compileall错误地递归编译可再生成pytest临时夹具，触发Windows路径错误；失败输出保留。
+随后明确检查全部生产/测试/脚本及真实记录程序，exit0，未跳过任何科学源码。
+
+旧诊断仍有39项缺docstring、3条英文注释及原文本Magic Number/隐藏RNG告警。
+本轮新写/改动模块没有这些新增告警；Replay使用显式seed，场景随机派生/隔离测试通过。
+未为旧风格告警全面重构或关闭规则，不将风格FAIL冒称质量PASS，也不将其冒称科学假设失败。
+旧throughput blocker仍保持历史BLOCKED，没有运行正式benchmark或据此自动批准科研预算。
+
+可达性只证明登记的水平/上升/下降无障碍、偏置头对头/横向交叉/垂向差CV夹具有可执行解。
+所有控制通过真实B0物理世界、一秒warm-up、原动作范围/时域/成功半径及碰撞限制；
+没有改TRAIN_SCENARIO_V1或用成功见证筛选随机分布。reachability被测3e0d0d8；
+Stage0/1回归与完整工程恢复被测039d93a；之后仅增加方法身份拒绝守卫/观察式计数，
+默认B0转移、普通SAC数学、可达性脚本及共享Stage0/1内核未改变；最终461项回归覆盖新守卫。
+
+## 实际计算与轻量存储
+
+科研 `scientific_training_steps=0`、`scientific_training_updates=0`。
+新真实工程学习smoke（首次失败仍计账）：`engineering_env_transitions=1120`，
+其中1056次训练Replay采样、64次独立短验证；`engineering_sac_updates=36`，144次Adam。
+包含warm-up的World调用1280次，属于嵌套计数，不与环境转移相加；上限仍为2048/128。
+本轮合成单测 `synthetic_test_updates=151`（成功完成普通SAC core的合成batch/Replay更新，
+包括两次全仓和CUDA失败/修复probe）；旧真实/混合环境单元夹具完整core更新另22次。
+两次全仓及CUDAprobe合计Adam820、SGD2；Actor-only/成本优化器操作包含在优化器计数中，
+不伪装成完整UTD更新。节点来源及嵌套World/有限感知/B0计数保存在两个counts JSON。
+非学习可达性1488正式转移及30 warm-up、Stage1的231和Stage0的1均另计。
+开发单测也有非学习环境调用，保留各次实际记录，不宣称所有环境和梯度计算均为0。
+
+仅清理本轮可再生成wheel、编译缓存和pytest checkpoint夹具 **2610777971字节**；
+清单 `temporary_cleanup.json`。原数据、原模型、协议、历史Gate和manifests未删除/重写。
+Torch包净增加 **2395657030字节（约2.23GiB）**；结果目录测量约46.23MiB，
+其中约44.86MiB为必要工程恢复/失败checkpoint，只在本机、全部排除Git。
+公开小体积文本证据约1.4MiB；精确测量时点/范围见storage_usage.json，Git发布对象略有增长。
+未复制源码/venv/交接包，未生成额外源码摘要清单、ZIP或provenance rebase。
+本轮没有新增退役科学断言；上轮12个纯摘要检查的退役仍按原记录，不计本轮PASS。
+
+## 下一项唯一任务
+
+**登记并申请Stage2 B0首个受控无障碍科研训练运行授权。**
+先明确该子任务配置/预算/停止安排，以及随后CV的预算分配、是否重新初始化和Replay携带；
+不默认无障碍300k再自动CV300k。独立配对验证集合及最终checkpoint主比较也须登记。
+此时工程准备已就绪，但尚无多seed学习简单任务证据，因此Stage2科研仍为NOT RUN，
+不能写Stage2科研GO；本轮到此停止。
+
+---
+
+# 历史记录：B5.1 迁入 Git 与 LOCAL Stage 0／Stage 1 训练前验收
+
+以下为上轮记录，保留其当时结论和环境限制；不作为当前环境状态。
 
 2026-10-06 本轮科学验收：**Stage 0 GO；Stage 1 GO**。
 Stage 2 仅可考虑准备工作，当前准备判断为 **CONDITIONAL GO**，没有训练授权。

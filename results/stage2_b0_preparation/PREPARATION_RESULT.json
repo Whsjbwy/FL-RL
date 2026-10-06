@@ -1,0 +1,85 @@
+{
+  "created_at_utc": "2026-10-06T11:08:14.869531+00:00",
+  "task": "STAGE2_B0_PREPARATION",
+  "execution_location": "USER_LOCAL_WINDOWS",
+  "project_root": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE",
+  "branch": "codex/stage2-b0-preparation",
+  "tested_code_commit": "6840dfbbf151ff38009487a1e8f13ac74d40c4c1",
+  "baseline_commit": "a836922b2e1f81689d09e811c29be3badf2462aa",
+  "status": "PREPARATION_READY",
+  "engineering_statuses": {
+    "ENVIRONMENT_READY": true,
+    "B0_INTERFACE_READY": true,
+    "HARNESS_READY": true,
+    "REACHABILITY_CONFIRMED": true,
+    "PREPARATION_READY": true
+  },
+  "scientific_stage2": "NOT_RUN",
+  "scientific_training_steps": 0,
+  "scientific_training_updates": 0,
+  "tests": {
+    "tests": 461,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 461
+  },
+  "phase_a_tests": {
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 13
+  },
+  "ruff_exit_code": 0,
+  "compileall_exit_code": 0,
+  "environment_evidence": "environment_after.json",
+  "gpu_evidence": "gpu_validation_acceptance.json",
+  "engineering_env_transitions": 1120,
+  "engineering_replay_transitions": 1056,
+  "engineering_validation_transitions": 64,
+  "engineering_sac_updates": 36,
+  "engineering_optimizer_steps": 144,
+  "engineering_world_calls_including_warmup": 1280,
+  "engineering_limits": {
+    "transitions": 2048,
+    "complete_updates": 128
+  },
+  "synthetic_test_updates": 151,
+  "synthetic_update_definition": "Successfully completed OrdinarySAC core calls on synthetic batch/Replay; includes the two full suite runs and failed/fixed CUDA resume probes. Actor-only autograd checks are separately represented by optimizer counts.",
+  "legacy_real_or_hybrid_environment_unit_updates": 22,
+  "unit_adam_steps": 820,
+  "unit_sgd_steps": 2,
+  "nonlearning_reachability_transitions": 1488,
+  "nonlearning_reachability_warmup_world_calls": 30,
+  "reachability_cases": 6,
+  "stage1_fixed_cases": 19,
+  "stage1_world_transitions": 231,
+  "stage0_interface_world_transitions": 1,
+  "old_shared_source_or_parameter_changes": [],
+  "formal_throughput_benchmark_run": false,
+  "federated_work_started": false,
+  "old_style_diagnostic": "FAIL_PRESERVED",
+  "failures_preserved": [
+    "engineering_smoke/failure.json",
+    "gpu_resume_failure.xml",
+    "agent_identity_failure.json",
+    "compileall_acceptance.stdout.txt",
+    "torch_install.stderr.txt",
+    "torch_official_package_download.stderr.txt"
+  ],
+  "remaining_research_registration": [
+    "obstacle-free initial budget and stopping arrangement",
+    "CV budget allocation",
+    "CV reinitialization and Replay carry policy",
+    "independent paired validation set"
+  ],
+  "next_task": "Request explicit authorization for the first controlled Stage2 B0 obstacle-free scientific run after registering these arrangements",
+  "measurement_versions": {
+    "final_tests": "6840dfbbf151ff38009487a1e8f13ac74d40c4c1",
+    "engineering_resume": "039d93af72a70caf2ce5e8ac557dfe4d7733a7c6",
+    "reachability": "3e0d0d8c40a97143eaa7c8c14b36f65a01a412fa",
+    "stage01_regression": "039d93af72a70caf2ce5e8ac557dfe4d7733a7c6"
+  },
+  "version_applicability": "Only constructor/environment identity rejection guards and observational counters were added after engineering resume. Default B0 transitions and OrdinarySAC mathematics are unchanged; final full regression tests the added guards. Reachability and Stage1 shared modules/configs are unchanged."
+}

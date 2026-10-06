@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "purpose": "ENGINEERING_ONLY_NOT_A_SCIENTIFIC_RESULT",
+  "code_version": "039d93af72a70caf2ce5e8ac557dfe4d7733a7c6",
+  "torch_version": "2.11.0+cu130",
+  "config": {
+    "run_kind": "engineering_smoke",
+    "task_profile": "cv_train_v1",
+    "training_seed": 830001,
+    "transition_budget": 264,
+    "num_envs": 2,
+    "validation_interval": 128,
+    "validation_episodes": 1,
+    "validation_max_steps": 8,
+    "checkpoint_interval": 256,
+    "external_max_steps": 64,
+    "scenario_root_seed": null,
+    "research_registration": null,
+    "sac": {
+      "gamma": 0.999,
+      "tau": 0.005,
+      "learning_rate": 0.0003,
+      "batch_size": 256,
+      "replay_capacity": 1024,
+      "learning_starts": 256,
+      "utd": 1,
+      "initial_alpha": 0.2,
+      "target_entropy": -3.0,
+      "device": "cuda",
+      "initialization_seed": 8618862298390616636,
+      "actor_seed": 4652885546828880128,
+      "replay_seed": 685307578559390570
+    },
+    "method": "B0_FULL_STATE_ORDINARY_SAC"
+  },
+  "budget": {
+    "env_transition_attempts": 1120,
+    "env_transitions": 1120,
+    "complete_update_attempts": 36,
+    "complete_updates": 36,
+    "world_step_returns": 1280,
+    "env_transition_ceiling": 2048,
+    "complete_update_ceiling": 128
+  },
+  "prior_budget": {
+    "env_transition_attempts": 560,
+    "env_transitions": 560,
+    "complete_update_attempts": 18,
+    "complete_updates": 18,
+    "world_step_returns": 640,
+    "env_transition_ceiling": 2048,
+    "complete_update_ceiling": 128
+  },
+  "attempt": 2,
+  "continuous": {
+    "transitions": 264,
+    "updates": 9,
+    "evaluation_env_transitions": 16,
+    "failure_metadata": null,
+    "optimizer_steps": 36,
+    "scientific_training_steps": 0,
+    "scientific_training_updates": 0
+  },
+  "resumed": {
+    "transitions": 264,
+    "updates": 9,
+    "evaluation_env_transitions": 16,
+    "failure_metadata": null,
+    "optimizer_steps": 36,
+    "scientific_training_steps": 0,
+    "scientific_training_updates": 0
+  },
+  "pending_reset_at_256": [
+    false,
+    true
+  ],
+  "active_steps_at_260": [
+    52,
+    2
+  ],
+  "full_state_exact_equal": true,
+  "full_state_registered_tolerance_equal": true,
+  "evaluation_training_state_preserved": true,
+  "scientific_training_steps": 0,
+  "scientific_training_updates": 0,
+  "local_stage2": "NOT_RUN"
+}

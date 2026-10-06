@@ -1,0 +1,8 @@
+.................                                                        [100%]
+============================== warnings summary ===============================
+.venv-b1\Lib\site-packages\_pytest\cacheprovider.py:469
+  D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\.venv-b1\Lib\site-packages\_pytest\cacheprovider.py:469: PytestCacheWarning: cache could not write path D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\.pytest_cache\v\cache\nodeids: [Errno 13] Permission denied: 'D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.pytest_cache\\v\\cache\\nodeids'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+17 passed, 1 warning in 0.57s

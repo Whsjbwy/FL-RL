@@ -1,0 +1,27 @@
+{
+  "status": "STAGED_CONTENT_REVIEW_PASS",
+  "staged_total_bytes": 1414137,
+  "largest_files": [
+    {
+      "path": "results/stage2_b0_preparation/reachability/trajectories.csv",
+      "bytes": 431373
+    },
+    {
+      "path": "results/stage2_b0_preparation/stage1_regression/stage1_acceptance.json",
+      "bytes": 286617
+    },
+    {
+      "path": "results/stage2_b0_preparation/reachability/obstacles.csv",
+      "bytes": 76793
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke/continuous/episode.jsonl",
+      "bytes": 53422
+    },
+    {
+      "path": "results/stage2_b0_preparation/engineering_smoke_2/continuous/episode.jsonl",
+      "bytes": 53422
+    }
+  ],
+  "branch": "codex/stage2-b0-preparation"
+}

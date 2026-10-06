@@ -1,0 +1,709 @@
+{
+  "created_at": "2026-10-06T10:41:19.564495+00:00",
+  "code_version": "3e0d0d8c40a97143eaa7c8c14b36f65a01a412fa",
+  "run_kind": "engineering_reachability",
+  "config_path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\configs\\stage0.yaml",
+  "config_snapshot": {
+    "protocol_version": "v2.0",
+    "config_version": "stage0_v2",
+    "stage": "S0",
+    "environment": {
+      "position_lower_bound_ned_m": [
+        0.0,
+        0.0,
+        2.0
+      ],
+      "position_upper_bound_ned_m": [
+        100.0,
+        100.0,
+        40.0
+      ],
+      "goal_radius_m": 2.0,
+      "max_episode_control_steps": 1000
+    },
+    "dynamics": {
+      "control_dt_s": 0.2,
+      "integration_dt_s": 0.05,
+      "min_surge_speed_mps": 0.3,
+      "max_surge_speed_mps": 1.5,
+      "max_yaw_rate_rad_s": 0.35,
+      "max_pitch_rate_rad_s": 0.25,
+      "max_pitch_rad": 0.5235987755982988,
+      "surge_time_constant_s": 0.8,
+      "yaw_rate_time_constant_s": 0.5,
+      "pitch_rate_time_constant_s": 0.5,
+      "max_surge_accel_mps2": 0.5,
+      "max_yaw_accel_rad_s2": 0.5,
+      "max_pitch_accel_rad_s2": 0.4
+    },
+    "kf": {
+      "acceleration_spectral_density_m2_s3": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "initial_velocity_std_mps": 1.0,
+      "covariance_symmetry_tolerance": 1e-10,
+      "covariance_psd_tolerance": 1e-10
+    },
+    "sensor": {
+      "range_m": 25.0,
+      "horizontal_fov_deg": 120.0,
+      "vertical_fov_deg": 60.0,
+      "measurement_std_body_m": [
+        0.2,
+        0.2,
+        0.3
+      ],
+      "dropout_probability": 0.05,
+      "measurement_delay_control_steps": 0
+    },
+    "risk": {
+      "auv_radius_m": 0.75,
+      "extra_margin_m": 0.3,
+      "short_horizon_risk_budget": 0.05,
+      "mean_norm_tolerance_m": 1e-12,
+      "variance_tolerance_m2": 1e-14
+    },
+    "validator": {
+      "validation_horizon_s": 5.0,
+      "speed_grid_mps": [
+        0.3,
+        0.9,
+        1.5
+      ],
+      "yaw_rate_grid_rad_s": [
+        -0.35,
+        -0.175,
+        0.0,
+        0.175,
+        0.35
+      ],
+      "pitch_rate_grid_rad_s": [
+        -0.25,
+        0.0,
+        0.25
+      ]
+    },
+    "cost": {
+      "discount_gamma": 0.999,
+      "planned_horizon_control_steps": 1000
+    }
+  },
+  "cases": [
+    {
+      "case_id": "R01_horizontal_empty",
+      "seed": 810001,
+      "run_kind": "engineering_reachability",
+      "task_profile": "fixed_reachability_diagnostic",
+      "split": "engineering_reachability",
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "actual_transitions": 245,
+      "nonlearning_warmup_world_transitions": 5,
+      "scientific_training_steps": 0,
+      "scientific_training_updates": 0,
+      "complete": true,
+      "status": "WITNESS_FOUND",
+      "warmup_info": {
+        "scenario_id": "engineering-reachability-R01_horizontal_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810001,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "witness_found": true,
+      "operation_limits_satisfied": true,
+      "final_event": {
+        "failure_type": "goal_success",
+        "timestamp_s": 49.89166666666508
+      },
+      "final_goal_distance_m": 2.0,
+      "actual_duration_s": 48.89166666666508,
+      "minimum_clearance_m": null,
+      "clearance_applicable": false,
+      "trajectories_file": "trajectories.csv",
+      "obstacle_trajectories_file": "obstacles.csv"
+    },
+    {
+      "case_id": "R02_deeper_empty",
+      "seed": 810002,
+      "run_kind": "engineering_reachability",
+      "task_profile": "fixed_reachability_diagnostic",
+      "split": "engineering_reachability",
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          12.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        28.0
+      ],
+      "actual_transitions": 254,
+      "nonlearning_warmup_world_transitions": 5,
+      "scientific_training_steps": 0,
+      "scientific_training_updates": 0,
+      "complete": true,
+      "status": "WITNESS_FOUND",
+      "warmup_info": {
+        "scenario_id": "engineering-reachability-R02_deeper_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810002,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          12.07729879516809
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "witness_found": true,
+      "operation_limits_satisfied": true,
+      "final_event": {
+        "failure_type": "goal_success",
+        "timestamp_s": 51.63891565420076
+      },
+      "final_goal_distance_m": 1.9999999999999976,
+      "actual_duration_s": 50.63891565420076,
+      "minimum_clearance_m": null,
+      "clearance_applicable": false,
+      "trajectories_file": "trajectories.csv",
+      "obstacle_trajectories_file": "obstacles.csv"
+    },
+    {
+      "case_id": "R03_shallower_empty",
+      "seed": 810003,
+      "run_kind": "engineering_reachability",
+      "task_profile": "fixed_reachability_diagnostic",
+      "split": "engineering_reachability",
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          28.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        12.0
+      ],
+      "actual_transitions": 254,
+      "nonlearning_warmup_world_transitions": 5,
+      "scientific_training_steps": 0,
+      "scientific_training_updates": 0,
+      "complete": true,
+      "status": "WITNESS_FOUND",
+      "warmup_info": {
+        "scenario_id": "engineering-reachability-R03_shallower_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810003,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          27.92270120483191
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "witness_found": true,
+      "operation_limits_satisfied": true,
+      "final_event": {
+        "failure_type": "goal_success",
+        "timestamp_s": 51.63891565420075
+      },
+      "final_goal_distance_m": 2.0000000000000013,
+      "actual_duration_s": 50.63891565420075,
+      "minimum_clearance_m": null,
+      "clearance_applicable": false,
+      "trajectories_file": "trajectories.csv",
+      "obstacle_trajectories_file": "obstacles.csv"
+    },
+    {
+      "case_id": "R04_head_on_lateral_offset",
+      "seed": 810004,
+      "run_kind": "engineering_reachability",
+      "task_profile": "fixed_reachability_diagnostic",
+      "split": "engineering_reachability",
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "actual_transitions": 245,
+      "nonlearning_warmup_world_transitions": 5,
+      "scientific_training_steps": 0,
+      "scientific_training_updates": 0,
+      "complete": true,
+      "status": "WITNESS_FOUND",
+      "warmup_info": {
+        "scenario_id": "engineering-reachability-R04_head_on_lateral_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810004,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "witness_found": true,
+      "operation_limits_satisfied": true,
+      "final_event": {
+        "failure_type": "goal_success",
+        "timestamp_s": 49.89166666666508
+      },
+      "final_goal_distance_m": 2.0,
+      "actual_duration_s": 48.89166666666508,
+      "minimum_clearance_m": 1.65,
+      "clearance_applicable": true,
+      "trajectories_file": "trajectories.csv",
+      "obstacle_trajectories_file": "obstacles.csv"
+    },
+    {
+      "case_id": "R05_crossing",
+      "seed": 810005,
+      "run_kind": "engineering_reachability",
+      "task_profile": "fixed_reachability_diagnostic",
+      "split": "engineering_reachability",
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "actual_transitions": 245,
+      "nonlearning_warmup_world_transitions": 5,
+      "scientific_training_steps": 0,
+      "scientific_training_updates": 0,
+      "complete": true,
+      "status": "WITNESS_FOUND",
+      "warmup_info": {
+        "scenario_id": "engineering-reachability-R05_crossing",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810005,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.40000000000006,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "witness_found": true,
+      "operation_limits_satisfied": true,
+      "final_event": {
+        "failure_type": "goal_success",
+        "timestamp_s": 49.89166666666508
+      },
+      "final_goal_distance_m": 2.0,
+      "actual_duration_s": 48.89166666666508,
+      "minimum_clearance_m": 1.8533872697489602,
+      "clearance_applicable": true,
+      "trajectories_file": "trajectories.csv",
+      "obstacle_trajectories_file": "obstacles.csv"
+    },
+    {
+      "case_id": "R06_head_on_vertical_offset",
+      "seed": 810006,
+      "run_kind": "engineering_reachability",
+      "task_profile": "fixed_reachability_diagnostic",
+      "split": "engineering_reachability",
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "actual_transitions": 245,
+      "nonlearning_warmup_world_transitions": 5,
+      "scientific_training_steps": 0,
+      "scientific_training_updates": 0,
+      "complete": true,
+      "status": "WITNESS_FOUND",
+      "warmup_info": {
+        "scenario_id": "engineering-reachability-R06_head_on_vertical_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810006,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "witness_found": true,
+      "operation_limits_satisfied": true,
+      "final_event": {
+        "failure_type": "goal_success",
+        "timestamp_s": 49.89166666666508
+      },
+      "final_goal_distance_m": 2.0,
+      "actual_duration_s": 48.89166666666508,
+      "minimum_clearance_m": 2.65,
+      "clearance_applicable": true,
+      "trajectories_file": "trajectories.csv",
+      "obstacle_trajectories_file": "obstacles.csv"
+    }
+  ],
+  "status": "REACHABILITY_CONFIRMED",
+  "nonlearning_env_transitions": 1488,
+  "nonlearning_warmup_world_transitions": 30,
+  "scientific_training_steps": 0,
+  "scientific_training_updates": 0,
+  "scientific_stage2": "NOT RUN",
+  "attempts_per_case": 1,
+  "statement": "仅证明六个固定案例存在合法可执行解，不证明随机训练分布全部可达。"
+}

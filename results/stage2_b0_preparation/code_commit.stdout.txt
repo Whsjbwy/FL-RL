@@ -1,0 +1,22 @@
+[codex/stage2-b0-preparation 3e0d0d8] Prepare B0 interface and guarded harness for Stage 2 engineering acceptance
+ 22 files changed, 2583 insertions(+), 2 deletions(-)
+ create mode 100644 configs/stage2_b0.yaml
+ create mode 100644 configs/stage2_b0_engineering.yaml
+ create mode 100644 docs/STAGE2_B0_PREPARATION.md
+ create mode 100644 results/stage2_b0_preparation/environment_probe.py
+ create mode 100644 results/stage2_b0_preparation/fetch_official_torch.py
+ create mode 100644 results/stage2_b0_preparation/pytest_counts.py
+ create mode 100644 results/stage2_b0_preparation/record_command.py
+ create mode 100644 results/stage2_b0_preparation/run_engineering_smoke.py
+ create mode 100644 scripts/run_b0_reachability.py
+ create mode 100644 scripts/run_b0_training.py
+ create mode 100644 src/auv_risk_rl/env/b0_navigation.py
+ create mode 100644 src/auv_risk_rl/training/__init__.py
+ create mode 100644 src/auv_risk_rl/training/config.py
+ create mode 100644 src/auv_risk_rl/training/harness.py
+ create mode 100644 src/auv_risk_rl/training/scenarios.py
+ create mode 100644 tests/test_b0_device.py
+ create mode 100644 tests/test_b0_entry.py
+ create mode 100644 tests/test_b0_harness.py
+ create mode 100644 tests/test_b0_interface.py
+ create mode 100644 tests/test_b0_reachability.py

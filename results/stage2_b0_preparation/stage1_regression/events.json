@@ -1,0 +1,50 @@
+[
+  {
+    "case": "head_on",
+    "reason": "collision",
+    "expected_time_s": 0.04545454545454539,
+    "actual_time_s": 0.045454545454542986,
+    "minimum_clearance_m": 0.0,
+    "no_advance_after_terminal": true
+  },
+  {
+    "case": "crossing",
+    "reason": "collision",
+    "expected_time_s": 0.0889137664304219,
+    "actual_time_s": 0.08891376643042015,
+    "minimum_clearance_m": 3.9968028886505635e-15,
+    "no_advance_after_terminal": true
+  },
+  {
+    "case": "boundary",
+    "reason": "boundary",
+    "expected_time_s": 0.06249999999999645,
+    "actual_time_s": 0.06249999999998668,
+    "minimum_clearance_m": null,
+    "no_advance_after_terminal": true
+  },
+  {
+    "case": "pitch_boundary",
+    "reason": "boundary",
+    "expected_time_s": 0.06,
+    "actual_time_s": 0.060000000000000005,
+    "minimum_clearance_m": null,
+    "no_advance_after_terminal": true
+  },
+  {
+    "case": "success",
+    "reason": "success",
+    "expected_time_s": 0.09999999999999935,
+    "actual_time_s": 0.09999999999999996,
+    "minimum_clearance_m": null,
+    "no_advance_after_terminal": true
+  },
+  {
+    "case": "timeout",
+    "reason": "timeout",
+    "expected_time_s": 0.4,
+    "actual_time_s": 0.39999999999999997,
+    "minimum_clearance_m": null,
+    "no_advance_after_terminal": true
+  }
+]

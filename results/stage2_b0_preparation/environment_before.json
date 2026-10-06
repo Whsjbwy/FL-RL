@@ -1,0 +1,38 @@
+{
+  "time_utc": "2026-10-06T10:22:18.550041+00:00",
+  "execution_location": "USER_LOCAL_WINDOWS",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "project_venv": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1",
+  "torch_version": "2.14.0+cpu",
+  "torch_file": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Lib\\site-packages\\torch\\__init__.py",
+  "cuda_build": null,
+  "cuda_available": false,
+  "devices": [],
+  "dependencies": {
+    "pip": "25.1.1",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.3",
+    "pytest": "9.1.1",
+    "ruff": "0.6.0"
+  },
+  "disk_free_bytes": {
+    "C:/": 23229341696,
+    "D:/": 50482249728,
+    "F:/": 73751937024
+  },
+  "pip_version": "pip 25.1.1 from D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Lib\\site-packages\\pip (python 3.13)",
+  "pip_check": {
+    "exit_code": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  "nvidia_smi": {
+    "exit_code": 0,
+    "stdout": "Tue Oct  6 18:22:20 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 596.21                 Driver Version: 596.21         CUDA Version: 13.2     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 5060      WDDM  |   00000000:01:00.0  On |                  N/A |\n|  0%   31C    P3             15W /  145W |    2462MiB /   8151MiB |      1%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "publication_redaction": "Full local nvidia-smi process list omitted; original retained locally in development."
+}

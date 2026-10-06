@@ -1,0 +1,15 @@
+{
+  "status": "FAIL_OR_BLOCKED",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\run_engineering_smoke.py\", line 156, in main\n    discrepancies = compare_state(continuous.state_dict(), final.state_dict())\n  File \"D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\run_engineering_smoke.py\", line 42, in compare_state\n    mismatches.extend(compare_state(left[key], right[key], f\"{path}.{key}\"))\n                      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\run_engineering_smoke.py\", line 42, in compare_state\n    mismatches.extend(compare_state(left[key], right[key], f\"{path}.{key}\"))\n                      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\run_engineering_smoke.py\", line 42, in compare_state\n    mismatches.extend(compare_state(left[key], right[key], f\"{path}.{key}\"))\n                      ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  [Previous line repeated 3 more times]\n  File \"D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_preparation\\run_engineering_smoke.py\", line 26, in compare_state\n    same = (torch.allclose(left, right, rtol=1e-6, atol=1e-7, equal_nan=True)\n            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!\n",
+  "budget": {
+    "env_transition_attempts": 560,
+    "env_transitions": 560,
+    "complete_update_attempts": 18,
+    "complete_updates": 18,
+    "world_step_returns": 640,
+    "env_transition_ceiling": 2048,
+    "complete_update_ceiling": 128
+  },
+  "scientific_training_steps": 0,
+  "scientific_training_updates": 0
+}

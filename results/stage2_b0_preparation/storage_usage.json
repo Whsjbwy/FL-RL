@@ -1,0 +1,17 @@
+{
+  "measured_at_utc": "2026-10-06T11:08:50.059630+00:00",
+  "torch_package_bytes": 2867567660,
+  "torch_before_bytes": 471910630,
+  "task_result_directory_bytes": 48469607,
+  "task_checkpoint_bytes": 47041616,
+  "git_directory_bytes": 648920,
+  "git_directory_before_bytes": 593499,
+  "task_temporary_cleanup_bytes": 2610777971.0,
+  "disk_free_bytes": {
+    "C:/": 23885377536,
+    "D:/": 46726094848,
+    "F:/": 73528582144
+  },
+  "measurement_scope": "File logical bytes, not allocated clusters. Torch dist-info metadata delta was not measured before installation. Git objects may grow during evidence publication.",
+  "torch_package_net_growth_bytes": 2395657030
+}

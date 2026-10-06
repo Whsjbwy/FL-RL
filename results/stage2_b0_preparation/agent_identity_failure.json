@@ -1,0 +1,11 @@
+{
+  "status": "DEFECT_CONFIRMED_BEFORE_IDENTITY_FIX",
+  "tested_historical_commit": "039d93af72a70caf2ce5e8ac557dfe4d7733a7c6",
+  "incorrectly_accepted_agent_types": [
+    "CostLearningAgent",
+    "ConstrainedSACAgent"
+  ],
+  "environment_steps": 0,
+  "gradient_updates": 0,
+  "scientific_training_steps": 0
+}

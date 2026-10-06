@@ -1,0 +1,15 @@
+{
+  "status": "PREPARATION_READY",
+  "tested_code_commit": "6840dfbbf151ff38009487a1e8f13ac74d40c4c1",
+  "tests": {
+    "tests": 461,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 461
+  },
+  "synthetic_test_updates": 151,
+  "unit_adam_steps": 820,
+  "engineering_env_transitions": 1120,
+  "engineering_sac_updates": 36
+}

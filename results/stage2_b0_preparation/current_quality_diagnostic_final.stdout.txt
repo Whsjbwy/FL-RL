@@ -1,0 +1,72 @@
+[
+  {
+    "item": "无注释核心函数",
+    "status": "FAIL",
+    "evidence": "missing=['src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py::_pair', 'src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py::ObstacleGenerationMetadata', 'src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py::ScenarioGenerationMetadata', 'src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py::_readonly_vector', 'src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py::_rng', 'src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py::_body_direction', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::alpha', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::_finite', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::_positive_alpha', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::sample_action', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::deterministic_action', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::store_transition', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::eligible', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::_step', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::load_state_dict', 'src\\\\auv_risk_rl\\\\rl\\\\agent.py::save_checkpoint', 'src\\\\auv_risk_rl\\\\rl\\\\constrained_agent.py::update_actor', 'src\\\\auv_risk_rl\\\\rl\\\\constrained_agent.py::update', 'src\\\\auv_risk_rl\\\\rl\\\\constrained_agent.py::state_dict', 'src\\\\auv_risk_rl\\\\rl\\\\constrained_agent.py::load_state_dict', 'src\\\\auv_risk_rl\\\\rl\\\\constrained_agent.py::migrate_from_b3', 'src\\\\auv_risk_rl\\\\rl\\\\constrained_runner.py::save_checkpoint', 'src\\\\auv_risk_rl\\\\rl\\\\constrained_runner.py::migrate_from_b4_checkpoint', 'src\\\\auv_risk_rl\\\\rl\\\\cost_agent.py::_finite', 'src\\\\auv_risk_rl\\\\rl\\\\cost_agent.py::state_dict', 'src\\\\auv_risk_rl\\\\rl\\\\cost_agent.py::load_state_dict', 'src\\\\auv_risk_rl\\\\rl\\\\cost_agent.py::save_checkpoint', 'src\\\\auv_risk_rl\\\\rl\\\\cost_math.py::forward', 'src\\\\auv_risk_rl\\\\rl\\\\cost_runner.py::step', 'src\\\\auv_risk_rl\\\\rl\\\\cost_runner.py::save_checkpoint', 'src\\\\auv_risk_rl\\\\rl\\\\cost_runner.py::load_checkpoint', 'src\\\\auv_risk_rl\\\\rl\\\\episode_cost.py::append', 'src\\\\auv_risk_rl\\\\rl\\\\episode_cost.py::completed_episodes_since_last_lambda_update', 'src\\\\auv_risk_rl\\\\rl\\\\episode_cost.py::submit', 'src\\\\auv_risk_rl\\\\rl\\\\episode_cost.py::state_dict', 'src\\\\auv_risk_rl\\\\rl\\\\episode_cost.py::load_state_dict', 'src\\\\auv_risk_rl\\\\rl\\\\networks.py::forward', 'src\\\\auv_risk_rl\\\\rl\\\\networks.py::forward', 'src\\\\auv_risk_rl\\\\rl\\\\runner.py::step']; non_chinese=[]"
+  },
+  {
+    "item": "中文注释规范",
+    "status": "FAIL",
+    "evidence": "发现非中文普通注释：['tests\\\\test_b4_cost_math.py:113:Q08/Q09: NaN entropy unused; target detached.', 'tests\\\\test_b5_actor.py:65:fresh nominal reparameterized fixture a=theta; known entropy/reward/cost derivatives.', 'tests\\\\test_b5_actor.py:136:Adam moments nonempty, not initialization-only equality.']"
+  },
+  {
+    "item": "Magic Number",
+    "status": "FAIL",
+    "evidence": "发现协议关键 Magic Number：['src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py:25.0', 'src\\\\auv_risk_rl\\\\env\\\\scenario_generator.py:0.25']"
+  },
+  {
+    "item": "全局随机状态",
+    "status": "FAIL",
+    "evidence": "发现隐藏全局/模块随机状态：['src\\\\auv_risk_rl\\\\rl\\\\replay.py:default_rng']"
+  },
+  {
+    "item": "裸except",
+    "status": "PASS",
+    "evidence": "未发现裸 except。"
+  },
+  {
+    "item": "超长函数",
+    "status": "PASS",
+    "evidence": "未发现超过 100 行的生产函数。"
+  },
+  {
+    "item": "代码行宽",
+    "status": "PASS",
+    "evidence": "生产代码、测试和脚本统一使用不超过 100 字符行宽。"
+  },
+  {
+    "item": "真值泄漏接口",
+    "status": "PASS",
+    "evidence": "策略侧感知帧及 tracking/prediction/risk/safety 与障碍真值接口隔离。"
+  },
+  {
+    "item": "坐标系命名不明确",
+    "status": "PASS",
+    "evidence": "未发现预定义的坐标/语义含糊缩写。"
+  },
+  {
+    "item": "单位不明确",
+    "status": "PASS",
+    "evidence": "核心公开接口字段/参数采用显式单位后缀与 Docstring。"
+  },
+  {
+    "item": "未测试核心公式",
+    "status": "PASS",
+    "evidence": "30条映射的测试文件和顶层测试函数均存在；语义仍需独立测试。"
+  },
+  {
+    "item": "重复实现",
+    "status": "WARNING",
+    "evidence": "语义重复仍需人工复核；env与validator共用AUV RK2。"
+  },
+  {
+    "item": "死代码",
+    "status": "PASS",
+    "evidence": "ruff check src tests scripts 通过。"
+  },
+  {
+    "item": "未使用配置项",
+    "status": "PASS",
+    "evidence": "41 个 YAML 叶子配置键均存在代码或测试引用。"
+  }
+]
