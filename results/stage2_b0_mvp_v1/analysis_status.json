@@ -1,0 +1,8 @@
+{
+  "status": "RESULTS_WRITTEN",
+  "completed_at": "2026-10-06T17:23:27.489084+00:00",
+  "stage2_scientific_decision": "AWAITING_RAW_EVIDENCE_REVIEW",
+  "stage3_started": false,
+  "scientific_training_beyond_registration": 0,
+  "github_results_status": "AWAITING_PUBLICATION_REVIEW"
+}

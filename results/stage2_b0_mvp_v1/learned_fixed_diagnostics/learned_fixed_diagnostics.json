@@ -1,0 +1,2101 @@
+{
+  "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+  "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+  "status": "DIAGNOSTICS_COMPLETE",
+  "cases": [
+    {
+      "training_seed": 11,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_11_100000.pt",
+      "case_id": "R01_horizontal_empty",
+      "environmental_seed": 810001,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R01_horizontal_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810001,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 32.367173823720655,
+      "reward_components": {
+        "progress": 52.91220355934076,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -10.545029735619456
+      },
+      "path_length_m": 155.88505808107894,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 6.787796440659295,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 11,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_11_100000.pt",
+      "case_id": "R02_deeper_empty",
+      "environmental_seed": 810002,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          12.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        28.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R02_deeper_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810002,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          12.07729879516809
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 40.394514199100925,
+      "reward_components": {
+        "progress": 52.32522158162886,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -1.9307073825272374
+      },
+      "path_length_m": 173.59577971432788,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 9.471477203411387,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 11,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_11_100000.pt",
+      "case_id": "R03_shallower_empty",
+      "environmental_seed": 810003,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          28.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        12.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R03_shallower_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810003,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          27.92270120483191
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 35.748432150003886,
+      "reward_components": {
+        "progress": 47.93524878429602,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -2.186816634291411
+      },
+      "path_length_m": 107.08981678524435,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 13.861450000744226,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 11,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_11_300000.pt",
+      "case_id": "R04_head_on_lateral_offset",
+      "environmental_seed": 810004,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R04_head_on_lateral_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810004,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 18.382684451401403,
+      "reward_components": {
+        "progress": 28.720843885871727,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -0.338159434469608
+      },
+      "path_length_m": 110.42817877586154,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 6.1928663101767665,
+      "final_goal_distance_m": 30.979156114128397,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 11,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_11_300000.pt",
+      "case_id": "R05_crossing",
+      "environmental_seed": 810005,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R05_crossing",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810005,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.40000000000006,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 25.613650861600796,
+      "reward_components": {
+        "progress": 36.06602580232734,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -0.452374940726079
+      },
+      "path_length_m": 208.65514992804816,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 7.2856785667798025,
+      "final_goal_distance_m": 23.63397419767259,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 11,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_11_300000.pt",
+      "case_id": "R06_head_on_vertical_offset",
+      "environmental_seed": 810006,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R06_head_on_vertical_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810006,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 11.901243107915725,
+      "reward_components": {
+        "progress": 22.072050582809823,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -0.17080747489350653
+      },
+      "path_length_m": 116.76837736130518,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 9.88497741191996,
+      "final_goal_distance_m": 37.62794941719017,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 22,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_22_100000.pt",
+      "case_id": "R01_horizontal_empty",
+      "environmental_seed": 810001,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 250,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R01_horizontal_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810001,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 49.947359893030566,
+      "reward": 48.81234284972646,
+      "reward_components": {
+        "progress": 52.90476382860356,
+        "goal": 0.0,
+        "time": -2.4973679946515235,
+        "smoothness": -1.5950529842255874
+      },
+      "path_length_m": 68.50478345720516,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 6.7952361713964216,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 22,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_22_100000.pt",
+      "case_id": "R02_deeper_empty",
+      "environmental_seed": 810002,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          12.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        28.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 261,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R02_deeper_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810002,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          12.07729879516809
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 52.159874742091375,
+      "reward": 43.38046826249699,
+      "reward_components": {
+        "progress": 50.25455703078555,
+        "goal": 0.0,
+        "time": -2.6079937371045627,
+        "smoothness": -4.266095031183982
+      },
+      "path_length_m": 73.43604471856568,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 11.542141754254555,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 22,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_22_100000.pt",
+      "case_id": "R03_shallower_empty",
+      "environmental_seed": 810003,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          28.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        12.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 406,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R03_shallower_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810003,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          27.92270120483191
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 81.02494499257638,
+      "reward": 42.2410852119371,
+      "reward_components": {
+        "progress": 47.264578986822805,
+        "goal": 0.0,
+        "time": -4.051247249628802,
+        "smoothness": -0.9722465252569418
+      },
+      "path_length_m": 98.43366393660529,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 14.53211979821728,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 22,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_22_300000.pt",
+      "case_id": "R04_head_on_lateral_offset",
+      "environmental_seed": 810004,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 312,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R04_head_on_lateral_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810004,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 62.27888678652612,
+      "reward": -6.783591147208698,
+      "reward_components": {
+        "progress": -3.4902975028575867,
+        "goal": 0.0,
+        "time": -3.1139443393262956,
+        "smoothness": -0.1793493050248084
+      },
+      "path_length_m": 67.9989141062632,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 5.643842636651867,
+      "final_goal_distance_m": 63.190297502857575,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 22,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_22_300000.pt",
+      "case_id": "R05_crossing",
+      "environmental_seed": 810005,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R05_crossing",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810005,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.40000000000006,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 15.273925673846833,
+      "reward_components": {
+        "progress": 25.46981617092965,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -0.19589049708224046
+      },
+      "path_length_m": 188.57136463907352,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 13.91852475286878,
+      "final_goal_distance_m": 34.23018382907034,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 22,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_22_300000.pt",
+      "case_id": "R06_head_on_vertical_offset",
+      "environmental_seed": 810006,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 550,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R06_head_on_vertical_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810006,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 109.8138351677961,
+      "reward": 38.92913846056443,
+      "reward_components": {
+        "progress": 44.53761644592679,
+        "goal": 0.0,
+        "time": -5.49069175838984,
+        "smoothness": -0.11778622697244866
+      },
+      "path_length_m": 65.43011864278387,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 4.905951835684865,
+      "final_goal_distance_m": 15.162383554073212,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 33,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_33_100000.pt",
+      "case_id": "R01_horizontal_empty",
+      "environmental_seed": 810001,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R01_horizontal_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810001,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 31.992285995568515,
+      "reward_components": {
+        "progress": 43.35666825694959,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -1.3643822613803553
+      },
+      "path_length_m": 152.52403239474447,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 16.343331743050477,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 33,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_33_100000.pt",
+      "case_id": "R02_deeper_empty",
+      "environmental_seed": 810002,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          12.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        28.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R02_deeper_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810002,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          12.07729879516809
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 30.769907905498066,
+      "reward_components": {
+        "progress": 43.53730778994658,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -2.767399884447951
+      },
+      "path_length_m": 155.1473130093054,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 18.259390995093504,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 33,
+      "model_transition": 100000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_33_100000.pt",
+      "case_id": "R03_shallower_empty",
+      "environmental_seed": 810003,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          28.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        12.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 1000,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R03_shallower_empty",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810003,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.289870481880357,
+          50.0,
+          27.92270120483191
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.260602391747341,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [],
+      "failure_type": "task_horizon",
+      "success": false,
+      "physical_time_s": 200.00000000001145,
+      "reward": 43.56255414044031,
+      "reward_components": {
+        "progress": 54.21675082581608,
+        "goal": 0.0,
+        "time": -10.000000000000524,
+        "smoothness": -0.6541966853752236
+      },
+      "path_length_m": 153.50896361374754,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": null,
+      "final_goal_distance_m": 7.579947959224013,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 33,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_33_300000.pt",
+      "case_id": "R04_head_on_lateral_offset",
+      "environmental_seed": 810004,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 253,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R04_head_on_lateral_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810004,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            53.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 50.57566905722518,
+      "reward": 41.823001970158415,
+      "reward_components": {
+        "progress": 44.45719373902054,
+        "goal": 0.0,
+        "time": -2.5287834528612536,
+        "smoothness": -0.10540831600089244
+      },
+      "path_length_m": 62.65059672142929,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 4.688120205088699,
+      "final_goal_distance_m": 15.242806260979439,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 33,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_33_300000.pt",
+      "case_id": "R05_crossing",
+      "environmental_seed": 810005,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.0,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 296,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R05_crossing",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810005,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            50.0,
+            36.40000000000006,
+            20.0
+          ],
+          "velocity_ned_mps": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 59.05989301092097,
+      "reward": 41.522239488446296,
+      "reward_components": {
+        "progress": 44.584677834138006,
+        "goal": 0.0,
+        "time": -2.9529946505460396,
+        "smoothness": -0.10944369514566955
+      },
+      "path_length_m": 59.382675708555716,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 5.391139328518896,
+      "final_goal_distance_m": 15.115322165861981,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    },
+    {
+      "training_seed": 33,
+      "model_transition": 300000,
+      "code_version": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+      "method": "B0_FULL_STATE_ORDINARY_SAC",
+      "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+      "device": "cuda",
+      "model_file": "models/seed_33_300000.pt",
+      "case_id": "R06_head_on_vertical_offset",
+      "environmental_seed": 810006,
+      "run_kind": "learned_policy_fixed_case_diagnostic",
+      "split": "learned_fixed_diagnostic",
+      "initial_state": {
+        "position_ned_m": [
+          20.0,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": -0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            60.0,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "goal_position_ned_m": [
+        80.0,
+        50.0,
+        20.0
+      ],
+      "attempt_count": 1,
+      "maximum_attempts": 1,
+      "maximum_transitions": 1000,
+      "diagnostic_env_transitions": 252,
+      "diagnostic_warmup_control_transitions": 5,
+      "diagnostic_sac_updates": 0,
+      "training_replay_writes": 0,
+      "complete": true,
+      "status": "COMPLETE",
+      "trajectories_file": "trajectory.csv",
+      "obstacle_trajectories_file": "obstacles.csv",
+      "warmup": {
+        "scenario_id": "learned-fixed-R06_head_on_vertical_offset",
+        "policy_version": null,
+        "warmup_duration_s": 1.0,
+        "warmup_measurement_times_s": [
+          0.0,
+          0.2,
+          0.4,
+          0.6000000000000001,
+          0.8,
+          1.0
+        ],
+        "episode_start_timestamp_s": 1.0,
+        "root_seed": 810006,
+        "rng_namespaces": [
+          "scenario",
+          "sensor_noise",
+          "dropout",
+          "environment"
+        ],
+        "method": "B0_FULL_STATE_SAC",
+        "observation_method": "CURRENT_TRUTH",
+        "risk_training": false,
+        "safety_validation": false,
+        "truth_age_s": 0.0,
+        "cost_semantics": "physical_failure_diagnostic_only"
+      },
+      "formal_initial_state": {
+        "position_ned_m": [
+          20.30000000000001,
+          50.0,
+          20.0
+        ],
+        "yaw_rad": 0.0,
+        "pitch_rad": 0.0,
+        "surge_speed_mps": 0.3,
+        "yaw_rate_rad_s": 0.0,
+        "pitch_rate_rad_s": 0.0
+      },
+      "formal_initial_obstacles": [
+        {
+          "obstacle_id": 1,
+          "position_ned_m": [
+            59.59999999999994,
+            50.0,
+            24.0
+          ],
+          "velocity_ned_mps": [
+            -0.4,
+            0.0,
+            0.0
+          ],
+          "radius_m": 0.6
+        }
+      ],
+      "failure_type": "operational_boundary_failure",
+      "success": false,
+      "physical_time_s": 50.30742307412008,
+      "reward": 42.4508292913977,
+      "reward_components": {
+        "progress": 45.080879921233915,
+        "goal": 0.0,
+        "time": -2.515371153705999,
+        "smoothness": -0.1146794761302031
+      },
+      "path_length_m": 61.2311622088036,
+      "path_length_definition": "CONTROL_NODE_POLYLINE",
+      "action_saturation_count": 0,
+      "minimum_clearance_m": 5.153485698445053,
+      "final_goal_distance_m": 14.61912007876609,
+      "operation_limits_satisfied": true,
+      "actor_parameters_unchanged": true,
+      "actor_gradient_operations": 0,
+      "scope": "Only this registered fixed case; not train-v1 reachability or a new baseline"
+    }
+  ],
+  "diagnostic_env_transitions": 12580,
+  "diagnostic_warmup_control_transitions": 90,
+  "diagnostic_sac_updates": 0,
+  "training_replay_writes": 0,
+  "actor_gradient_operations": 0,
+  "claim": "Fixed-case learned policy diagnostic only; no all-scenario reachability claim"
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "command": [
+      "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Scripts\\python.exe",
+      "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\scripts\\analyze_b0_mvp.py",
+      "--batch-root",
+      "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1",
+      "--learned-diagnostics",
+      "--trusted-local-models"
+    ],
+    "start_utc": "2026-10-06T17:22:39.383270+00:00",
+    "end_utc": "2026-10-06T17:23:16.689336+00:00",
+    "exit_code": 0,
+    "experiment_code_commit": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898"
+  },
+  {
+    "command": [
+      "C:\\Users\\MSN\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\scripts\\analyze_b0_mvp.py",
+      "--plot-only",
+      "--analysis-json",
+      "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\analysis\\batch_analysis.json",
+      "--output-dir",
+      "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\analysis\\figures"
+    ],
+    "start_utc": "2026-10-06T17:23:16.695236+00:00",
+    "end_utc": "2026-10-06T17:23:27.485121+00:00",
+    "exit_code": 0,
+    "experiment_code_commit": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898"
+  }
+]

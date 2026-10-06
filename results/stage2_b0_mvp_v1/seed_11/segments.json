@@ -1,0 +1,20 @@
+[
+  {
+    "segment_id": "segment_0001",
+    "path": "seed_11/segments/segment_0001",
+    "parent_checkpoint": null,
+    "valid_log_sequence": 90171,
+    "status": "PAUSED",
+    "created_at": "2026-10-06T12:56:58.036491+00:00",
+    "updated_at": "2026-10-06T13:24:23.042713+00:00"
+  },
+  {
+    "segment_id": "segment_0002",
+    "path": "seed_11/segments/segment_0002",
+    "parent_checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\seed_11\\latest_resume.pt",
+    "valid_log_sequence": 290502,
+    "status": "COMPLETED",
+    "created_at": "2026-10-06T14:26:02.305625+00:00",
+    "updated_at": "2026-10-06T15:33:00.133319+00:00"
+  }
+]

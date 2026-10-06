@@ -1,0 +1,151 @@
+results\stage2_b0_mvp_v1\build_final_record.py:162:96: E501 Line too long (110 > 100)
+    |
+160 |         '最终公开提交见PUBLICATION.json及远端分支引用，不要求报告包含自身提交ID。', '',
+161 |         '## 实际执行与计数', '',
+162 |         '| seed | 无障碍transition/update | CV transition/update | 合计transition/update | optimizer steps |',
+    |                                                                                                     ^^^^^^^^^^ E501
+163 |         '| --- | ---: | ---: | ---: | ---: |',
+164 |     ]
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:167:101: E501 Line too long (102 > 100)
+    |
+165 |     for seed, record in seeds.items():
+166 |         lines.append(f"| {seed} | 100000/{record['obstacle_free_updates']} | "
+167 |                      f"200000/{record['cv_updates']} | {record['transitions']}/{record['updates']} | "
+    |                                                                                                     ^^ E501
+168 |                      f"{record['optimizer_steps']} |")
+169 |     lines.extend([
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:170:91: E501 Line too long (105 > 100)
+    |
+168 |                      f"{record['optimizer_steps']} |")
+169 |     lines.extend([
+170 |         '', f"实测总科研训练 **{totals['transitions']} transitions、{totals['updates']}完整SAC update、",
+    |                                                                                                     ^^^^^ E501
+171 |         f"{totals['optimizer_steps']} optimizer steps**。计数与确认后的逐条update、episode日志一致。",
+172 |         '同seed保留网络/Adam/alpha/Replay/RNG跨100k课程；其他seed独立初始化。',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:171:85: E501 Line too long (102 > 100)
+    |
+169 |     lines.extend([
+170 |         '', f"实测总科研训练 **{totals['transitions']} transitions、{totals['updates']}完整SAC update、",
+171 |         f"{totals['optimizer_steps']} optimizer steps**。计数与确认后的逐条update、episode日志一致。",
+    |                                                                                                     ^^ E501
+172 |         '同seed保留网络/Adam/alpha/Replay/RNG跨100k课程；其他seed独立初始化。',
+173 |         '每seed9999步不更新，10000首次更新；无重复learning_starts；2环境共用预算。',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:174:92: E501 Line too long (109 > 100)
+    |
+172 |         '同seed保留网络/Adam/alpha/Replay/RNG跨100k课程；其他seed独立初始化。',
+173 |         '每seed9999步不更新，10000首次更新；无重复learning_starts；2环境共用预算。',
+174 |         f"完整训练episode {result['complete_training_episodes']}，另6个phase_boundary及6个budget_stop片段；",
+    |                                                                                                     ^^^^^^^^^ E501
+175 |         '未完成片段不作事件分母、不补reward、不改Replay终止标记、不额外推进。',
+176 |         f"验证 **{totals['evaluation_env_transitions']}** transitions（42点、2880完整episode）；",
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:179:93: E501 Line too long (118 > 100)
+    |
+177 |         f"训练warm-up {totals['training_warmup_transitions']}、验证warm-up "
+178 |         f"{totals['evaluation_warmup_control_transitions']}控制transition，均不写训练Replay、不计学习起步。",
+179 |         f"独立learned策略诊断 {diagnostics['diagnostic_env_transitions']} transitions、90warm-up，0更新/Replay写入。",
+    |                                                                                                      ^^^^^^^^^^^^^^^^^ E501
+180 |         '科研失败/意外中断/重算0；3次100k→CV加载是预登记恢复，不是失败重试。',
+181 |         f"实测训练计时 {totals['training_seconds']/3600:.4f}h、验证计时 "
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:182:98: E501 Line too long (106 > 100)
+    |
+180 |         '科研失败/意外中断/重算0；3次100k→CV加载是预登记恢复，不是失败重试。',
+181 |         f"实测训练计时 {totals['training_seconds']/3600:.4f}h、验证计时 "
+182 |         f"{totals['evaluation_seconds']/3600:.4f}h、checkpoint保存 {totals['checkpoint_seconds']:.3f}s；",
+    |                                                                                                     ^^^^^^ E501
+183 |         f"批次实际elapsed {result['elapsed_batch_seconds']/3600:.4f}h（不含最后分析）。",
+184 |         'warm-up数量独立计账，其wall-clock没有单独instrument：部分包含在step/reset计时中，',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:185:68: E501 Line too long (101 > 100)
+    |
+183 |         f"批次实际elapsed {result['elapsed_batch_seconds']/3600:.4f}h（不含最后分析）。",
+184 |         'warm-up数量独立计账，其wall-clock没有单独instrument：部分包含在step/reset计时中，',
+185 |         '不能把一秒模拟暖机写成一秒实测墙钟。计时用于运行记账，未开展正式throughput benchmark。', '',
+    |                                                                                                     ^ E501
+186 |         '## 固定终点Val300（每行分母300，普通B0，不作安全方法比较）', '',
+187 |         '| seed | profile/终点 | 成功 | 碰撞 | 操作边界失败 | 超时 | SR | mean reward |',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:196:101: E501 Line too long (102 > 100)
+    |
+194 |                      f"{events['goal_success']} | {events['collision']} | "
+195 |                      f"{events['operational_boundary_failure']} | {events['task_horizon']} | "
+196 |                      f"{100*stats['success_rate']:.4f}% | {stats['moments']['reward']['mean']:.6f} |")
+    |                                                                                                     ^^ E501
+197 |     lines.extend(['', '跨独立训练seed N=3；样本SD分母n−1，不把episode当独立seed。'])
+198 |     for endpoint in analysis['val300_seed_mean_sd']:
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:228:78: E501 Line too long (111 > 100)
+    |
+226 |         '8个边界失败诊断的实际终态pitch均触及±30°，位置仍在操作盒内；具体CSV引用见MVP_RESULT.json。',
+227 |         '验证的boundary还包含位置球包络、姿态、速度/角率限制；没有完整终态的验证点不能全部归因为位置越界。',
+228 |         'seed11空场景Val index0/1超时时距目标约9.0/8.7m；seed22 index0边界终止仍距目标3.59m，未进入2m目标球。',
+    |                                                                                                     ^^^^^^^^^^^ E501
+229 |         '固定轨迹indices0/1/2+最早失败index共127条、72864节点，成功与失败均保留。',
+230 |         '高正reward/局部进展不能替代到达：冻结reward只有progress、goal、时间和动作平滑项，',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:233:92: E501 Line too long (109 > 100)
+    |
+231 |         '无额外失败奖励惩罚；这是冻结语义，不据此擅自改reward或宣布实现bug。', '',
+232 |         '## 真实验收、范围及缺陷', '',
+233 |         '**本轮全仓561 passed，0 failed/errors/skipped；外置PhaseA13 passed；Ruff0.6.0/compileall exit0。**',
+    |                                                                                                     ^^^^^^^^^ E501
+234 |         '实际测试发生在34f2d4a前驱加工作树，完全相同的被测源码/配置/测试随后提交45f3cc8；',
+235 |         '登记与被测代码已在训练前提交推送。历史461+13及Stage0/1记录不当成本轮新运行。',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:248:80: E501 Line too long (109 > 100)
+    |
+246 |         '## 本机保留、公开发布与科学判断', '',
+247 |         '本机models/seed_{11,22,33}_{100000,300000}.pt以及seed_*/latest_resume.pt保留，',
+248 |         '有效原始episode/update/validation与segment cutoffs保留；最近全状态可恢复，不存所有25k Replay副本。',
+    |                                                                                                     ^^^^^^^^^ E501
+249 |         '公开两个episode CSV及选定轨迹CSV.gz、Val清单、统计/曲线、18固定诊断、必要测试与命令。',
+250 |         '压缩21,450,928→7,511,523字节，经直接字节流往返一致检查；原CSV留本机，非项目ZIP/摘要封存。',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:252:92: E501 Line too long (141 > 100)
+    |
+250 |         '压缩21,450,928→7,511,523字节，经直接字节流往返一致检查；原CSV留本机，非项目ZIP/摘要封存。',
+251 |         '不上传模型/Replay/虚拟环境/Word原件/私人上下文/大update和rawvalidation日志。',
+252 |         f"本轮结果目录当前 {storage['task_directory_bytes']} bytes（{storage['task_directory_bytes']/2**30:.3f}GiB，测量范围/时点见JSON）；",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ E501
+253 |         f"仅清理自生成可再生单测夹具 {storage['cleaned_regenerable_fixture_bytes']} bytes；原数据/模型未删除。",
+254 |         f"已观测进程峰值RAM {result['observed_process_peak_rss_bytes']} bytes；GPU为资源快照，未instrument分配峰值。",
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:253:83: E501 Line too long (112 > 100)
+    |
+251 |         '不上传模型/Replay/虚拟环境/Word原件/私人上下文/大update和rawvalidation日志。',
+252 |         f"本轮结果目录当前 {storage['task_directory_bytes']} bytes（{storage['task_directory_bytes']/2**30:.3f}GiB，测量范围/时点见JSON）；",
+253 |         f"仅清理自生成可再生单测夹具 {storage['cleaned_regenerable_fixture_bytes']} bytes；原数据/模型未删除。",
+    |                                                                                                     ^^^^^^^^^^^^ E501
+254 |         f"已观测进程峰值RAM {result['observed_process_peak_rss_bytes']} bytes；GPU为资源快照，未instrument分配峰值。",
+255 |         '最后normal Git diff确认科研源码、测试、配置、依赖、冻结登记相对45f无漂移。', '',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:254:86: E501 Line too long (118 > 100)
+    |
+252 |         f"本轮结果目录当前 {storage['task_directory_bytes']} bytes（{storage['task_directory_bytes']/2**30:.3f}GiB，测量范围/时点见JSON）；",
+253 |         f"仅清理自生成可再生单测夹具 {storage['cleaned_regenerable_fixture_bytes']} bytes；原数据/模型未删除。",
+254 |         f"已观测进程峰值RAM {result['observed_process_peak_rss_bytes']} bytes；GPU为资源快照，未instrument分配峰值。",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^ E501
+255 |         '最后normal Git diff确认科研源码、测试、配置、依赖、冻结登记相对45f无漂移。', '',
+256 |         '严格按LOCAL§25.3：**GO证据未建立**。固定可达任务0/18、随机CV终点极少成功，',
+    |
+
+Found 15 errors.

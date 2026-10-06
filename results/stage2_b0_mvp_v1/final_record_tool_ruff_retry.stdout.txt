@@ -1,0 +1,21 @@
+results\stage2_b0_mvp_v1\build_final_record.py:193:68: E501 Line too long (101 > 100)
+    |
+191 |         'warm-up数量独立计账，其wall-clock没有单独instrument：'
+192 |         '部分包含在step/reset计时中，',
+193 |         '不能把一秒模拟暖机写成一秒实测墙钟。计时用于运行记账，未开展正式throughput benchmark。', '',
+    |                                                                                                     ^ E501
+194 |         '## 固定终点Val300（每行分母300，普通B0，不作安全方法比较）', '',
+195 |         '| seed | profile/终点 | 成功 | 碰撞 | 操作边界失败 | 超时 | SR | mean reward |',
+    |
+
+results\stage2_b0_mvp_v1\build_final_record.py:237:78: E501 Line too long (111 > 100)
+    |
+235 |         '8个边界失败诊断的实际终态pitch均触及±30°，位置仍在操作盒内；具体CSV引用见MVP_RESULT.json。',
+236 |         '验证的boundary还包含位置球包络、姿态、速度/角率限制；没有完整终态的验证点不能全部归因为位置越界。',
+237 |         'seed11空场景Val index0/1超时时距目标约9.0/8.7m；seed22 index0边界终止仍距目标3.59m，未进入2m目标球。',
+    |                                                                                                     ^^^^^^^^^^^ E501
+238 |         '固定轨迹indices0/1/2+最早失败index共127条、72864节点，成功与失败均保留。',
+239 |         '高正reward/局部进展不能替代到达：冻结reward只有progress、goal、时间和动作平滑项，',
+    |
+
+Found 2 errors.

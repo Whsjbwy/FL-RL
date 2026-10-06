@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="8" time="4.160" timestamp="2026-10-06T20:45:29.551060+08:00" hostname="BrasseBobi"><testcase classname="tests.test_b0_mvp_batch" name="test_mock_six_jobs_independent_initialization_then_each_own_resume" time="0.100"><failure message="AttributeError: 'MockCurriculumHarness' object has no attribute 'evaluation_warmup_control_transitions'">mock_batch = None
+tmp_path = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/test_temp_batch/test_mock_six_jobs_independent0')
+
+    def test_mock_six_jobs_independent_initialization_then_each_own_resume(
+        mock_batch: None, tmp_path: Path,
+    ) -&gt; None:
+        """3seed先各100k再各恢复到300k；所有跳计数均mock，真实训练次数为0。"""
+&gt;       state = mvp_batch.run_batch(tmp_path, deepcopy(APPROVED))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_b0_mvp_batch.py:188: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\auv_risk_rl\training\mvp_batch.py:361: in run_batch
+    save()
+src\auv_risk_rl\training\mvp_batch.py:357: in save
+    progress()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+harness = &lt;test_b0_mvp_batch.MockCurriculumHarness object at 0x000002B2A1868050&gt;
+row = {'training_seconds': 0.0, 'evaluation_seconds': 4.900000931229442e-06, 'checkpoint_seconds': 0.002943899999081623, 'status': 'RUNNING', ...}
+seed = 11
+
+    def progress(*, harness: Any = harness, row: dict[str, Any] = row,
+                 seed: int = seed) -&gt; None:
+        """累计数为真实harness/Agent计数，不把计划预算填为实测。"""
+        row.update(transitions=harness.transitions,
+                   updates=harness.agent.counters['gradient_updates'],
+                   optimizer_steps=sum(harness.agent.counters[key]
+                                       for key in ('actor', 'q1', 'q2', 'alpha')),
+                   profile=harness.current_profile, replay_size=len(harness.agent.replay),
+                   evaluation_env_transitions=harness.evaluation_env_transitions,
+                   evaluation_warmup_control_transitions=(
+&gt;                      harness.evaluation_warmup_control_transitions),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   training_warmup_transitions=harness.started_episodes * 5,
+                   completed_episodes=harness.completed_episodes,
+                   last_progress_at=utc())
+E       AttributeError: 'MockCurriculumHarness' object has no attribute 'evaluation_warmup_control_transitions'
+
+src\auv_risk_rl\training\mvp_batch.py:325: AttributeError</failure></testcase><testcase classname="tests.test_b0_mvp_batch" name="test_mock_completed_resume_does_not_repeat_jobs" time="0.055"><failure message="AttributeError: 'MockCurriculumHarness' object has no attribute 'evaluation_warmup_control_transitions'">mock_batch = None
+tmp_path = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/test_temp_batch/test_mock_completed_resume_doe0')
+
+    def test_mock_completed_resume_does_not_repeat_jobs(mock_batch: None, tmp_path: Path) -&gt; None:
+        """COMPLETED恢复只是读取批次状态，不能重新初始化/采样或写模型。"""
+&gt;       first = mvp_batch.run_batch(tmp_path, deepcopy(APPROVED))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_b0_mvp_batch.py:218: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\auv_risk_rl\training\mvp_batch.py:361: in run_batch
+    save()
+src\auv_risk_rl\training\mvp_batch.py:357: in save
+    progress()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+harness = &lt;test_b0_mvp_batch.MockCurriculumHarness object at 0x000002B2A18BC410&gt;
+row = {'training_seconds': 0.0, 'evaluation_seconds': 5.100002454128116e-06, 'checkpoint_seconds': 0.0028125000026193447, 'status': 'RUNNING', ...}
+seed = 11
+
+    def progress(*, harness: Any = harness, row: dict[str, Any] = row,
+                 seed: int = seed) -&gt; None:
+        """累计数为真实harness/Agent计数，不把计划预算填为实测。"""
+        row.update(transitions=harness.transitions,
+                   updates=harness.agent.counters['gradient_updates'],
+                   optimizer_steps=sum(harness.agent.counters[key]
+                                       for key in ('actor', 'q1', 'q2', 'alpha')),
+                   profile=harness.current_profile, replay_size=len(harness.agent.replay),
+                   evaluation_env_transitions=harness.evaluation_env_transitions,
+                   evaluation_warmup_control_transitions=(
+&gt;                      harness.evaluation_warmup_control_transitions),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   training_warmup_transitions=harness.started_episodes * 5,
+                   completed_episodes=harness.completed_episodes,
+                   last_progress_at=utc())
+E       AttributeError: 'MockCurriculumHarness' object has no attribute 'evaluation_warmup_control_transitions'
+
+src\auv_risk_rl\training\mvp_batch.py:325: AttributeError</failure></testcase><testcase classname="tests.test_b0_mvp_batch" name="test_mock_failure_keeps_only_last_valid_checkpoint_and_no_automatic_retry" time="0.063"><failure message="AttributeError: 'MockCurriculumHarness' object has no attribute 'evaluation_warmup_control_transitions'">mock_batch = None
+tmp_path = WindowsPath('D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE/results/stage2_b0_mvp_v1/test_temp_batch/test_mock_failure_keeps_only_l0')
+
+    def test_mock_failure_keeps_only_last_valid_checkpoint_and_no_automatic_retry(
+        mock_batch: None, tmp_path: Path,
+    ) -&gt; None:
+        """seed22半步失败保留0步有效续点，不伪装25000完成或自动重复故障预算。"""
+        MockCurriculumHarness.failure_seed = 22
+        MockCurriculumHarness.failure_transition = 25000
+        with pytest.raises(RuntimeError, match='injected partial-step failure'):
+&gt;           mvp_batch.run_batch(tmp_path, deepcopy(APPROVED))
+
+tests\test_b0_mvp_batch.py:233: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\auv_risk_rl\training\mvp_batch.py:361: in run_batch
+    save()
+src\auv_risk_rl\training\mvp_batch.py:357: in save
+    progress()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+harness = &lt;test_b0_mvp_batch.MockCurriculumHarness object at 0x000002B2A18BD6D0&gt;
+row = {'training_seconds': 0.0, 'evaluation_seconds': 4.399997123982757e-06, 'checkpoint_seconds': 0.002857400002540089, 'status': 'RUNNING', ...}
+seed = 11
+
+    def progress(*, harness: Any = harness, row: dict[str, Any] = row,
+                 seed: int = seed) -&gt; None:
+        """累计数为真实harness/Agent计数，不把计划预算填为实测。"""
+        row.update(transitions=harness.transitions,
+                   updates=harness.agent.counters['gradient_updates'],
+                   optimizer_steps=sum(harness.agent.counters[key]
+                                       for key in ('actor', 'q1', 'q2', 'alpha')),
+                   profile=harness.current_profile, replay_size=len(harness.agent.replay),
+                   evaluation_env_transitions=harness.evaluation_env_transitions,
+                   evaluation_warmup_control_transitions=(
+&gt;                      harness.evaluation_warmup_control_transitions),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   training_warmup_transitions=harness.started_episodes * 5,
+                   completed_episodes=harness.completed_episodes,
+                   last_progress_at=utc())
+E       AttributeError: 'MockCurriculumHarness' object has no attribute 'evaluation_warmup_control_transitions'
+
+src\auv_risk_rl\training\mvp_batch.py:325: AttributeError</failure></testcase><testcase classname="tests.test_b0_mvp_batch" name="test_mock_resume_without_state_is_rejected" time="0.006" /><testcase classname="tests.test_b0_mvp_batch" name="test_segment_resume_cutoff_excludes_unconfirmed_tail" time="0.036" /><testcase classname="tests.test_b0_mvp_batch" name="test_active_batch_lock_blocks_second_process" time="0.004" /><testcase classname="tests.test_b0_mvp_batch" name="test_stale_lock_requires_explicit_resume" time="0.004" /><testcase classname="tests.test_b0_mvp_batch" name="test_fresh_batch_rejects_orphan_checkpoint_before_any_resume" time="0.006" /></testsuite></testsuites>

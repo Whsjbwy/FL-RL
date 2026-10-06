@@ -1,0 +1,84 @@
+{
+  "created_at_utc": "2026-10-06T17:29:16.0950301Z",
+  "status": "COMPLETED",
+  "targets": [
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\test_temp_batch",
+      "bytes": 20813,
+      "purpose": "This task reproducible pytest temporary fixtures/cache; no scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\test_temp_pool_batch",
+      "bytes": 127315,
+      "purpose": "This task reproducible pytest temporary fixtures/cache; no scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\test_cache_batch",
+      "bytes": 1549,
+      "purpose": "This task reproducible pytest temporary fixtures/cache; no scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\test_cache_fixed_validation",
+      "bytes": 2669,
+      "purpose": "This task reproducible pytest temporary fixtures/cache; no scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\test_cache_pool_batch",
+      "bytes": 3466,
+      "purpose": "This task reproducible pytest temporary fixtures/cache; no scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\analysis_temp_01",
+      "bytes": 33300,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\curriculum_tmp_001",
+      "bytes": 23675911,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\identity_tmp_001",
+      "bytes": 0,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\identity_tmp_002",
+      "bytes": 0,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\plot_fixture",
+      "bytes": 433075,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\plot_trajectory_fixture",
+      "bytes": 479240,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_batch_root",
+      "bytes": 128793,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_curriculum_root",
+      "bytes": 49928472,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_entry_retry",
+      "bytes": 15344,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    },
+    {
+      "path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\development\\pytest_final",
+      "bytes": 312106567,
+      "purpose": "This task regenerable unit/synthetic plotting temporary fixtures, not scientific data/models"
+    }
+  ],
+  "removed_bytes": 386956514,
+  "scientific_data_or_models_deleted": false,
+  "completed_at_utc": "2026-10-06T17:30:57.5674989Z"
+}

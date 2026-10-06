@@ -1,0 +1,237 @@
+{
+  "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+  "registration": {
+    "registration_id": "STAGE2_B0_MVP_BATCH_V1",
+    "registration_document": "docs/STAGE2_B0_MVP_V1.md",
+    "run_kind": "scientific_training",
+    "method": "B0_FULL_STATE_ORDINARY_SAC",
+    "project_config": "configs/stage0.yaml",
+    "scenario_config": "configs/train_scenario_v1.yaml",
+    "output_directory": "results/stage2_b0_mvp_v1",
+    "training_seeds": [
+      11,
+      22,
+      33
+    ],
+    "transition_budget_per_seed": 300000,
+    "total_transition_budget": 900000,
+    "num_envs": 2,
+    "device": "cuda",
+    "curriculum": [
+      {
+        "profile": "obstacle_free",
+        "start": 1,
+        "end": 100000
+      },
+      {
+        "profile": "cv_train_v1",
+        "start": 100001,
+        "end": 300000
+      }
+    ],
+    "execution_order": [
+      {
+        "seed": 11,
+        "stop": 100000
+      },
+      {
+        "seed": 22,
+        "stop": 100000
+      },
+      {
+        "seed": 33,
+        "stop": 100000
+      },
+      {
+        "seed": 11,
+        "stop": 300000
+      },
+      {
+        "seed": 22,
+        "stop": 300000
+      },
+      {
+        "seed": 33,
+        "stop": 300000
+      }
+    ],
+    "retain_agent_optimizer_replay_at_switch": true,
+    "validation": {
+      "root_seed": 20261006,
+      "base_indices": {
+        "first": 0,
+        "last": 299
+      },
+      "monitor_indices": {
+        "first": 0,
+        "last": 29
+      },
+      "obstacle_free_monitor_steps": [
+        0,
+        25000,
+        50000,
+        75000
+      ],
+      "obstacle_free_full_steps": [
+        100000
+      ],
+      "cv_monitor_steps": [
+        100000,
+        125000,
+        150000,
+        175000,
+        200000,
+        225000,
+        250000,
+        275000
+      ],
+      "cv_full_steps": [
+        300000
+      ],
+      "task_horizon": 1000,
+      "deterministic": true,
+      "trajectory_indices": [
+        0,
+        1,
+        2
+      ],
+      "earliest_failure_trajectory": true
+    },
+    "checkpoint_interval": 25000,
+    "logging_flush_records": 100,
+    "primary_checkpoint": "final",
+    "sac": {
+      "gamma": 0.999,
+      "tau": 0.005,
+      "learning_rate": 0.0003,
+      "batch_size": 256,
+      "replay_capacity": 500000,
+      "learning_starts": 10000,
+      "utd": 1,
+      "initial_alpha": 0.2,
+      "target_entropy": -3.0
+    }
+  },
+  "experiment_code_commit": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+  "created_at": "2026-10-06T12:56:55.440716+00:00",
+  "status": "COMPLETED",
+  "completed_jobs": [
+    {
+      "seed": 11,
+      "stop": 100000
+    },
+    {
+      "seed": 22,
+      "stop": 100000
+    },
+    {
+      "seed": 33,
+      "stop": 100000
+    },
+    {
+      "seed": 11,
+      "stop": 300000
+    },
+    {
+      "seed": 22,
+      "stop": 300000
+    },
+    {
+      "seed": 33,
+      "stop": 300000
+    }
+  ],
+  "seeds": {
+    "11": {
+      "training_seconds": 4507.966850598343,
+      "evaluation_seconds": 1091.7968643000277,
+      "checkpoint_seconds": 42.96415549999074,
+      "status": "COMPLETED",
+      "checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\seed_11\\latest_resume.pt",
+      "checkpoint_transition": 300000,
+      "transitions": 300000,
+      "updates": 290001,
+      "optimizer_steps": 1160004,
+      "profile": "cv_train_v1",
+      "replay_size": 300000,
+      "evaluation_env_transitions": 651902,
+      "evaluation_warmup_control_transitions": 4800,
+      "training_warmup_transitions": 2430,
+      "completed_episodes": 482,
+      "phase_transition_counts": {
+        "obstacle_free": 100000,
+        "cv_train_v1": 200000
+      },
+      "last_progress_at": "2026-10-06T15:33:00.144003+00:00",
+      "obstacle_free_updates": 90001,
+      "cv_updates": 200000
+    },
+    "22": {
+      "training_seconds": 4153.101171499708,
+      "evaluation_seconds": 717.7282257000043,
+      "checkpoint_seconds": 36.441496799998276,
+      "status": "COMPLETED",
+      "checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\seed_22\\latest_resume.pt",
+      "checkpoint_transition": 300000,
+      "transitions": 300000,
+      "updates": 290001,
+      "optimizer_steps": 1160004,
+      "profile": "cv_train_v1",
+      "replay_size": 300000,
+      "evaluation_env_transitions": 414660,
+      "evaluation_warmup_control_transitions": 4800,
+      "training_warmup_transitions": 2840,
+      "completed_episodes": 564,
+      "phase_transition_counts": {
+        "obstacle_free": 100000,
+        "cv_train_v1": 200000
+      },
+      "last_progress_at": "2026-10-06T16:27:38.132768+00:00",
+      "obstacle_free_updates": 90001,
+      "cv_updates": 200000
+    },
+    "33": {
+      "training_seconds": 4236.48071509834,
+      "evaluation_seconds": 1050.8846543000109,
+      "checkpoint_seconds": 36.97703129999718,
+      "status": "COMPLETED",
+      "checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_mvp_v1\\seed_33\\latest_resume.pt",
+      "checkpoint_transition": 300000,
+      "transitions": 300000,
+      "updates": 290001,
+      "optimizer_steps": 1160004,
+      "profile": "cv_train_v1",
+      "replay_size": 300000,
+      "evaluation_env_transitions": 630084,
+      "evaluation_warmup_control_transitions": 4800,
+      "training_warmup_transitions": 2615,
+      "completed_episodes": 519,
+      "phase_transition_counts": {
+        "obstacle_free": 100000,
+        "cv_train_v1": 200000
+      },
+      "last_progress_at": "2026-10-06T17:22:39.124123+00:00",
+      "obstacle_free_updates": 90001,
+      "cv_updates": 200000
+    }
+  },
+  "pid": 43736,
+  "started_at": "2026-10-06T12:56:55.891120+00:00",
+  "current_seed": 33,
+  "current_stop": 300000,
+  "current_operation": "BATCH_FINISHED",
+  "evaluation_profile": "cv_train_v1",
+  "evaluation_at_transition": 300000,
+  "evaluation_full": true,
+  "last_progress_at": "2026-10-06T17:22:39.124136+00:00",
+  "current_validation_index": 299,
+  "current_validation_completed_episodes": 300,
+  "current_validation_transitions": 102333,
+  "current_validation_warmup_transitions": 1500,
+  "actual_training_transitions": 900000,
+  "actual_sac_updates": 870003,
+  "remaining_training_hours_estimate": 0.0,
+  "estimate_excludes_future_evaluation_and_save": true,
+  "completed_at": "2026-10-06T17:22:39.236736+00:00",
+  "scientific_stage2_decision": "AWAITING_RESULT_ANALYSIS"
+}

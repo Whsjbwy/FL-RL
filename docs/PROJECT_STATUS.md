@@ -1,3 +1,24 @@
+# 当前结果：STAGE2_B0_MVP_BATCH_V1（2026-10-07本机）
+
+**BATCH_COMPLETED；Stage2科学Gate暂缓裁决，GO未建立；Stage3未进入。**
+实际实验提交45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898，工作分支codex/stage2-b0-mvp-v1。
+三seed11/22/33各100k无障碍+200kCV，均300000真实transition/290001完整update；
+总900000/870003，3480012 optimizer steps。原普通SAC/动力学/reward/采样律不变。
+42固定验证点和2880完整episode齐全；无障碍Val300成功35/5/14，CV终点2/1/0。
+18次learned固定诊断0成功（10超时、8姿态边界失败）；不能当作已学会简单任务。
+本轮最终561+13真实通过、Ruff/compileall exit0；旧461+13仍为历史验收。
+复用Python3.13.5/Torch2.11.0+cu130/RTX5060；未重装或改变默认参数。
+科研有限性检查无异常，源/配置/测试/登记相对45f normal Git diff无变化；结果/工具提交独立。
+完整回执、计数、曲线、失败证据与存储见results/stage2_b0_mvp_v1/MVP_RESULT_REPORT.md和MVP_RESULT.json。
+本机模型/Replay/原始日志保留；公开轻量CSV/gzip/图及必要测试，发布回执见PUBLICATION.json。
+没有额外摘要/ZIP封存、throughput正式benchmark、预算追加、Stage3或联邦工作。
+GO证据不足；CONDITIONAL GO原因未确认；NO-GO有限修复前提未完成，不宣告研究假设失败。
+**唯一下一任务建议：Stage2 B0姿态边界及近目标超时的有界失败诊断。**
+不自动调参、重训或进入下一科学阶段。以下旧状态与“科研0/尚未授权”均为当时历史记录。
+
+---
+
+# 历史准备和迁入记录（保留原结论）
 # 项目状态：STAGE2_B0_PREPARATION
 
 2026-10-06 最新工程结论：**PREPARATION_READY**。LOCAL Stage2 科研仍为 **NOT RUN**。
