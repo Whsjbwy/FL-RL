@@ -1,0 +1,26 @@
+{
+  "all": {
+    "tests": 397,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "groups": {
+    "b1_retained": 34,
+    "b2": 75,
+    "b3": 81,
+    "b4": 73,
+    "b5_retained": 54,
+    "original": 34,
+    "stage1_new": 20,
+    "b51_scenario": 26
+  },
+  "phase_a": {
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "historical_pure_digest_cases_retired": 12,
+  "counts_generated_from_junit": true
+}

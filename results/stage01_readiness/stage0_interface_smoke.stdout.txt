@@ -1,0 +1,12 @@
+{
+  "initial_track_count": 1,
+  "decision_type": "nominal",
+  "executed_action": {
+    "surge_speed_command_mps": 0.8,
+    "yaw_rate_command_rad_s": 0.0,
+    "pitch_rate_command_rad_s": 0.0
+  },
+  "world_timestamp_s": 0.2,
+  "event_reason": "none",
+  "policy_track_count": 1
+}

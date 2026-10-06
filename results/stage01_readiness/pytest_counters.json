@@ -1,0 +1,15 @@
+{
+  "purpose": "unit/integration acceptance only; no scientific training task",
+  "pytest_exit_code": 0,
+  "counts": {
+    "world_step_calls": 2022,
+    "world_step_returns": 2015,
+    "local_env_step_calls": 1048,
+    "local_env_step_returns": 1047,
+    "adam_steps_in_unit_tests": 384,
+    "sgd_steps_in_unit_tests": 1
+  },
+  "nested_world_and_local_env_calls_must_not_be_added": true,
+  "scientific_rl_training_steps": 0,
+  "scientific_gradient_updates": 0
+}

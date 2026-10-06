@@ -1,0 +1,11 @@
+{
+  "measured_before_evidence_commit_utc": "2026-10-06T09:03:11.148423+00:00",
+  "new_acceptance_directory_bytes": 1040240,
+  "new_git_directory_bytes": 293387,
+  "new_acceptance_code_and_docs_bytes": 35760,
+  "no_source_or_environment_copies_created": true,
+  "no_original_data_or_models_deleted": true,
+  "own_temporary_cleanup": "temporary_cleanup.json",
+  "publication_selection": "code/config/tests/smalltext only; local protocols/private handoff/large outputs excluded",
+  "approximate_permanent_new_bytes": 1369387
+}

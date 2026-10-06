@@ -1,0 +1,68 @@
+FILE: stage1_ruff_initial_failure.txt
+Captured from the actual development command output, before the first new-test run.
+Command: .venv-b1/Scripts/python.exe -m ruff check scripts/run_stage1_acceptance.py tests/test_stage1_acceptance.py
+Exit code: 1
+
+scripts\run_stage1_acceptance.py:182:101: E501 Line too long (102 > 100)
+scripts\run_stage1_acceptance.py:375:101: E501 Line too long (106 > 100)
+Found 2 errors.
+
+Resolution: manually wrap these two new script lines. No bulk --fix, ignored rules,
+scientific parameter changes, or tolerance changes were used.
+FILE: stage1_ruff_final.txt
+scripts\run_stage1_acceptance.py:334:101: E501 Line too long (103 > 100)
+    |
+332 |                          offline_target_truth_position_ned_m=(
+333 |                              next(obstacle.position_ned_m.tolist()
+334 |                                   for obstacle in world.obstacle_states if obstacle.obstacle_id == 1)),
+    |                                                                                                     ^^^ E501
+335 |                          target_track_time_s=(target_track.state_timestamp_s
+336 |                                               if target_track is not None else None),
+    |
+
+Found 1 error.
+FILE: compile_initial_failure.txt
+Captured from the actual development command output.
+Command: .venv-b1/Scripts/python.exe -m compileall -q scripts/run_stage1_acceptance.py tests/test_stage1_acceptance.py
+Exit code: 1
+
+PermissionError: [Errno 13] Permission denied: 'D:\Demo-energy\_runtime\pycache\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\scripts\run_stage1_acceptance.cpython-313.pyc.2041177657616'
+PermissionError: [Errno 13] Permission denied: 'D:\Demo-energy\_runtime\pycache\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\tests\test_stage1_acceptance.cpython-313.pyc.2041177658256'
+
+Environment issue: existing PYTHONPYCACHEPREFIX selects an unwritable cache under
+the sandbox. The rerun sets a command-local writable cache below this task's
+generated results. Scientific code and compile checks are unchanged.
+FILE: digest_retirement_ruff.txt
+COMMAND: D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\.venv-b1\Scripts\python.exe -m ruff check scripts/run_stage0_audit.py tests/test_b1_audit_integrity.py tests/test_b5_integration.py
+EXIT CODE: 1
+tests\test_b5_integration.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+   |
+ 1 |   """B5编排、双动作、历史数学保持及checkpoint；仅工程测试。"""
+ 2 |   
+ 3 | / import inspect
+ 4 | | from copy import deepcopy
+ 5 | | 
+ 6 | | import numpy as np
+ 7 | | import pytest
+ 8 | | import torch
+ 9 | | 
+10 | | from auv_risk_rl.rl.agent import OrdinarySACAgent
+11 | | from auv_risk_rl.rl.constrained_runner import ConstrainedSACRunner
+12 | | from auv_risk_rl.rl.cost_agent import CostLearningAgent
+13 | | from auv_risk_rl.rl.cost_runner import CostLearningRunner
+14 | | from auv_risk_rl.rl.episode_cost import EpisodeCostLedger
+15 | | from auv_risk_rl.rl.losses import actor_loss
+16 | | from auv_risk_rl.rl.runner import OrdinarySACRunner
+17 | | from test_b3_integration import assert_tree, batch, make_env, transition
+18 | | from test_b4_learning import complete_fixture
+19 | | from test_b5_actor import make_agent
+20 | | 
+21 | | @pytest.fixture(autouse=True)
+   | |_^ I001
+22 |   def one_thread():
+23 |       previous = torch.get_num_threads()
+   |
+   = help: Organize imports
+
+Found 1 error.
+[*] 1 fixable with the `--fix` option.

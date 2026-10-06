@@ -1,0 +1,104 @@
+{
+  "created_at_utc": "2026-10-06T09:03:11.133729+00:00",
+  "task": "B5.1_GIT_MIGRATION_LOCAL_STAGE_0_STAGE_1_READINESS",
+  "scientific_stage0": "GO",
+  "scientific_stage1": "GO",
+  "stage2_preparation": "CONDITIONAL GO",
+  "stage2_training_authorized": false,
+  "tested_commits": [
+    "0bcc2531de0691890c67766ef66cde968ab797d7",
+    "34f83f6238068f6558d5b08d0881fb904d458f5e"
+  ],
+  "scientific_files_identical_between_tested_commits_by_git_diff": true,
+  "tests": {
+    "all": {
+      "tests": 397,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "groups": {
+      "b1_retained": 34,
+      "b2": 75,
+      "b3": 81,
+      "b4": 73,
+      "b5_retained": 54,
+      "original": 34,
+      "stage1_new": 20,
+      "b51_scenario": 26
+    },
+    "phase_a": {
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "historical_pure_digest_cases_retired": 12,
+    "counts_generated_from_junit": true
+  },
+  "command_exit_codes": {
+    "pytest_all": 1,
+    "pytest_phase_a": 0,
+    "stage1_acceptance": 0,
+    "stage0_interface_smoke": 0,
+    "ruff": 0,
+    "compileall": 0,
+    "stage0_quality_diagnostic": 1,
+    "pytest_all_after_tmp_permission_fix": 0
+  },
+  "initial_test_run": {
+    "passed": 355,
+    "failed": 0,
+    "errors": 42,
+    "skipped": 0,
+    "reason": "pytest tmp fixture permission WinError 5",
+    "preserved_junit": "pytest_all_initial.xml",
+    "preserved_log": "pytest_all_initial.stdout.txt"
+  },
+  "legacy_quality_diagnostic": {
+    "status": "FAIL",
+    "exit_code": 1,
+    "missing_docstrings": 39,
+    "english_only_comments": 3,
+    "lexical_magic_number_flags": "scenario config legality guards, not new parameter changes",
+    "rng_flag": "ReplayBuffer uses explicit seed; hidden RNG claim is lexical false positive",
+    "required_stage0_test_collection": "PASS (20 nodes)",
+    "evidence": "stage0_quality_diagnostic.stdout.txt",
+    "does_not_replace_local_scientific_gate": true
+  },
+  "b51_scenarios": {
+    "newly_executed_tests": 26,
+    "newly_executed_warmup_scenarios": 100,
+    "warmup_failed": 0,
+    "historical_distribution_summary_reused": true,
+    "sampling_law_changed": false
+  },
+  "stage1_nonlearning_world_transitions": 231,
+  "unit_test_counts": {
+    "world_step_calls": 2022,
+    "world_step_returns": 2015,
+    "local_env_step_calls": 1048,
+    "local_env_step_returns": 1047,
+    "adam_steps_in_unit_tests": 384,
+    "sgd_steps_in_unit_tests": 1
+  },
+  "unit_test_counts_nested_not_additive": true,
+  "scientific_rl_training_steps": 0,
+  "scientific_gradient_updates": 0,
+  "synthetic_gradient_checks_were_run": true,
+  "production_source_modified": [],
+  "config_modified": [],
+  "dependency_declarations_modified": [],
+  "extra_digest_checks": "RETIRED / NOT RUN",
+  "pure_digest_test_cases_retired": 12,
+  "scientific_assertions_preserved": true,
+  "throughput_benchmark": "NOT RUN; historical BLOCKED report unchanged",
+  "mvp_training": "NOT STARTED",
+  "federated_work": "NOT STARTED",
+  "unresolved": [
+    "Torch2.14.0+cpu differs from declared2.11.0; currentTorchCUDA unavailable",
+    "39docstring/3comment style findings remain; two lexical heuristics require separate tooling review",
+    "Stage2 reachability and B0 training entry/harness not implemented or run"
+  ],
+  "next_authorizable_task": "Stage2 preparation only: align declaredTorch environment, B0 Full-State ordinarySAC entry/harness and task reachability review; no risk training/execution filtering; no training until separately authorized"
+}

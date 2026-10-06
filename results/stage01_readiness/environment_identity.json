@@ -1,0 +1,14 @@
+{
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "PyYAML": "6.0.3",
+  "pytest": "9.1.1",
+  "torch": "2.14.0+cpu",
+  "torch_path": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Lib\\site-packages\\torch\\__init__.py",
+  "declared_torch": "2.11.0",
+  "torch_matches_declared": false,
+  "cuda_available": false,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies_changed_this_task": false
+}
