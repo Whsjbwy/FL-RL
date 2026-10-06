@@ -28,6 +28,7 @@ def main():
     commands = [
         ("pytest_all", [sys.executable, "-m", "pytest", "tests", "-q", "-p",
                         "no:cacheprovider", "-p", "results.stage01_readiness.pytest_counters",
+                        f"--basetemp={OUT / 'development/pytest_workspace'}",
                         f"--junitxml={OUT / 'pytest_all.xml'}"]),
         ("pytest_phase_a", [sys.executable, "-m", "pytest",
                             "handoff/reference_tests/test_phase_a_conformance.py", "-q",
