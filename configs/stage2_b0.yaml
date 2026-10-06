@@ -1,0 +1,39 @@
+# 科研运行准备快照；当前未授权执行，子任务预算/重置/Replay安排待登记。
+project_config: configs/stage0.yaml
+scenario_config: configs/train_scenario_v1.yaml
+harness:
+  method: B0_FULL_STATE_ORDINARY_SAC
+  run_kind: scientific_training
+  task_profile: obstacle_free
+  training_seed: 11
+  transition_budget: 300000
+  num_envs: 2
+  validation_interval: 25000
+  validation_episodes: 1
+  validation_max_steps: 1000
+  checkpoint_interval: 25000
+  external_max_steps: null
+  scenario_root_seed: null
+  research_registration: null
+  sac:
+    gamma: 0.999
+    tau: 0.005
+    learning_rate: 0.0003
+    batch_size: 256
+    replay_capacity: 500000
+    learning_starts: 10000
+    utd: 1
+    initial_alpha: 0.2
+    target_entropy: -3.0
+    device: cuda
+    initialization_seed: 0
+    actor_seed: 1
+    replay_seed: 2
+preparation:
+  execution_authorized: false
+  mvp_seeds: [11, 22, 33]
+  primary_comparison_checkpoint: final
+  obstacle_free_cv_budget_allocation: NOT_REGISTERED
+  cv_reinitialize_agent: NOT_REGISTERED
+  cv_keep_replay: NOT_REGISTERED
+  scientific_stage2_status: NOT_RUN

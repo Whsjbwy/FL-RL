@@ -7,7 +7,9 @@
 原 START_HERE/FIRST_TASK/CODEX_EXECUTION_PLAN 和旧 Gate 是历史交接资料，不代表当前状态。
 不再运行额外文件摘要封存、fresh-copy/ZIP 验收或 provenance rebase；用 Git 提交、
 版本化配置和真实运行记录定位版本。随机派生和稳定场景 ID 的算法行为保持不变。
-本轮不启动科研 RL 训练、训练流水线 smoke、throughput benchmark 或联邦工作。
+当前授权为STAGE2_B0_PREPARATION：允许B0适配层、训练harness、非学习可达性、
+项目Torch修复及累计最多2048真实工程transition/128完整SAC update的独立工程smoke。
+不启动科研RL训练、正式throughput benchmark、Stage3或联邦工作。
 
 每个有实际修改的已授权任务结束时，只提交本任务文件并推送至
 `https://github.com/Whsjbwy/FL-RL.git` 的工作分支；失败工作明确标 WIP/未通过。
@@ -29,13 +31,16 @@
 
 已存在动力学、CV、感知/KF、234维输入、任务接口、风险/验证器、普通及约束SAC、
 成本与lambda、TRAIN_SCENARIO_V1。以源码和本次验收为准，历史 PASS 不冒充当前结果。
-尚未授权训练 harness、科研训练或联邦实现。不得删科学测试凑历史总数。
+已授权本轮B0训练harness准备与严格限额工程smoke；科研训练和联邦实现仍未授权。
+不得删科学测试凑历史总数。
 
 ## 禁止静默改动的语义
 
 - 三维导航、八维状态、三维速度/角率指令；不是推进器力或六维动作。
 - 234 = 18 + 45 + 45 + 6×21；上一执行动作、剩余任务比例已经包含。
 - 不加 client ID、联邦轮次、真流速、真障碍速度或计算风险标量到输入。
+- 上条真障碍速度限制适用于有限感知输入；B0专用当前特权真值接口是LOCAL规定例外，
+  只含当前位置/地速和零协方差，不含真未来、不使用执行安全过滤。
 - CV-KF：P为6×6，未来位置Sigma为3×3；Joseph、过程噪声、发生时间戳重放。
 - 半空间＋0.05秒扫掠＋时间/目标并集界，保留未截断U；不能改成max单项风险。
 - 方向为(m0+m1)归一化，零和固定NED轴；小正方差不能当确定性零方差。

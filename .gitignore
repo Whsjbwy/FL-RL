@@ -42,6 +42,8 @@ artifacts/
 !/results/b5_1_training_scenario_generator/rng_isolation_audit.md
 !/results/b5_1_training_scenario_generator/warmup_compatibility.json
 /results/stage01_readiness/development/
+/results/stage2_b0_preparation/development/
+/results/stage2_b0_preparation/environment_before.stdout.txt
 /results/code_quality_audit.csv
 /results/config_snapshot.yaml
 /results/pytest_output.txt
