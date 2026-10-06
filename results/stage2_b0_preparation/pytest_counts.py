@@ -14,6 +14,7 @@ from auv_risk_rl.rl.agent import OrdinarySACAgent
 COUNTS: dict[str, int] = {}
 ORIGINALS: list[tuple[type, str, object]] = []
 UPDATE_NODES: dict[str, int] = {}
+COMPLETE_UPDATE_NODES: dict[str, int] = {}
 CURRENT_NODE = ""
 
 
@@ -40,6 +41,9 @@ def pytest_sessionstart(session) -> None:
                                    or kwargs.get("batch") is not None))
             result = _fn(*args, **kwargs)
             COUNTS[_label + "_returns"] = COUNTS.get(_label + "_returns", 0) + 1
+            if _label == "ordinary_update":
+                COMPLETE_UPDATE_NODES[CURRENT_NODE] = (
+                    COMPLETE_UPDATE_NODES.get(CURRENT_NODE, 0) + 1)
             if explicit_batch:
                 key = "explicit_batch_complete_update_returns"
                 COUNTS[key] = COUNTS.get(key, 0) + 1
@@ -58,6 +62,7 @@ def pytest_sessionfinish(session, exitstatus) -> None:
     output = Path(session.config.rootpath) / "results/stage2_b0_preparation"
     (output / f"{name}_counts.json").write_text(json.dumps(dict(
         counts=COUNTS, explicit_batch_update_nodes=UPDATE_NODES,
+        complete_update_nodes=COMPLETE_UPDATE_NODES,
         pytest_exit_code=int(exitstatus),
         purpose="unit/integration tests, not scientific training",
         nested_counts_must_not_be_added=True,

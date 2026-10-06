@@ -63,7 +63,13 @@ class B0TrainingHarness:
             raise ValueError('必须登记实际 Git 代码版本。')
         self.config, self.project_config = config, project_config
         self.scenario_config, self.code_version = scenario_config, code_version
-        self.agent = agent or OrdinarySACAgent(config.sac, source_fingerprint=f'git:{code_version}')
+        self.agent = (OrdinarySACAgent(config.sac, source_fingerprint=f'git:{code_version}')
+                      if agent is None else agent)
+        # B0身份不能仅凭相同配置判断；成本组合器和覆盖Actor的子类不是普通SAC。
+        if type(self.agent) is not OrdinarySACAgent:
+            schedule_fixture = getattr(self.agent, '_b0_schedule_fixture', False) is True
+            if not schedule_fixture or env_factory is None or hasattr(self.agent, 'actor'):
+                raise TypeError('B0必须使用原OrdinarySACAgent；夹具须显式标记且无Actor模块。')
         if self.agent.config != config.sac:
             raise ValueError('Agent 与 harness SAC 配置必须一致。')
         self.source = B0ScenarioSource(config, project_config, scenario_config)
@@ -95,11 +101,18 @@ class B0TrainingHarness:
             target.append(deepcopy(record))
             del target[:-1000]
 
+    def _make_env(self, scenario: TrainingScenario) -> B0NavigationEnv:
+        """真实B0必须使用专用环境；在reset/warm-up前阻止误用有限感知验证路径。"""
+        env = self.env_factory(scenario)
+        if type(self.agent) is OrdinarySACAgent and type(env) is not B0NavigationEnv:
+            raise TypeError('真实B0必须使用原B0NavigationEnv，不能启用执行过滤环境。')
+        return env
+
     def _reset_slot(self, slot_index: int) -> None:
         """连续发行场景；warm-up 不计正式 transition、Replay 或起步。"""
         index = self.next_scenario_index
         scenario = self.source.scenario(index)
-        env = self.env_factory(scenario)
+        env = self._make_env(scenario)
         options = {'external_max_steps': self.config.external_max_steps}
         obs, warmup = env.reset(seed=self.source.environment_seed(index), options=options)
         self.slots[slot_index] = dict(
@@ -266,7 +279,7 @@ class B0TrainingHarness:
         for _ in range(self.config.validation_episodes):
             index = self.validation_scenario_index
             scenario = self.source.scenario(index, 'validation')
-            env = self.env_factory(scenario)
+            env = self._make_env(scenario)
             env_seed = self.source.environment_seed(index, 'validation')
             options = {'external_max_steps': self.config.validation_max_steps}
             obs, warmup = env.reset(seed=env_seed,

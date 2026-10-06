@@ -10,9 +10,16 @@ import numpy as np
 import pytest
 import torch
 
-from auv_risk_rl.env.scenario_generator import TrainingScenario, load_training_scenario_config
+from auv_risk_rl.env.local_navigation import LocalNavigationEnv
+from auv_risk_rl.env.scenario_generator import (
+    TrainingScenario,
+    load_training_scenario_config,
+    make_local_navigation_env,
+)
 from auv_risk_rl.rl.agent import OrdinarySACAgent
 from auv_risk_rl.rl.config import SACConfig
+from auv_risk_rl.rl.constrained_agent import ConstrainedSACAgent
+from auv_risk_rl.rl.cost_agent import CostLearningAgent
 from auv_risk_rl.rl.replay import ReplayBuffer
 from auv_risk_rl.training.config import B0HarnessConfig, derived_sac_config
 from auv_risk_rl.training.harness import B0TrainingHarness, states_equal
@@ -21,6 +28,8 @@ from auv_risk_rl.training.scenarios import B0ScenarioSource
 
 class FixtureAgent:
     """只计模拟调度，不创建神经网络或调用 backward 的纯接口夹具。"""
+
+    _b0_schedule_fixture = True
 
     def __init__(self, config: SACConfig) -> None:
         """创建无神经网络的独立接口状态。"""
@@ -153,6 +162,66 @@ def test_explicit_sac_seed_derivation_isolated() -> None:
     for name in ('initialization_seed', 'actor_seed', 'replay_seed'):
         assert len({getattr(value, name) for value in (first, second, engineering)}) == 3
     assert first.gamma == SACConfig().gamma
+
+
+@pytest.mark.parametrize('kind', ['cost', 'constrained', 'constrained_actor_core'])
+def test_b0_rejects_cost_or_constrained_agent_identity(
+    project_config: Any, scenario_config: Any, kind: str,
+) -> None:
+    """真实成本/约束对象或其覆盖Actor的core不能冒名B0；不采样或更新。"""
+    config = B0HarnessConfig(run_kind='engineering_smoke', transition_budget=264)
+    cls = CostLearningAgent if kind == 'cost' else ConstrainedSACAgent
+    wrapper = cls(config.sac, source_fingerprint='git:unit-identity')
+    supplied = wrapper.ordinary if kind == 'constrained_actor_core' else wrapper
+    with pytest.raises(TypeError, match='OrdinarySACAgent'):
+        B0TrainingHarness(config, project_config, scenario_config, code_version='unit-identity',
+                          agent=supplied, env_factory=FixtureEnv)
+
+
+@pytest.mark.parametrize('misuse', ['unmarked', 'actor_module', 'no_env_factory'])
+def test_b0_rejects_ambiguous_schedule_fixture(
+    project_config: Any, scenario_config: Any, misuse: str,
+) -> None:
+    """纯调度夹具必须有明确标记、独立环境夹具且没有神经Actor。"""
+    config = B0HarnessConfig(run_kind='engineering_smoke', transition_budget=264)
+    agent = FixtureAgent(config.sac)
+    if misuse == 'unmarked':
+        agent._b0_schedule_fixture = False
+    elif misuse == 'actor_module':
+        agent.actor = torch.nn.Identity()
+    factory = None if misuse == 'no_env_factory' else FixtureEnv
+    with pytest.raises(TypeError, match='夹具'):
+        B0TrainingHarness(config, project_config, scenario_config, code_version='unit-identity',
+                          agent=agent, env_factory=factory)
+
+
+@pytest.mark.parametrize('path', ['train', 'evaluate'])
+def test_b0_rejects_filtered_environment_before_reset(
+    project_config: Any, scenario_config: Any, monkeypatch: pytest.MonkeyPatch, path: str,
+) -> None:
+    """真实普通Agent不能通过factory接入带验证器环境；拒绝发生在任何推进前。"""
+    config = B0HarnessConfig(run_kind='engineering_smoke', transition_budget=264)
+    forbidden_calls = []
+
+    def forbidden_call(*args: Any, **kwargs: Any) -> None:
+        """风险环境reset/step的异常spy不得被调用。"""
+        forbidden_calls.append('called')
+        raise AssertionError('错误环境不应被reset或step')
+
+    monkeypatch.setattr(LocalNavigationEnv, 'reset', forbidden_call)
+    monkeypatch.setattr(LocalNavigationEnv, 'step', forbidden_call)
+    harness = B0TrainingHarness(
+        config, project_config, scenario_config, code_version='unit-env-identity',
+        env_factory=lambda scenario: make_local_navigation_env(project_config, scenario),
+    )
+    with pytest.raises(TypeError, match='B0NavigationEnv'):
+        if path == 'train':
+            harness.step()
+        else:
+            harness.evaluate()
+    assert forbidden_calls == []
+    assert harness.transitions == len(harness.agent.replay) == 0
+    assert harness.agent.counters['gradient_updates'] == 0
 
 
 def test_scenario_profiles_and_split_isolation(project_config: Any, scenario_config: Any) -> None:

@@ -64,6 +64,8 @@ warm-up不计Replay/起步。store后eligible为全局transitions>=starts且Repl
 数值比较预登记rtol=1e-6、atol=1e-7（不得为结果放宽）；不宣称跨设备/版本逐位一致。
 临时文件完整写入后replace，只保留最近完整恢复点和最终模型，不默认每25k保存全Replay。
 实现补充：保存触发通过harness callback落实；失败的半transition不允许保存恢复点。
+入口身份补充：真实Agent只能为原OrdinarySACAgent，环境只能为B0NavigationEnv；
+成本/约束Agent及有限感知过滤环境在创建时拒绝，纯调度夹具必须明确标记且不含Actor模块。
 checkpoint登记并检查Torch版本。路径长度日志标记CONTROL_NODE_POLYLINE，非连续曲线弧长。
 网络三个随机流由training_seed/run_kind分别派生；YAML中的旧种子字段仅兼容输入，
 preflight和实际checkpoint记录解析后真正使用的派生值。
