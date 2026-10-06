@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-06T17:43:33.0842027Z",
+  "task": "STAGE2_B0_MVP_BATCH_V1",
+  "status": "PUSH_SUCCEEDED",
+  "repository": "https://github.com/Whsjbwy/FL-RL.git",
+  "branch": "codex/stage2-b0-mvp-v1",
+  "experiment_code_commit": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+  "results_commit": "dd5113c9de171d33254f382226a64446e31c628d",
+  "verified_remote_branch_commit": "dd5113c9de171d33254f382226a64446e31c628d",
+  "push_exit_code": 0,
+  "ls_remote_exit_code": 0,
+  "remote_main_unchanged": "be72a6ba1947d1f0346d44335e99c94e0a9f8bf6",
+  "batch_status": "BATCH_COMPLETED",
+  "actual_training_transitions": 900000,
+  "actual_full_sac_updates": 870003,
+  "scientific_stage2_gate": "DEFERRED_PENDING_BOUNDED_FAILURE_DIAGNOSIS",
+  "no_force_push": true,
+  "no_main_merge": true,
+  "no_models_replay_protocol_uploaded": true,
+  "receipt_note": "This subsequent receipt records the already verified results commit; final branch reference is confirmed after receipt push, without self-referential commit IDs."
+}
