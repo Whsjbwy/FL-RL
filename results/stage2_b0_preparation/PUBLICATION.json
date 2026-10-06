@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-10-06T11:15:08.226249+00:00",
+  "status": "PUSH_SUCCESS",
+  "remote": "https://github.com/Whsjbwy/FL-RL.git",
+  "branch": "codex/stage2-b0-preparation",
+  "verified_published_evidence_commit": "b645dca7799cca536ebbec8538eb45d61b70d6cb",
+  "tested_code_commit": "6840dfbbf151ff38009487a1e8f13ac74d40c4c1",
+  "remote_ref": "b645dca7799cca536ebbec8538eb45d61b70d6cb",
+  "previous_branch_ref": "a836922b2e1f81689d09e811c29be3badf2462aa",
+  "main_ref": "be72a6ba1947d1f0346d44335e99c94e0a9f8bf6",
+  "branch_url": "https://github.com/Whsjbwy/FL-RL/tree/codex/stage2-b0-preparation",
+  "commit_url": "https://github.com/Whsjbwy/FL-RL/commit/b645dca7799cca536ebbec8538eb45d61b70d6cb",
+  "force_push": false,
+  "main_merged": false,
+  "pr_created": false,
+  "receipt_note": "This receipt records the verified evidence commit; a subsequent documentation-only receipt commit is confirmed separately, without changing the tested code."
+}

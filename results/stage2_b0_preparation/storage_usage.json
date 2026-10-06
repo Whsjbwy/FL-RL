@@ -13,5 +13,11 @@
     "F:/": 73528582144
   },
   "measurement_scope": "File logical bytes, not allocated clusters. Torch dist-info metadata delta was not measured before installation. Git objects may grow during evidence publication.",
-  "torch_package_net_growth_bytes": 2395657030
+  "torch_package_net_growth_bytes": 2395657030,
+  "publication_time_measurement": {
+    "time_utc": "2026-10-06T11:16:56.231138+00:00",
+    "tracked_source_configuration_document_and_text_evidence_net_growth_bytes": 1578058,
+    "local_engineering_checkpoint_bytes": 47041616,
+    "git_object_directory_growth_bytes": 387918
+  }
 }
