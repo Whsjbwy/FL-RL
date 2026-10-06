@@ -25,6 +25,9 @@ def main() -> int:
     env = os.environ.copy()
     env.update(PYTHONUTF8="1", PYTHONIOENCODING="utf-8", PYTHONDONTWRITEBYTECODE="1")
     env.pop("PYTHONPYCACHEPREFIX", None)
+    env["PATH"] = str(Path(sys.executable).parent) + os.pathsep + env.get("PATH", "")
+    env["PYTHONPATH"] = os.pathsep.join((str(root / "src"), str(root),
+                                        env.get("PYTHONPATH", "")))
     git = "D:/Program Files/Git/cmd/git.exe"
     version = subprocess.run(
         [git, "-c", f"safe.directory={root.as_posix()}", "rev-parse", "HEAD"],
