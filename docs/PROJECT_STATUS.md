@@ -137,5 +137,7 @@ temporary_cleanup.json。未复制源码/环境/交接包，未删除或移动�
 ## Git 发布定位
 
 仓库：<https://github.com/Whsjbwy/FL-RL>；工作分支 `codex/b51-stage1-readiness`。
-发布状态以实际push日志、PUBLICATION.json及最终远端分支确认记录为准；
-这里不把本地commit写成已上传。未自动合并main或改写远端历史。
+验收证据提交 `034f3434c4ac28e11c53c81442b16d183f596542` 已成功push，
+远端工作分支引用核对相同，main仍为原 `be72a6b`；见PUBLICATION.json、push日志和
+remote_confirmation.txt。此回执记录该时间点，随后回执本身的提交以最终远端分支为准。
+未创建PR、自动合并main或改写远端历史；原目录中的忽略项仍本机留存。
