@@ -1,4 +1,4 @@
-"""B0入口默认只做preflight；科研运行必须另行登记和授权，不自动训练。"""
+"""B0入口默认preflight；只允许真实登记匹配的科研批次或独立工程夹具。"""
 
 from __future__ import annotations
 
@@ -47,7 +47,7 @@ def git_code_version() -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    """显式run_kind与预算是执行必要条件；本轮科研入口保持关闭。"""
+    """科研批次使用完整登记守卫；旧未登记准备配置仍不能执行。"""
     from auv_risk_rl.config import load_project_config
     from auv_risk_rl.env.scenario_generator import load_training_scenario_config
     from auv_risk_rl.training.harness import B0TrainingHarness
@@ -60,7 +60,33 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--resume", type=Path)
     parser.add_argument("--trusted-local", action="store_true")
+    parser.add_argument("--mvp-registration", type=Path)
+    parser.add_argument("--resume-batch", action="store_true")
     args = parser.parse_args(argv)
+    if args.mvp_registration is not None:
+        from auv_risk_rl.training.mvp_batch import finalize_results, run_batch
+        from auv_risk_rl.training.mvp_registration import validate_registration
+
+        try:
+            registration = validate_registration(
+                ROOT, args.mvp_registration, run_kind=args.run_kind,
+                budget=args.transition_budget, output=args.output_dir, execute=args.execute,
+            )
+        except ValueError as error:
+            parser.error(str(error))
+        if args.resume is not None or args.trusted_local:
+            parser.error("批次只从自身可信最新恢复点继续，请使用--resume-batch")
+        if not args.execute:
+            print(json.dumps(dict(status="PREFLIGHT_ONLY", registration=registration,
+                                  code_version=git_code_version()), ensure_ascii=False, indent=2))
+            return 0
+        summary = run_batch(ROOT, registration, resume=args.resume_batch)
+        if summary.get('status') == 'COMPLETED':
+            finalize_results(ROOT, summary)
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        return 0
+    if args.resume_batch:
+        parser.error("resume-batch必须同时指定实际mvp-registration")
     config, raw = read_run_config(args.config)
     identity = dict(status="PREFLIGHT_ONLY", config=asdict(config),
                     code_version=git_code_version(), scientific_stage2_status="NOT_RUN")

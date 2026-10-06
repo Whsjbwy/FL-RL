@@ -43,6 +43,11 @@ artifacts/
 !/results/b5_1_training_scenario_generator/warmup_compatibility.json
 /results/stage01_readiness/development/
 /results/stage2_b0_preparation/development/
+/results/stage2_b0_mvp_v1/development/
+/results/stage2_b0_mvp_v1/test_temp_*/
+/results/stage2_b0_mvp_v1/test_cache_*/
+/results/stage2_b0_mvp_v1/runtime/
+/results/stage2_b0_mvp_v1/seed_*/segments/*/update.jsonl
 /results/stage2_b0_preparation/environment_before.stdout.txt
 /results/code_quality_audit.csv
 /results/config_snapshot.yaml

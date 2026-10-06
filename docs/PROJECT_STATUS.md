@@ -266,3 +266,14 @@ temporary_cleanup.json。未复制源码/环境/交接包，未删除或移动�
 远端工作分支引用核对相同，main仍为原 `be72a6b`；见PUBLICATION.json、push日志和
 remote_confirmation.txt。此回执记录该时间点，随后回执本身的提交以最终远端分支为准。
 未创建PR、自动合并main或改写远端历史；原目录中的忽略项仍本机留存。
+# 当前任务：STAGE2_B0_MVP_BATCH_V1（运行前登记）
+
+2026-10-06 在已发布34f2d4a准备版本上继续，工作分支codex/stage2-b0-mvp-v1。
+用户已明确授权seed11/22/33各100k无障碍+200kCV连续课程，共900k科研transition。
+本轮冻结登记见docs/STAGE2_B0_MVP_V1.md和configs/stage2_b0_mvp_v1.yaml。
+普通SAC和B0物理环境不重新实现；补固定Val、科研入口守卫、课程/批次及恢复日志。
+当前记录位置results/stage2_b0_mvp_v1；运行结果只认该批真实日志及固定实验Git版本。
+历史461+13属于上一轮验收；本轮最终回归与训练结果将在执行后分别登记。
+登记/代码测试前和真实训练前，Stage2科研状态均为NOT RUN，不因入口可执行就记GO。
+上轮397/461测试、非学习可达性和旧throughput blocker保留原历史结论。
+旧39项docstring、3条英文注释及词法告警不借本轮全面重构；新代码执行既有Ruff规则。

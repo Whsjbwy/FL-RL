@@ -7,9 +7,10 @@
 原 START_HERE/FIRST_TASK/CODEX_EXECUTION_PLAN 和旧 Gate 是历史交接资料，不代表当前状态。
 不再运行额外文件摘要封存、fresh-copy/ZIP 验收或 provenance rebase；用 Git 提交、
 版本化配置和真实运行记录定位版本。随机派生和稳定场景 ID 的算法行为保持不变。
-当前授权为STAGE2_B0_PREPARATION：允许B0适配层、训练harness、非学习可达性、
-项目Torch修复及累计最多2048真实工程transition/128完整SAC update的独立工程smoke。
-不启动科研RL训练、正式throughput benchmark、Stage3或联邦工作。
+当前授权为STAGE2_B0_MVP_BATCH_V1：seed11/22/33各连续100k无障碍+200kCV，
+每seed300k、计划总900k。登记见docs/STAGE2_B0_MVP_V1.md；固定Val与课程调度，
+登记和被测代码提交后直接运行本批。不得按结果增预算/换seed/调参；不启动Stage3、
+正式throughput benchmark、B1–B5比较或联邦工作。
 
 每个有实际修改的已授权任务结束时，只提交本任务文件并推送至
 `https://github.com/Whsjbwy/FL-RL.git` 的工作分支；失败工作明确标 WIP/未通过。
@@ -31,7 +32,7 @@
 
 已存在动力学、CV、感知/KF、234维输入、任务接口、风险/验证器、普通及约束SAC、
 成本与lambda、TRAIN_SCENARIO_V1。以源码和本次验收为准，历史 PASS 不冒充当前结果。
-已授权本轮B0训练harness准备与严格限额工程smoke；科研训练和联邦实现仍未授权。
+本轮只授权登记的B0科研批次；历史准备smoke不冒充科研结果，联邦实现仍未授权。
 不得删科学测试凑历史总数。
 
 ## 禁止静默改动的语义
@@ -85,7 +86,7 @@ Ruff建议固定0.6.0（满足原>=0.6）；不是原项目精确锁文件。不
 
 ## 停止条件与交付
 
-本轮禁止科研RL训练、F0/F1、FedAvg/FedProx、Test调参及正式预算执行。
+本轮禁止登记之外的科研训练、F0/F1、FedAvg/FedProx、Test调参及1.5M正式实验。
 不要添加Manifold/GNN/Transformer/Attention/PER/Diffusion/RRT*/APF；IMM/6-DOF仅登记备份。
 如修lint需要改变风险/成本/动作/终止语义，暂停并请求新的明确决定。
 本任务结束交付：差异、全部真实测试输出、工具版本、源码标识、Gate状态和下一允许阶段。

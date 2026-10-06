@@ -29,10 +29,14 @@ class B0ScenarioSource:
         namespace = f'b0/{self.config.run_kind}/{split}/{purpose}'
         return int(SeedManager(self.root_seed).get_rng(namespace).integers(0, 2**63))
 
-    def scenario(self, index: int, split: str = 'train') -> TrainingScenario:
+    def scenario(self, index: int, split: str = 'train', *,
+                 task_profile: str | None = None) -> TrainingScenario:
         """CV 不改变采样律；无障碍另有身份，不改 train-v1 的 1–4 范围。"""
+        profile = self.config.task_profile if task_profile is None else task_profile
+        if profile not in ('obstacle_free', 'cv_train_v1'):
+            raise ValueError('未知场景任务profile。')
         original = self.generator.generate(self.split_seed(split), index)
-        if self.config.task_profile == 'cv_train_v1':
+        if profile == 'cv_train_v1':
             return original
         version = 'B0_OBSTACLE_FREE_V1'
         identity = f'b0-empty-{split}-seed-{original.root_seed}-idx-{index}'

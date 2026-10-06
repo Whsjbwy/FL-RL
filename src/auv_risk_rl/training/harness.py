@@ -108,10 +108,15 @@ class B0TrainingHarness:
             raise TypeError('真实B0必须使用原B0NavigationEnv，不能启用执行过滤环境。')
         return env
 
+    def _task_profile(self) -> str:
+        """原入口为固定profile；课程适配层可以显式覆盖发行身份。"""
+        return self.config.task_profile
+
     def _reset_slot(self, slot_index: int) -> None:
         """连续发行场景；warm-up 不计正式 transition、Replay 或起步。"""
         index = self.next_scenario_index
-        scenario = self.source.scenario(index)
+        profile = self._task_profile()
+        scenario = self.source.scenario(index, task_profile=profile)
         env = self._make_env(scenario)
         options = {'external_max_steps': self.config.external_max_steps}
         obs, warmup = env.reset(seed=self.source.environment_seed(index), options=options)
@@ -119,6 +124,8 @@ class B0TrainingHarness:
             env=env, obs=obs.copy(), needs_reset=False, scenario_index=index,
             scenario_id=scenario.scenario_id, scenario_root_seed=scenario.root_seed,
             episode_id=self.started_episodes, env_slot=slot_index, steps=0,
+            task_profile=profile, start_transition=self.transitions + 1,
+            last_transition=self.transitions,
             physical_time_s=0.0, reward=0.0, reward_components={}, path_length_m=0.0,
             minimum_clearance_m=None, action_saturation_count=0,
             initial_position_ned_m=env.world.auv_state.position_ned_m.copy(),
@@ -131,9 +138,11 @@ class B0TrainingHarness:
         """完成、外部截断和预算停机分开；无障碍间距或未测量指标使用 None。"""
         keys = ('scenario_index', 'scenario_id', 'scenario_root_seed', 'episode_id', 'env_slot',
                 'steps', 'physical_time_s', 'reward', 'reward_components', 'path_length_m',
-                'minimum_clearance_m', 'action_saturation_count', 'warmup')
+                'minimum_clearance_m', 'action_saturation_count', 'warmup',
+                'start_transition', 'last_transition')
         return {**{k: deepcopy(slot[k]) for k in keys}, 'training_seed': self.config.training_seed,
-                'split': 'train', 'task_profile': self.config.task_profile,
+                'split': 'train', 'task_profile': slot['task_profile'],
+                'at_transition': self.transitions,
                 'failure_type': failure_type, 'complete': complete, 'budget_stop': budget_stop,
                 'success': failure_type == 'goal_success', 'collision': failure_type == 'collision',
                 'boundary': failure_type == 'operational_boundary_failure',
@@ -180,6 +189,7 @@ class B0TrainingHarness:
                 episode_id=slot['episode_id'], task_step=info['task_control_step'])
             slot['obs'] = next_obs.copy()
             self.transitions += 1
+            slot['last_transition'] = self.transitions
             slot['steps'] += 1
             slot['physical_time_s'] += info['elapsed_s']
             slot['reward'] += reward
