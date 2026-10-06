@@ -2,6 +2,7 @@
 
 import json
 import os
+from dataclasses import replace
 from pathlib import Path
 
 import numpy as np
@@ -9,6 +10,8 @@ import torch
 
 from auv_risk_rl.rl.agent import OrdinarySACAgent
 from auv_risk_rl.rl.config import SACConfig
+from auv_risk_rl.training.config import B0HarnessConfig
+from auv_risk_rl.training.harness import B0TrainingHarness, states_equal
 
 
 def test_project_torch_declared_version() -> None:
@@ -55,3 +58,36 @@ def test_target_device_tensor_and_complete_sac_update() -> None:
             complete_synthetic_updates=1, optimizer_steps=4, metrics=metrics,
             scientific_training_steps=0, scientific_training_updates=0,
         ), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def test_same_device_checkpoint_preserves_adam_step_location(project_config, tmp_path) -> None:
+    """非capturable Adam步数保持CPU，网络及一二阶矩保持目标设备。"""
+    from auv_risk_rl.env.scenario_generator import load_training_scenario_config
+
+    device = os.environ.get("AUV_TARGET_DEVICE", "cpu")
+    scenario = load_training_scenario_config(
+        Path(__file__).resolve().parents[1] / "configs/train_scenario_v1.yaml")
+    config = B0HarnessConfig(run_kind="engineering_smoke", transition_budget=8,
+                             sac=replace(SACConfig(), device=device))
+    left = B0TrainingHarness(config, project_config, scenario, code_version="device-fixture")
+    batch = dict(obs=np.zeros((256, 234), np.float32),
+                 next_obs=np.full((256, 234), 0.1, np.float32),
+                 nominal_action=np.full((256, 3), 0.2, np.float32),
+                 reward=np.ones((256, 1), np.float32),
+                 terminated=np.zeros((256, 1), np.float32))
+    left.agent.update(batch)
+    path = tmp_path / "trusted_device_checkpoint.pt"
+    left.save_checkpoint(path)
+    right = B0TrainingHarness(config, project_config, scenario, code_version="device-fixture")
+    right.load_checkpoint(path, trusted_local=True)
+    for optimizer in right.agent.optimizers.values():
+        for state in optimizer.state.values():
+            assert state["step"].device.type == "cpu"
+            assert state["exp_avg"].device.type == device
+            assert state["exp_avg_sq"].device.type == device
+    assert states_equal(left.state_dict(), right.state_dict())
+    left.agent.update(batch)
+    right.agent.update(batch)
+    if device == "cuda":
+        torch.cuda.synchronize()
+    assert states_equal(left.state_dict(), right.state_dict())

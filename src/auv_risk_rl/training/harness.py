@@ -385,5 +385,6 @@ class B0TrainingHarness:
         """反序列化完整 Python 环境前，必须由调用者确认可信本项目本机来源。"""
         if not trusted_local:
             raise ValueError('拒绝加载来源未确认的完整 checkpoint。')
-        state = torch.load(Path(path), map_location=self.agent.device, weights_only=False)
+        # CPU反序列化保留Adam步数标量；既有加载器将模型/矩送回原设备，不是CPU执行回退。
+        state = torch.load(Path(path), map_location='cpu', weights_only=False)
         self.load_state_dict(state)

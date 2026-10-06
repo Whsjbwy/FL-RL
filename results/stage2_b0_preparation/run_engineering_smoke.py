@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import math
 import sys
@@ -23,6 +24,8 @@ def compare_state(left: Any, right: Any, path: str = "state") -> list[str]:
     if type(left) is not type(right):
         return [path + ":type"]
     if isinstance(left, torch.Tensor):
+        if left.device != right.device or left.dtype != right.dtype:
+            return [path + ":device_or_dtype"]
         same = (torch.allclose(left, right, rtol=1e-6, atol=1e-7, equal_nan=True)
                 if left.is_floating_point() else torch.equal(left, right))
         return [] if same else [path]
@@ -67,14 +70,24 @@ def main() -> int:
     from auv_risk_rl.rl.agent import OrdinarySACAgent
     from auv_risk_rl.training.harness import B0TrainingHarness, states_equal
 
-    output = Path(__file__).parent / "engineering_smoke"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--attempt", type=int, choices=(1, 2, 3), default=1)
+    args = parser.parse_args()
+    name = "engineering_smoke" if args.attempt == 1 else f"engineering_smoke_{args.attempt}"
+    output = Path(__file__).parent / name
     output.mkdir(exist_ok=False)
     budget_path = Path(__file__).parent / "engineering_budget.json"
     if budget_path.exists():
-        raise RuntimeError("已有工程预算记录，不允许静默重置计算次数")
-    budget = dict(env_transition_attempts=0, env_transitions=0, complete_update_attempts=0,
-                  complete_updates=0, world_step_returns=0,
-                  env_transition_ceiling=2048, complete_update_ceiling=128)
+        if args.attempt == 1:
+            raise RuntimeError("已有工程预算记录，不允许静默重置计算次数")
+        budget = json.loads(budget_path.read_text(encoding="utf-8"))
+    else:
+        if args.attempt != 1:
+            raise RuntimeError("没有前次计账记录，不允许以修复重跑名义重置预算")
+        budget = dict(env_transition_attempts=0, env_transitions=0, complete_update_attempts=0,
+                      complete_updates=0, world_step_returns=0,
+                      env_transition_ceiling=2048, complete_update_ceiling=128)
+    prior_budget = dict(budget)
 
     def save_budget() -> None:
         """每次实际操作前后落盘，故障仍保留已经消耗的预算。"""
@@ -158,10 +171,11 @@ def main() -> int:
             raise AssertionError({"resume_discrepancies": discrepancies[:30]})
         assert continuous.transitions == final.transitions == 264
         assert continuous.summary()["updates"] == final.summary()["updates"] == 9
-        assert budget["complete_updates"] == 18
+        assert budget["complete_updates"] - prior_budget["complete_updates"] == 18
         report = dict(status="PASS", purpose="ENGINEERING_ONLY_NOT_A_SCIENTIFIC_RESULT",
                       code_version=code_version, torch_version=torch.__version__,
-                      config=config.to_dict(), budget=budget,
+                      config=config.to_dict(), budget=budget, prior_budget=prior_budget,
+                      attempt=args.attempt,
                       continuous=continuous.summary(), resumed=final.summary(),
                       pending_reset_at_256=pending_reset, active_steps_at_260=active_steps,
                       full_state_exact_equal=states_equal(
