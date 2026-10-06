@@ -1,0 +1,55 @@
+protocol_version: "v2.0"
+config_version: "stage0_v2"
+stage: "S0"
+
+environment:
+  position_lower_bound_ned_m: [0.0, 0.0, 2.0]
+  position_upper_bound_ned_m: [100.0, 100.0, 40.0]
+  goal_radius_m: 2.0
+  max_episode_control_steps: 1000
+
+dynamics:
+  control_dt_s: 0.2
+  integration_dt_s: 0.05
+  min_surge_speed_mps: 0.3
+  max_surge_speed_mps: 1.5
+  max_yaw_rate_rad_s: 0.35
+  max_pitch_rate_rad_s: 0.25
+  max_pitch_rad: 0.5235987755982988
+  surge_time_constant_s: 0.8
+  yaw_rate_time_constant_s: 0.5
+  pitch_rate_time_constant_s: 0.5
+  max_surge_accel_mps2: 0.5
+  max_yaw_accel_rad_s2: 0.5
+  max_pitch_accel_rad_s2: 0.4
+
+kf:
+  acceleration_spectral_density_m2_s3: [0.001, 0.001, 0.001]
+  initial_velocity_std_mps: 1.0
+  covariance_symmetry_tolerance: 1.0e-10
+  covariance_psd_tolerance: 1.0e-10
+
+sensor:
+  range_m: 25.0
+  horizontal_fov_deg: 120.0
+  vertical_fov_deg: 60.0
+  measurement_std_body_m: [0.2, 0.2, 0.3]
+  dropout_probability: 0.05
+  measurement_delay_control_steps: 0
+
+risk:
+  auv_radius_m: 0.75
+  extra_margin_m: 0.30
+  short_horizon_risk_budget: 0.05
+  mean_norm_tolerance_m: 1.0e-12
+  variance_tolerance_m2: 1.0e-14
+
+validator:
+  validation_horizon_s: 5.0
+  speed_grid_mps: [0.3, 0.9, 1.5]
+  yaw_rate_grid_rad_s: [-0.35, -0.175, 0.0, 0.175, 0.35]
+  pitch_rate_grid_rad_s: [-0.25, 0.0, 0.25]
+
+cost:
+  discount_gamma: 0.999
+  planned_horizon_control_steps: 1000

@@ -1,0 +1,137 @@
+{
+  "phase": "B5.1",
+  "task": "LOCAL_TRAINING_SCENARIO_GENERATOR_COMPLETION",
+  "status": "PASS",
+  "decision": "PHASE B5.1 TRAINING SCENARIO GENERATOR = PASS",
+  "created_at": "2026-09-21T08:08:53.906902+00:00",
+  "entry_baseline": "B5_CLOSED",
+  "entry_gate_pass": true,
+  "source_fingerprint_scheme": "relative-posix-nul-sha256-v1",
+  "source_fingerprint_before": "74a3567fdfc400d9960bfa995d1e085ea48b8c40b7e9c5f3fb98ac2e7ddfd9fb",
+  "source_fingerprint_after": "1faa62c6cd011e47532ba6b30e1bfc27c9f18d988b86f84a9a085e9b10a7e8a3",
+  "spec_frozen_before_production_code": true,
+  "protocol_docx_sha256": "ad368c0952d0d265a98ba0a6af80e3a9f88a906654ba256c5308d4443c67482a",
+  "source_vs_implementation_rules_separated": true,
+  "distribution_version": "TRAIN_SCENARIO_V1",
+  "tests": {
+    "pytest_original.xml": {
+      "tests": 34,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_b1.xml": {
+      "tests": 35,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_phase_a.xml": {
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_b2.xml": {
+      "tests": 75,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_b3.xml": {
+      "tests": 81,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_b4.xml": {
+      "tests": 73,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_b5.xml": {
+      "tests": 65,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_scenario.xml": {
+      "tests": 26,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_all.xml": {
+      "tests": 389,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "ruff_exit_code": 0,
+  "compileall_exit_code": 0,
+  "diagnostic_scenarios": 10000,
+  "count_frequency": {
+    "1": 2562,
+    "2": 2514,
+    "3": 2409,
+    "4": 2515
+  },
+  "velocity_mean_unit_direction": [
+    -0.006902947496056811,
+    -0.007476140595520297,
+    0.004179427425732554
+  ],
+  "velocity_axis_second_moments": [
+    0.3321190238400792,
+    0.3365125024109184,
+    0.3313684737490045
+  ],
+  "warmup_compatibility": {
+    "tested": 100,
+    "passed": 100,
+    "failed": 0
+  },
+  "benchmark_readiness_smoke": "PASS",
+  "historical_benchmark_blocker_preserved": true,
+  "scientific_training_steps": 0,
+  "formal_throughput_benchmark_run": false,
+  "federated_implementation_added": false,
+  "B5_SCENARIO_CLOSED_manifest_created": false,
+  "CURRENT_BASELINE_modified": false,
+  "scope": {
+    "status": "PASS",
+    "scientific_production_files_added": [
+      "src/auv_risk_rl/env/scenario_generator.py"
+    ],
+    "scientific_production_files_modified": [],
+    "scientific_tests_added": [
+      "tests/test_training_scenario_generator.py"
+    ],
+    "scientific_tests_modified": [],
+    "configs_added": [
+      "configs/train_scenario_v1.yaml"
+    ],
+    "configs_modified": [],
+    "rl_modules_modified": [],
+    "risk_modules_modified": [],
+    "kf_modules_modified": [],
+    "validator_modules_modified": [],
+    "reward_cost_modules_modified": [],
+    "local_navigation_modified": false,
+    "handoff_tooling_modified": false,
+    "baseline_or_manifest_modified": false,
+    "forbidden_imports": [],
+    "fedavg_implementation_count": 0,
+    "fedprox_implementation_count": 0,
+    "federated_client_implementation_count": 0,
+    "federated_server_implementation_count": 0,
+    "scientific_training_steps": 0,
+    "formal_throughput_benchmark_blocks": 0,
+    "mvp_started": false,
+    "federated_started": false,
+    "all_B5_protected_files_byte_identical": true
+  },
+  "next_stage": "B5_SCENARIO_CLOSED_REBASE_AWAITING_USER_AUTHORIZATION"
+}

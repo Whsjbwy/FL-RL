@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "direction_count": 10000,
+  "sampling_method": "normalize(z), z~N(0,I3)",
+  "mean_unit_direction": [
+    -0.006902947496056811,
+    -0.007476140595520297,
+    0.004179427425732554
+  ],
+  "axis_second_moments": [
+    0.3321190238400792,
+    0.3365125024109184,
+    0.3313684737490045
+  ],
+  "unit_norm_max_abs_error": 3.3306690738754696e-16,
+  "policy_conditioning": false,
+  "note": "Diagnostic only; finite-sample moments do not define or prove the law."
+}

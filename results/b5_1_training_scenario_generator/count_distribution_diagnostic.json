@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "root_seed": 913001,
+  "scenario_count": 10000,
+  "defined_law": {
+    "1": 0.25,
+    "2": 0.25,
+    "3": 0.25,
+    "4": 0.25
+  },
+  "observed_frequency": {
+    "1": 2562,
+    "2": 2514,
+    "3": 2409,
+    "4": 2515
+  },
+  "observed_fraction": {
+    "1": 0.2562,
+    "2": 0.2514,
+    "3": 0.2409,
+    "4": 0.2515
+  },
+  "gate_uses_monte_carlo_significance": false
+}

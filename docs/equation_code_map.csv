@@ -1,0 +1,31 @@
+equation_id,module,function_or_class,test_evidence,property
+Eq. (1),src/auv_risk_rl/frames.py,rotation_body_to_ned,tests/test_frames.py::test_rotation_matrix_is_orthonormal;tests/test_frames.py::test_positive_pitch_moves_forward_axis_up_in_ned_convention,精确坐标变换
+Eq. (2),src/auv_risk_rl/frames.py,relative_position_body,tests/test_frames.py::test_relative_position_roundtrip_preserves_vector,精确坐标变换
+Eq. (4),src/auv_risk_rl/frames.py,angular_velocity_body_from_euler_rates,tests/test_frames.py::test_euler_yaw_rate_can_create_body_roll_rate_component,精确坐标变换
+Eq. (6)-(8),src/auv_risk_rl/dynamics/auv_kinematics.py,auv_state_derivative,tests/test_dynamics.py::test_positive_pitch_moves_auv_up_in_ned_convention,工程导航模型
+Eq. (9),src/auv_risk_rl/dynamics/auv_kinematics.py,integrate_rk2_step,tests/test_dynamics.py::test_rk2_step_halving_reduces_smooth_trajectory_error;tests/test_world_integration.py::test_world_matches_shared_rk2_rollout_for_one_control_cycle,数值近似/共享实现
+Eq. (11)-(12),src/auv_risk_rl/env/obstacles.py,propagate_cv_obstacle_truth,tests/test_world_integration.py::test_world_stops_at_swept_physical_collision,主环境严格CV真值
+Eq. (12),src/auv_risk_rl/tracking/cv_model.py,cv_state_transition,tests/test_cv_model.py::test_cv_state_transition_has_expected_position_velocity_block,CV均值条件精确
+Eq. (13)-(15),src/auv_risk_rl/tracking/cv_model.py,cv_process_noise_covariance,tests/test_cv_model.py::test_cv_process_noise_matches_independent_numerical_integral;tests/test_cv_model.py::test_cv_q_semigroup_consistency,连续白加速度精确离散
+Eq. (16)-(18),src/auv_risk_rl/sensors/sonar.py,generate_sonar_detections,tests/test_sensor_pipeline.py::test_sonar_visibility_respects_forward_fov;tests/test_sensor_pipeline.py::test_sonar_dropout_probability_one_produces_no_detection,简化声呐测量抽象
+Eq. (17),src/auv_risk_rl/sensors/measurement.py,detection_to_ned_measurement,tests/test_sensor_pipeline.py::test_tracker_uses_measurement_time_auv_pose_for_delayed_detection,测量发生时刻坐标转换
+Eq. (19),src/auv_risk_rl/tracking/kalman_filter.py,predict_cv_state,tests/test_kalman_filter.py::test_arbitrary_horizon_prediction_matches_direct_cv_blocks,条件精确
+Eq. (20)-(22),src/auv_risk_rl/tracking/kalman_filter.py,update_position_measurement,tests/test_kalman_filter.py::test_kf_covariance_remains_psd_after_joseph_update,条件精确/Joseph数值稳定
+Eq. (19)-(22) Delay,src/auv_risk_rl/tracking/delay_replay.py,DelayedMeasurementReplayer,tests/test_delay_replay.py::test_delayed_measurement_replay_matches_chronological_processing;tests/test_sensor_pipeline.py::test_tracker_uses_measurement_time_auv_pose_for_delayed_detection,按发生时间戳重放
+Eq. (23)-(25),src/auv_risk_rl/prediction/predictor.py,predict_position_distribution,tests/test_kalman_filter.py::test_arbitrary_horizon_prediction_matches_direct_cv_blocks,条件精确
+Eq. (27),src/auv_risk_rl/env/geometry.py,first_moving_sphere_collision_fraction,tests/test_environment_geometry.py::test_moving_sphere_collision_detects_between_nodes;tests/test_world_integration.py::test_world_stops_at_swept_physical_collision,物理扫掠球真实碰撞几何
+Eq. (30),tests/test_gaussian_coverage.py,test_gaussian_95pct_ellipsoid_coverage_within_sampling_tolerance,tests/test_gaussian_coverage.py::test_gaussian_95pct_ellipsoid_coverage_within_sampling_tolerance,模型匹配三维高斯覆盖检查
+Eq. (33)-(35),src/auv_risk_rl/risk/gaussian_bounds.py,point_collision_upper_bound,tests/test_risk_bounds.py::test_risk_upper_bound_dominates_mc_estimate,球事件保守上界
+Eq. (36)-(38),src/auv_risk_rl/risk/gaussian_bounds.py,segment_collision_upper_bound,tests/test_risk_bounds.py::test_segment_bound_detects_endpoint_only_counterexample,线性扫掠模型条件上界
+Eq. (39),src/auv_risk_rl/risk/gaussian_bounds.py,aggregate_union_bounds,tests/test_risk_bounds.py::test_union_bound_preserves_untruncated_sum,Boole联合上界
+Eq. (45)-(46),src/auv_risk_rl/costs/finite_horizon.py,normalized_finite_horizon_cost,tests/test_cost_accounting.py::test_normalized_cost_constant_one_equals_one;tests/test_cost_accounting.py::test_discount_normalizer_matches_closed_geometric_sum,有限时域归一化操作成本
+Eq. (51),src/auv_risk_rl/costs/finite_horizon.py,absorbing_failure_tail_cost,tests/test_cost_accounting.py::test_failure_tail_matches_explicit_absorbing_sequence,安全失败吸收尾项
+Eq. (55),src/auv_risk_rl/safety/candidates.py,build_candidate_actions,tests/test_validator.py::test_candidate_library_contains_45_grid_plus_dynamic_actions,工程启发式候选库
+Eq. (56)-(58),src/auv_risk_rl/safety/validator.py,validate_nominal_action,tests/test_validator.py::test_validator_preserves_safe_nominal_action;tests/test_world_integration.py::test_validator_rejects_center_inside_box_when_auv_sphere_is_outside,模型条件验证/完整包络操作约束
+Data isolation,src/auv_risk_rl/env/types.py,PolicyPerceptionFrame,tests/test_data_flow.py::test_policy_perception_frame_has_no_ground_truth_field;tests/test_data_flow.py::test_stage0_cycle_keeps_truth_in_diagnostics_only,策略侧与Ground Truth接口隔离
+B1 CM02 Eq. (28)(38),src/auv_risk_rl/risk/gaussian_bounds.py,segment_projection_direction,tests/test_b1_risk_compliance.py::test_segment_direction_matches_frozen_spec;tests/test_b1_risk_compliance.py::test_validator_risk_uses_auv_minus_obstacle_sign,冻结方向与相对符号
+B1 CM03 Eq. (34)(37),src/auv_risk_rl/risk/gaussian_bounds.py,_validated_projected_variance,tests/test_b1_risk_compliance.py::test_positive_tiny_projection_variance_not_deterministic,正方差不归零
+B1 CM04-CM05 Chapter 14,src/auv_risk_rl/safety/validator.py,validate_nominal_action,tests/test_b1_validator_compliance.py::test_invalid_covariance_enters_unverified_fallback;tests/test_b1_validator_compliance.py::test_backup_fallback_uses_lexicographic_rule,明确异常和未验证backup
+B1 CM06 Eq. (64),src/auv_risk_rl/env/world.py,AUVWorld.step,tests/test_b1_clearance_compliance.py::test_world_reports_whole_interval_minimum_clearance;tests/test_b1_clearance_compliance.py::test_collision_clearance_excludes_unexecuted_suffix,实际执行区间
+B1 CM07 Logging,src/auv_risk_rl/logging_utils.py,ResearchLoggerAdapter,tests/test_b1_logging_compliance.py::test_logger_accepts_research_context,非保留字段component
+B1 CM08 Chapter 9,src/auv_risk_rl/sensors/delay_queue.py,DetectionDelayQueue,tests/test_b1_delay_compliance.py::test_one_step_delay_releases_on_next_control_tick,整数控制tick调度

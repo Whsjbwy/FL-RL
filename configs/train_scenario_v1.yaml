@@ -1,0 +1,27 @@
+distribution_version: "TRAIN_SCENARIO_V1"
+
+start_N_range: [15.0, 25.0]
+start_E_range: [20.0, 80.0]
+start_D_range: [8.0, 32.0]
+
+goal_N_range: [75.0, 85.0]
+goal_E_range: [20.0, 80.0]
+goal_D_range: [8.0, 32.0]
+
+forced_vertical_separation_m: 4.0
+vertical_stratum_rule: "even_index_conditional_uniform"
+
+obstacle_count_values: [1, 2, 3, 4]
+obstacle_count_probabilities: [0.25, 0.25, 0.25, 0.25]
+obstacle_distance_range_m: [8.0, 23.0]
+obstacle_horizontal_angle_deg: [-50.0, 50.0]
+obstacle_vertical_angle_deg: [-25.0, 25.0]
+obstacle_radius_range_m: [0.5, 1.0]
+obstacle_speed_range_mps: [0.2, 0.8]
+
+velocity_direction: "isotropic_s2"
+motion_model: "CV"
+current: "zero"
+auv_initial_orientation: "goal_line_of_sight"
+auv_initial_surge: "min_surge"
+auv_initial_rates: "zero"

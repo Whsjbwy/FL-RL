@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scenario_count": 100,
+  "passed": 100,
+  "failed": 0,
+  "failures": [],
+  "maintained_tracks_min": 1,
+  "maintained_tracks_max": 4,
+  "truth_leakage_detected": false
+}

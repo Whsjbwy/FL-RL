@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "diagnostic_scenarios": 10000,
+  "root_seed": 913001,
+  "support_observed": {
+    "start_min": [
+      15.000718863228723,
+      20.003715582902558,
+      8.001787352925339
+    ],
+    "start_max": [
+      24.99944763171069,
+      79.99610891423927,
+      31.998668183098534
+    ],
+    "goal_min": [
+      75.00031133537574,
+      20.000561697064406,
+      8.002991562388674
+    ],
+    "goal_max": [
+      84.99780655740541,
+      79.99455964537978,
+      31.999938186526755
+    ],
+    "distance_min": 8.001131076699863,
+    "distance_max": 22.995767465769653,
+    "horizontal_min_deg": -49.999058535994635,
+    "horizontal_max_deg": 49.997302201563926,
+    "vertical_min_deg": -24.997772104438404,
+    "vertical_max_deg": 24.99877642033949,
+    "radius_min_m": 0.5000150420382465,
+    "radius_max_m": 0.9999669512377278,
+    "speed_min_mps": 0.20010735037875793,
+    "speed_max_mps": 0.799950907587504
+  },
+  "forced_vertical_scenarios": 5000,
+  "forced_vertical_fraction": 0.5,
+  "outside_operation_box_obstacle_centres_retained": 11,
+  "initial_obstacle_overlap_count_retained": 95,
+  "allowed_generation_retry_count": 2179,
+  "nonfinite_count": 0,
+  "motion_models": [
+    "CV"
+  ],
+  "currents": [
+    "zero"
+  ],
+  "scenario_level_rejection_count": 0,
+  "note": "Observed extrema are diagnostics, not definitions of the probability laws."
+}
