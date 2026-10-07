@@ -1,0 +1,22 @@
+{
+  "status": "EXITED",
+  "worker_pid": 38168,
+  "command": [
+    ".venv-b1/Scripts/python.exe",
+    "scripts/run_b0_training.py",
+    "--repair-registration",
+    "configs/stage2_b0_repair_r1.yaml",
+    "--execute",
+    "--run-kind",
+    "scientific_training",
+    "--transition-budget",
+    "300000",
+    "--output-dir",
+    "results/stage2_b0_repair_r1"
+  ],
+  "start_utc": "2026-10-07T15:05:38.111411+00:00",
+  "code_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+  "note": "PID is the actual direct child, not the outer launcher.",
+  "actual_worker_exit_code": 0,
+  "end_utc": "2026-10-07T16:24:49.783705+00:00"
+}

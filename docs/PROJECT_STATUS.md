@@ -1,4 +1,27 @@
-# 当前结果：STAGE2_B0_MVP_BATCH_V1（2026-10-07本机）
+# 当前结果：STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1
+
+2026-10-08本机：**R1 BATCH COMPLETED；学习率候选未改善固定100k完成能力。**
+科学Stage2 GO未建立，CONDITIONAL GO原因未确认；Stage3进入NO-GO/HOLD。
+第一轮有限L2已完成，尚有一轮L2/L3须另行授权，不宣布研究假设被否定。
+实验代码9029d60a3d88210e9113936b5da4f604bbf8c202，公开分支codex/stage2-b0-repair-r1-public；实际发布见PUBLICATION.json。
+未确认科学L1，仅公共lr3e-4→1e-4；原默认、SAC/动力学/reward/观察/场景均不改。
+C复用经真实派生随机流和固定Val核对的V1前三个100k；新11/22/33各100k空场景，
+共300000科研transition、270003完整update、1080012optimizer step；无新CV/重算。
+实际计算PID37516与启动器38168均exit0，三seed完成，不存在仍在运行的训练worker。
+固定100k Val300成功C=35/5/14，R1=19/1/6；SR均值6.00%→2.89%，各seed均下降。
+R1终点135边界（16pitch、119位置）、739timeout；固定R01–R03九例0成功。
+所选213578实际0.05s分段无首次事件不一致/漏判2m；最后R1失败均未进入2m球。
+本轮冻结诊断167条/65056控制步/385warm-up，未超登记上限。
+最终全仓621 passed、外置13 passed，0失败/错误/跳过；Ruff/compileall exit0。
+科学/测试/配置/登记与训练代码Git差异为空；后续结果工具修复不修改科学计算。
+详细机制等级、计数、曲线、终点和存储见results/stage2_b0_repair_r1/R1_RESULT_REPORT.md、R1_RESULT.json。
+原V1及历史验收材料/唯一模型保留，本轮不增加摘要/ZIP封存，不重装环境，不做正式benchmark。
+**唯一下一任务建议：利用中间权重做有界近目标价值/控制诊断，预登记最后一轮单因素R2，另行申请授权。**
+不自动第二候选、增预算、重跑CV、Stage3、Test/OOD或联邦。
+
+---
+
+# 历史结果：STAGE2_B0_MVP_BATCH_V1（2026-10-07本机）
 
 **BATCH_COMPLETED；Stage2科学Gate暂缓裁决，GO未建立；Stage3未进入。**
 实际实验提交45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898，工作分支codex/stage2-b0-mvp-v1。

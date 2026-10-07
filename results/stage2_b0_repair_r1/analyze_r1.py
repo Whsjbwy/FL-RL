@@ -31,10 +31,20 @@ EVENTS = ('goal_success', 'collision', 'operational_boundary_failure', 'task_hor
 COLORS = ('#0072B2', '#D55E00', '#009E73')
 
 
+def json_default(value: Any) -> Any:
+    """只转换NumPy数组/标量；未知类型和非有限数值继续显式报错。"""
+    if isinstance(value, np.ndarray):
+        return value.tolist()
+    if isinstance(value, np.generic):
+        return value.item()
+    raise TypeError(f'Object of type {type(value).__name__} is not JSON serializable')
+
+
 def json_write(path: Path, value: Any) -> None:
     """本轮派生汇总可重新生成，原始V1/R1日志永不修改。"""
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+'\n',
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False,
+                               default=json_default)+'\n',
                     encoding='utf-8')
 
 
@@ -50,8 +60,10 @@ def csv_write(path: Path, rows: list[dict[str, Any]], *, compressed: bool = Fals
         writer = csv.DictWriter(stream, fieldnames=fields)
         writer.writeheader()
         for row in rows:
-            writer.writerow({key: json.dumps(value, ensure_ascii=False, allow_nan=False)
-                             if isinstance(value, list | dict | tuple) else value
+            writer.writerow({key: json.dumps(value, ensure_ascii=False, allow_nan=False,
+                                              default=json_default)
+                             if isinstance(value, list | dict | tuple | np.ndarray)
+                             else json_default(value) if isinstance(value, np.generic) else value
                              for key, value in row.items()})
 
 
@@ -568,6 +580,7 @@ def plots(result: dict[str, Any], output: Path) -> list[str]:
                    'Dashed C is historical; solid R1 is a new run.')
     name = 'paired_monitor30_learning_curves.svg'
     figure.savefig(output/name)
+    figure.savefig(output/name.replace('.svg', '.png'), dpi=150)
     plt.close(figure)
     files.append(name)
     figure, axes = plt.subplots(1, 4, figsize=(16, 5), constrained_layout=True)
@@ -590,6 +603,7 @@ def plots(result: dict[str, Any], output: Path) -> list[str]:
                    'No best-checkpoint selection; not independent Test-ID.')
     name = 'fixed_100k_val300_raw_seeds.svg'
     figure.savefig(output/name)
+    figure.savefig(output/name.replace('.svg', '.png'), dpi=150)
     plt.close(figure)
     files.append(name)
     figure, axes = plt.subplots(2, 3, figsize=(15, 9), constrained_layout=True)
@@ -611,6 +625,7 @@ def plots(result: dict[str, Any], output: Path) -> list[str]:
                    'Finite losses and gradients are numerical evidence, not learned-task success.')
     name = 'update_diagnostics_comparison.svg'
     figure.savefig(output/name)
+    figure.savefig(output/name.replace('.svg', '.png'), dpi=150)
     plt.close(figure)
     files.append(name)
     return files

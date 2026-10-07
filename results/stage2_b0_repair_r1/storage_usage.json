@@ -1,0 +1,26 @@
+{
+  "measured_at": "2026-10-07T16:48:16.806670+00:00",
+  "measurement": "actual current task-directory file sizes; no hashes",
+  "files": 1078,
+  "total_bytes": 1421051711,
+  "total_gib": 1.323457538150251,
+  "by_top_directory_bytes": {
+    "__pycache__": 273295,
+    "analysis": 3026250,
+    "development": 359649159,
+    "diagnostic_replay": 79630697,
+    "local_snapshots": 611630,
+    "math": 2813062,
+    "models": 30618696,
+    "offline": 1048947,
+    "public_evidence": 9880854,
+    "root_evidence": 2982505,
+    "seed_11": 310700688,
+    "seed_22": 309849139,
+    "seed_33": 309966789
+  },
+  "original_v1_files_deleted_or_overwritten": false,
+  "virtual_environments_copied": 0,
+  "git_internal_growth": "NOT_MEASURED",
+  "task_code_and_docs_bytes_not_included": true
+}

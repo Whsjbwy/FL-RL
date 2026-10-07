@@ -1,0 +1,158 @@
+{
+  "registration_id": "STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1",
+  "registration": {
+    "registration_id": "STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1",
+    "registration_document": "docs/STAGE2_B0_REPAIR_R1.md",
+    "run_kind": "scientific_training",
+    "method": "B0_FULL_STATE_ORDINARY_SAC",
+    "branch": "L2_COMMON_LEARNING_RATE",
+    "repair_round": 1,
+    "project_config": "configs/stage0.yaml",
+    "scenario_config": "configs/train_scenario_v1.yaml",
+    "output_directory": "results/stage2_b0_repair_r1",
+    "training_seeds": [
+      11,
+      22,
+      33
+    ],
+    "task_profile": "obstacle_free",
+    "transition_budget_per_seed": 100000,
+    "total_transition_budget": 300000,
+    "hard_new_training_limit": 600000,
+    "control_group": "REUSE_V1_FIRST_100K",
+    "control_experiment_commit": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+    "num_envs": 2,
+    "device": "cuda",
+    "validation": {
+      "root_seed": 20261006,
+      "base_indices": {
+        "first": 0,
+        "last": 299
+      },
+      "monitor_indices": {
+        "first": 0,
+        "last": 29
+      },
+      "monitor_steps": [
+        0,
+        25000,
+        50000,
+        75000
+      ],
+      "full_steps": [
+        100000
+      ],
+      "task_horizon": 1000,
+      "deterministic": true,
+      "trajectory_indices": [
+        0,
+        1,
+        2
+      ],
+      "earliest_failure_trajectory": true
+    },
+    "checkpoint_interval": 25000,
+    "logging_flush_records": 100,
+    "small_model_steps": [
+      25000,
+      50000,
+      75000,
+      100000
+    ],
+    "primary_checkpoint": "final",
+    "sac": {
+      "gamma": 0.999,
+      "tau": 0.005,
+      "learning_rate": 0.0001,
+      "batch_size": 256,
+      "replay_capacity": 500000,
+      "learning_starts": 10000,
+      "utd": 1,
+      "initial_alpha": 0.2,
+      "target_entropy": -3.0
+    },
+    "branch_decision_file": "results/stage2_b0_repair_r1/branch_decision.json",
+    "comparability_file": "results/stage2_b0_repair_r1/control_comparability.json"
+  },
+  "experiment_code_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+  "created_at": "2026-10-07T15:05:39.807619+00:00",
+  "status": "COMPLETED",
+  "completed_seeds": [
+    11,
+    22,
+    33
+  ],
+  "seeds": {
+    "11": {
+      "training_seconds": 1195.0294529999755,
+      "evaluation_seconds": 381.38297010000133,
+      "checkpoint_seconds": 5.177128499999526,
+      "status": "COMPLETED",
+      "checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_repair_r1\\seed_11\\latest_resume.pt",
+      "checkpoint_transition": 100000,
+      "transitions": 100000,
+      "updates": 90001,
+      "optimizer_steps": 360004,
+      "profile": "obstacle_free",
+      "replay_size": 100000,
+      "evaluation_env_transitions": 379457,
+      "evaluation_warmup_control_transitions": 2100,
+      "training_warmup_transitions": 755,
+      "completed_episodes": 149,
+      "last_progress_at": "2026-10-07T15:32:09.833344+00:00"
+    },
+    "22": {
+      "training_seconds": 1204.479878499662,
+      "evaluation_seconds": 382.66637979999905,
+      "checkpoint_seconds": 5.075777200003358,
+      "status": "COMPLETED",
+      "checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_repair_r1\\seed_22\\latest_resume.pt",
+      "checkpoint_transition": 100000,
+      "transitions": 100000,
+      "updates": 90001,
+      "optimizer_steps": 360004,
+      "profile": "obstacle_free",
+      "replay_size": 100000,
+      "evaluation_env_transitions": 372626,
+      "evaluation_warmup_control_transitions": 2100,
+      "training_warmup_transitions": 925,
+      "completed_episodes": 183,
+      "last_progress_at": "2026-10-07T15:58:49.039811+00:00"
+    },
+    "33": {
+      "training_seconds": 1200.246291299478,
+      "evaluation_seconds": 347.87775169999804,
+      "checkpoint_seconds": 5.131678400000965,
+      "status": "COMPLETED",
+      "checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_repair_r1\\seed_33\\latest_resume.pt",
+      "checkpoint_transition": 100000,
+      "transitions": 100000,
+      "updates": 90001,
+      "optimizer_steps": 360004,
+      "profile": "obstacle_free",
+      "replay_size": 100000,
+      "evaluation_env_transitions": 339628,
+      "evaluation_warmup_control_transitions": 2100,
+      "training_warmup_transitions": 825,
+      "completed_episodes": 163,
+      "last_progress_at": "2026-10-07T16:24:49.258356+00:00"
+    }
+  },
+  "pid": 37516,
+  "started_at": "2026-10-07T15:05:40.538042+00:00",
+  "current_seed": 33,
+  "current_operation": "BATCH_FINISHED",
+  "evaluation_full": true,
+  "evaluation_at_transition": 100000,
+  "last_progress_at": "2026-10-07T16:24:49.258363+00:00",
+  "current_validation_index": 299,
+  "current_validation_completed_episodes": 300,
+  "current_validation_transitions": 249801,
+  "current_validation_warmup_transitions": 1500,
+  "actual_training_transitions": 300000,
+  "actual_sac_updates": 270003,
+  "remaining_training_hours_estimate": 0.0,
+  "estimate_excludes_future_evaluation_and_save": true,
+  "completed_at": "2026-10-07T16:24:49.313163+00:00",
+  "scientific_stage2_decision": "AWAITING_RESULT_ANALYSIS"
+}

@@ -1,0 +1,1 @@
+{"status": "EXITED", "actual_computation_pid": 37516, "monitored_at_utc": "2026-10-07T15:07:34.022348+00:00", "mechanism": "read-only Windows process handle; actual batch_state PID", "actual_worker_exit_code": 0, "exited_at_utc": "2026-10-07T16:24:49.781232+00:00"}

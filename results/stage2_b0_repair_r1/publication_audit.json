@@ -1,0 +1,215 @@
+{
+  "checked_at": "2026-10-07T16:51:33.375719+00:00",
+  "status": "APPROVED_SMALL_RESULTS_ONLY",
+  "staged_added_or_modified_files": 50,
+  "bytes_added_or_modified_file_contents": 1695169,
+  "largest_file_bytes": 451895,
+  "secret_pattern_hits": [],
+  "protected_code_configuration_registration_diff": [],
+  "source_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+  "raw_commands_retained_locally": true,
+  "models_replay_protocol_not_staged": true,
+  "no_extra_file_digests": true,
+  "sizes": [
+    {
+      "path": ".gitignore",
+      "bytes": 6324
+    },
+    {
+      "path": "docs/PROJECT_STATUS.md",
+      "bytes": 28465
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/COMMANDS.txt",
+      "bytes": 13518
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/R1_RESULT.json",
+      "bytes": 70815
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/R1_RESULT_REPORT.md",
+      "bytes": 11347
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_training_worker_exit.json",
+      "bytes": 288
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_worker_watch.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_worker_watch.stdout.txt",
+      "bytes": 267
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_worker_watch.worker.json",
+      "bytes": 449
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/endpoint_comparison.csv",
+      "bytes": 3453
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/figures/fixed_100k_val300_raw_seeds.svg",
+      "bytes": 82199
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/figures/paired_monitor30_learning_curves.svg",
+      "bytes": 158995
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/figures/update_diagnostics_comparison.svg",
+      "bytes": 173536
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/paired_endpoint_changes.csv",
+      "bytes": 315
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/training_episode_bins.csv",
+      "bytes": 50202
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/update_bins.csv",
+      "bytes": 22925
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/validation_points.csv",
+      "bytes": 9326
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analyze_r1.py",
+      "bytes": 40039
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/audit_final_evidence.py",
+      "bytes": 18474
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/batch_state.json",
+      "bytes": 5305
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/build_final_report.py",
+      "bytes": 34817
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/diag_budget.json",
+      "bytes": 55887
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_paths.json",
+      "bytes": 22258
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.worker.json",
+      "bytes": 453
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.worker.json",
+      "bytes": 450
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/prepare_final_publication.py",
+      "bytes": 10518
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/fixed_100k_index0_trajectories.csv.gz",
+      "bytes": 451895
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/fixed_diagnostics_summary.csv",
+      "bytes": 5631
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/training_episodes.csv.gz",
+      "bytes": 122516
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/validation_episodes.csv.gz",
+      "bytes": 280240
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis.stderr.txt",
+      "bytes": 1428
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis.worker.json",
+      "bytes": 486
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.stdout.txt",
+      "bytes": 5551
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.worker.json",
+      "bytes": 485
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit.stderr.txt",
+      "bytes": 1425
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit.worker.json",
+      "bytes": 459
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.stdout.txt",
+      "bytes": 227
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.worker.json",
+      "bytes": 460
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_scientific_batch.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_scientific_batch.worker.json",
+      "bytes": 647
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/storage_usage.json",
+      "bytes": 804
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/watch_actual_worker.py",
+      "bytes": 2159
+    }
+  ]
+}

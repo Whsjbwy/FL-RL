@@ -1,0 +1,250 @@
+R1 FINAL PUBLIC COMMAND RECORDS
+Derived from local commands.jsonl; original records are unchanged.
+This helper did not run any scientific training, evaluation, or Git command.
+Plot interpreter: <EXISTING_BUNDLED_PLOT_PYTHON> means the existing bundled
+Python used in the actual record. Its personal user directory is withheld here.
+Arguments are JSON arrays, not shell-reconstructed commands.
+Early nonzero exits below are preserved failures, not reported as PASS.
+
+name=control_comparability_final
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/check_control_comparability.py"]
+exit_code=0
+code_commit=f89bfa4af3cad0c6da9ab64b79da7ae1b267dbf7
+start_utc=2026-10-07T14:45:52.558877+00:00
+end_utc=2026-10-07T14:46:20.853180+00:00
+actual_worker_pid=NOT RECORDED
+
+name=repair_goal_diagnostic_roundoff_counterexample
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "pytest", "tests/test_b0_repair_r1.py::test_diagnostic_goal_entry_survives_event_prefix_roundoff", "-q", "--basetemp", "results/stage2_b0_repair_r1/development/pytest_observer_counterexample", "--junitxml", "results/stage2_b0_repair_r1/repair_goal_diagnostic_roundoff_counterexample.xml"]
+exit_code=1
+code_commit=f89bfa4af3cad0c6da9ab64b79da7ae1b267dbf7
+start_utc=2026-10-07T14:51:20.289821+00:00
+end_utc=2026-10-07T14:51:22.846598+00:00
+actual_worker_pid=NOT RECORDED
+
+name=repair_harness_targeted
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "pytest", "tests/test_b0_repair_r1.py", "-q", "--basetemp", "results/stage2_b0_repair_r1/development/pytest_repair_targeted", "--junitxml", "results/stage2_b0_repair_r1/repair_harness_targeted.xml"]
+exit_code=1
+code_commit=f89bfa4af3cad0c6da9ab64b79da7ae1b267dbf7
+start_utc=2026-10-07T14:52:03.042440+00:00
+end_utc=2026-10-07T14:52:05.809886+00:00
+actual_worker_pid=NOT RECORDED
+
+name=r1_targeted_final
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "pytest", "tests/test_b0_repair_entry.py", "tests/test_b0_repair_r1.py", "tests/test_b0_r1_numerics.py", "-q", "--basetemp", "results/stage2_b0_repair_r1/development/targeted_final", "--junitxml", "results/stage2_b0_repair_r1/targeted_final.xml"]
+exit_code=0
+code_commit=f89bfa4af3cad0c6da9ab64b79da7ae1b267dbf7
+start_utc=2026-10-07T14:57:17.107552+00:00
+end_utc=2026-10-07T14:57:21.773023+00:00
+actual_worker_pid=38292
+
+name=r1_ruff
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "ruff", "check", "src", "tests", "scripts", "results/stage2_b0_repair_r1"]
+exit_code=1
+code_commit=f89bfa4af3cad0c6da9ab64b79da7ae1b267dbf7
+start_utc=2026-10-07T14:57:42.490484+00:00
+end_utc=2026-10-07T14:57:42.574047+00:00
+actual_worker_pid=38940
+
+name=r1_phase_a
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "pytest", "handoff/reference_tests/test_phase_a_conformance.py", "-q", "-p", "results.stage2_b0_repair_r1.pytest_counts", "--basetemp", "results/stage2_b0_repair_r1/development/phase_a", "--junitxml", "results/stage2_b0_repair_r1/pytest_phase_a.xml"]
+exit_code=0
+code_commit=ca4e67b88941a19ee1974be8150b58e7a443e5dd
+start_utc=2026-10-07T15:00:05.135476+00:00
+end_utc=2026-10-07T15:00:08.028543+00:00
+actual_worker_pid=39272
+
+name=r1_static_final
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "ruff", "check", "src", "tests", "scripts", "results/stage2_b0_repair_r1"]
+exit_code=0
+code_commit=ca4e67b88941a19ee1974be8150b58e7a443e5dd
+start_utc=2026-10-07T15:00:08.595623+00:00
+end_utc=2026-10-07T15:00:08.691142+00:00
+actual_worker_pid=38408
+
+name=r1_compileall
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "compileall", "-q", "src", "tests", "scripts", "results/stage2_b0_repair_r1"]
+exit_code=0
+code_commit=ca4e67b88941a19ee1974be8150b58e7a443e5dd
+start_utc=2026-10-07T15:00:08.896375+00:00
+end_utc=2026-10-07T15:00:09.397326+00:00
+actual_worker_pid=34644
+
+name=r1_pytest_all
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "pytest", "tests", "-q", "-p", "results.stage2_b0_repair_r1.pytest_counts", "--basetemp", "results/stage2_b0_repair_r1/development/pytest_all", "--junitxml", "results/stage2_b0_repair_r1/pytest_all.xml"]
+exit_code=0
+code_commit=ca4e67b88941a19ee1974be8150b58e7a443e5dd
+start_utc=2026-10-07T15:00:03.815512+00:00
+end_utc=2026-10-07T15:00:40.705377+00:00
+actual_worker_pid=24248
+
+name=r1_scientific_batch
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "scripts/run_b0_training.py", "--repair-registration", "configs/stage2_b0_repair_r1.yaml", "--execute", "--run-kind", "scientific_training", "--transition-budget", "300000", "--output-dir", "results/stage2_b0_repair_r1"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T15:05:38.111411+00:00
+end_utc=2026-10-07T16:24:49.784429+00:00
+actual_worker_pid=38168
+
+name=actual_worker_watch
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/watch_actual_worker.py", "37516"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T15:07:33.966714+00:00
+end_utc=2026-10-07T16:24:49.791774+00:00
+actual_worker_pid=40820
+
+name=r1_final_analysis
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/analyze_r1.py", "--execute-final-diagnostics", "--trusted-local"]
+exit_code=1
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:25:19.116220+00:00
+end_utc=2026-10-07T16:25:35.500511+00:00
+actual_worker_pid=40976
+
+name=r1_final_evidence_audit
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/audit_final_evidence.py", "--trusted-local"]
+exit_code=1
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:25:42.661175+00:00
+end_utc=2026-10-07T16:25:44.477425+00:00
+actual_worker_pid=2792
+
+name=r1_final_evidence_audit_retry
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/audit_final_evidence.py", "--trusted-local"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:27:24.825597+00:00
+end_utc=2026-10-07T16:27:48.840429+00:00
+actual_worker_pid=41636
+
+name=r1_analyzer_numpy_serialization_check
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-c", "import csv, importlib.util, json, tempfile\nfrom pathlib import Path\nimport numpy as np\npath = Path('results/stage2_b0_repair_r1/analyze_r1.py')\nspec = importlib.util.spec_from_file_location('r1_analysis_serialization_check', path)\nm = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(m)\nvalue = {'array': np.array([1.25, 2.5]), 'integer': np.int64(7), 'nested': {'boolean': np.bool_(True), 'scalar': np.float32(0.5)}}\nwith tempfile.TemporaryDirectory(prefix='serialization_check_', dir=m.TASK) as temporary:\n    directory = Path(temporary)\n    m.json_write(directory/'valid.json', value)\n    parsed = json.loads((directory/'valid.json').read_text(encoding='utf-8'))\n    assert parsed == {'array': [1.25, 2.5], 'integer': 7, 'nested': {'boolean': True, 'scalar': 0.5}}\n    m.csv_write(directory/'valid.csv', [value])\n    row = next(csv.DictReader((directory/'valid.csv').open(encoding='utf-8')))\n    assert json.loads(row['array']) == [1.25, 2.5]\n    assert row['integer'] == '7'\n    assert json.loads(row['nested']) == {'boolean': True, 'scalar': 0.5}\n    for invalid, expected in (({'array': np.array([float('nan')])}, ValueError), ({'unknown': object()}, TypeError)):\n        try:\n            m.json_write(directory/'invalid.json', invalid)\n        except expected:\n            pass\n        else:\n            raise AssertionError('strict JSON validation did not fail')\n    for invalid, expected in (({'array': np.array([float('inf')])}, ValueError), ({'nested': [object()]}, TypeError)):\n        try:\n            m.csv_write(directory/'invalid.csv', [invalid])\n        except expected:\n            pass\n        else:\n            raise AssertionError('strict nested CSV validation did not fail')\nprint(json.dumps({'status': 'PASS', 'checks': ['nested_numpy_json', 'numpy_csv_cells', 'nonfinite_json_rejected', 'unknown_json_rejected', 'nonfinite_csv_array_rejected', 'unknown_csv_nested_rejected'], 'environment_transitions': 0, 'gradient_updates': 0}))"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:28:08.494348+00:00
+end_utc=2026-10-07T16:28:08.731547+00:00
+actual_worker_pid=41964
+
+name=r1_final_analysis_retry_serialization
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/analyze_r1.py", "--execute-final-diagnostics", "--trusted-local"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:31:27.984106+00:00
+end_utc=2026-10-07T16:31:56.945599+00:00
+actual_worker_pid=9996
+
+name=r1_actual_results_plot_png
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=["<EXISTING_BUNDLED_PLOT_PYTHON>", "results/stage2_b0_repair_r1/analyze_r1.py", "--plot-only", "--analysis-json", "results/stage2_b0_repair_r1/analysis/r1_analysis.json", "--output-dir", "results/stage2_b0_repair_r1/analysis/figures"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:32:59.437847+00:00
+end_utc=2026-10-07T16:33:01.862184+00:00
+actual_worker_pid=41104
+
+name=r1_report_builder_ruff
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "ruff", "check", "results/stage2_b0_repair_r1/build_final_report.py"]
+exit_code=1
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:40:20.291035+00:00
+end_utc=2026-10-07T16:40:20.403706+00:00
+actual_worker_pid=35260
+
+name=r1_report_builder_ruff_manual_recheck
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "ruff", "check", "results/stage2_b0_repair_r1/build_final_report.py"]
+exit_code=1
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:42:32.116829+00:00
+end_utc=2026-10-07T16:42:32.194252+00:00
+actual_worker_pid=17076
+
+name=r1_report_builder_ruff_manual_final
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "ruff", "check", "results/stage2_b0_repair_r1/build_final_report.py"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:42:46.250520+00:00
+end_utc=2026-10-07T16:42:46.328596+00:00
+actual_worker_pid=30656
+
+name=r1_final_report_generation
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/build_final_report.py"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:43:08.054438+00:00
+end_utc=2026-10-07T16:43:08.999884+00:00
+actual_worker_pid=35260
+
+name=final_publication_prepare
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/prepare_final_publication.py"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:45:06.407094+00:00
+end_utc=2026-10-07T16:45:06.515676+00:00
+actual_worker_pid=40012
+
+name=final_publication_tooling_ruff
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "ruff", "check", "results/stage2_b0_repair_r1"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:45:29.026236+00:00
+end_utc=2026-10-07T16:45:29.167301+00:00
+actual_worker_pid=41064
+
+name=final_publication_tooling_compile
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "compileall", "-q", "results/stage2_b0_repair_r1"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:45:29.939485+00:00
+end_utc=2026-10-07T16:45:30.421544+00:00
+actual_worker_pid=13224
+
+name=r1_final_report_generation_clarified
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "results/stage2_b0_repair_r1/build_final_report.py"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:48:15.877069+00:00
+end_utc=2026-10-07T16:48:16.816223+00:00
+actual_worker_pid=31316
+
+name=final_publication_tooling_ruff_clarified
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "ruff", "check", "results/stage2_b0_repair_r1"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:48:17.568512+00:00
+end_utc=2026-10-07T16:48:17.704782+00:00
+actual_worker_pid=31032
+
+name=final_publication_tooling_compile_clarified
+cwd=D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE
+command=[".venv-b1/Scripts/python.exe", "-m", "compileall", "-q", "results/stage2_b0_repair_r1"]
+exit_code=0
+code_commit=9029d60a3d88210e9113936b5da4f604bbf8c202
+start_utc=2026-10-07T16:48:18.486578+00:00
+end_utc=2026-10-07T16:48:18.954021+00:00
+actual_worker_pid=37688

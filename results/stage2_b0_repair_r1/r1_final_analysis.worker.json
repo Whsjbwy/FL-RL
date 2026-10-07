@@ -1,0 +1,15 @@
+{
+  "status": "EXITED",
+  "worker_pid": 40976,
+  "command": [
+    ".venv-b1/Scripts/python.exe",
+    "results/stage2_b0_repair_r1/analyze_r1.py",
+    "--execute-final-diagnostics",
+    "--trusted-local"
+  ],
+  "start_utc": "2026-10-07T16:25:19.116220+00:00",
+  "code_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+  "note": "PID is the actual direct child, not the outer launcher.",
+  "actual_worker_exit_code": 1,
+  "end_utc": "2026-10-07T16:25:35.499819+00:00"
+}

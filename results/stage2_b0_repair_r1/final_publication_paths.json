@@ -1,0 +1,580 @@
+{
+  "created_at_utc": "2026-10-07T16:48:19.825845+00:00",
+  "purpose": "explicit final R1 public stage candidates; no Git operations performed",
+  "current_public_code_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+  "stage_paths": [
+    ".gitignore",
+    "docs/PROJECT_STATUS.md",
+    "results/stage2_b0_repair_r1/COMMANDS.txt",
+    "results/stage2_b0_repair_r1/R1_RESULT.json",
+    "results/stage2_b0_repair_r1/R1_RESULT_REPORT.md",
+    "results/stage2_b0_repair_r1/actual_training_worker_exit.json",
+    "results/stage2_b0_repair_r1/actual_worker_watch.stderr.txt",
+    "results/stage2_b0_repair_r1/actual_worker_watch.stdout.txt",
+    "results/stage2_b0_repair_r1/actual_worker_watch.worker.json",
+    "results/stage2_b0_repair_r1/analysis/endpoint_comparison.csv",
+    "results/stage2_b0_repair_r1/analysis/figures/fixed_100k_val300_raw_seeds.svg",
+    "results/stage2_b0_repair_r1/analysis/figures/paired_monitor30_learning_curves.svg",
+    "results/stage2_b0_repair_r1/analysis/figures/update_diagnostics_comparison.svg",
+    "results/stage2_b0_repair_r1/analysis/paired_endpoint_changes.csv",
+    "results/stage2_b0_repair_r1/analysis/training_episode_bins.csv",
+    "results/stage2_b0_repair_r1/analysis/update_bins.csv",
+    "results/stage2_b0_repair_r1/analysis/validation_points.csv",
+    "results/stage2_b0_repair_r1/analyze_r1.py",
+    "results/stage2_b0_repair_r1/audit_final_evidence.py",
+    "results/stage2_b0_repair_r1/batch_state.json",
+    "results/stage2_b0_repair_r1/build_final_report.py",
+    "results/stage2_b0_repair_r1/control_comparability_final.stderr.txt",
+    "results/stage2_b0_repair_r1/control_comparability_final.stdout.txt",
+    "results/stage2_b0_repair_r1/diag_budget.json",
+    "results/stage2_b0_repair_r1/final_publication_paths.json",
+    "results/stage2_b0_repair_r1/final_publication_prepare.stderr.txt",
+    "results/stage2_b0_repair_r1/final_publication_prepare.stdout.txt",
+    "results/stage2_b0_repair_r1/final_publication_prepare.worker.json",
+    "results/stage2_b0_repair_r1/final_publication_tooling_compile.stderr.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_compile.stdout.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_compile.worker.json",
+    "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.stderr.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.stdout.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.worker.json",
+    "results/stage2_b0_repair_r1/final_publication_tooling_ruff.stderr.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_ruff.stdout.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_ruff.worker.json",
+    "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.stderr.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.stdout.txt",
+    "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.worker.json",
+    "results/stage2_b0_repair_r1/prepare_final_publication.py",
+    "results/stage2_b0_repair_r1/public_evidence/fixed_100k_index0_trajectories.csv.gz",
+    "results/stage2_b0_repair_r1/public_evidence/fixed_diagnostics_summary.csv",
+    "results/stage2_b0_repair_r1/public_evidence/training_episodes.csv.gz",
+    "results/stage2_b0_repair_r1/public_evidence/validation_episodes.csv.gz",
+    "results/stage2_b0_repair_r1/pytest_all.xml",
+    "results/stage2_b0_repair_r1/pytest_all_counts.json",
+    "results/stage2_b0_repair_r1/pytest_phase_a.xml",
+    "results/stage2_b0_repair_r1/pytest_phase_a_counts.json",
+    "results/stage2_b0_repair_r1/r1_actual_results_plot_png.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_actual_results_plot_png.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_actual_results_plot_png.worker.json",
+    "results/stage2_b0_repair_r1/r1_analyzer_numpy_serialization_check.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_analyzer_numpy_serialization_check.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_analyzer_numpy_serialization_check.worker.json",
+    "results/stage2_b0_repair_r1/r1_compileall.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_compileall.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_compileall.worker.json",
+    "results/stage2_b0_repair_r1/r1_final_analysis.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_final_analysis.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_final_analysis.worker.json",
+    "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.worker.json",
+    "results/stage2_b0_repair_r1/r1_final_evidence_audit.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_final_evidence_audit.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_final_evidence_audit.worker.json",
+    "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.worker.json",
+    "results/stage2_b0_repair_r1/r1_final_report_generation.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_final_report_generation.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_final_report_generation.worker.json",
+    "results/stage2_b0_repair_r1/r1_final_report_generation_clarified.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_final_report_generation_clarified.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_final_report_generation_clarified.worker.json",
+    "results/stage2_b0_repair_r1/r1_phase_a.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_phase_a.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_phase_a.worker.json",
+    "results/stage2_b0_repair_r1/r1_pytest_all.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_pytest_all.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_pytest_all.worker.json",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff.worker.json",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_final.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_final.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_final.worker.json",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_recheck.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_recheck.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_recheck.worker.json",
+    "results/stage2_b0_repair_r1/r1_ruff.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_ruff.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_ruff.worker.json",
+    "results/stage2_b0_repair_r1/r1_scientific_batch.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_scientific_batch.worker.json",
+    "results/stage2_b0_repair_r1/r1_static_final.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_static_final.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_static_final.worker.json",
+    "results/stage2_b0_repair_r1/r1_targeted_final.stderr.txt",
+    "results/stage2_b0_repair_r1/r1_targeted_final.stdout.txt",
+    "results/stage2_b0_repair_r1/r1_targeted_final.worker.json",
+    "results/stage2_b0_repair_r1/repair_goal_diagnostic_roundoff_counterexample.stderr.txt",
+    "results/stage2_b0_repair_r1/repair_goal_diagnostic_roundoff_counterexample.stdout.txt",
+    "results/stage2_b0_repair_r1/repair_harness_targeted.stderr.txt",
+    "results/stage2_b0_repair_r1/repair_harness_targeted.stdout.txt",
+    "results/stage2_b0_repair_r1/storage_usage.json",
+    "results/stage2_b0_repair_r1/targeted_final.xml",
+    "results/stage2_b0_repair_r1/watch_actual_worker.py"
+  ],
+  "file_sizes": [
+    {
+      "path": ".gitignore",
+      "bytes": 8227
+    },
+    {
+      "path": "docs/PROJECT_STATUS.md",
+      "bytes": 28465
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/COMMANDS.txt",
+      "bytes": 13518
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/R1_RESULT.json",
+      "bytes": 70815
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/R1_RESULT_REPORT.md",
+      "bytes": 11140
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_training_worker_exit.json",
+      "bytes": 288
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_worker_watch.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_worker_watch.stdout.txt",
+      "bytes": 267
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/actual_worker_watch.worker.json",
+      "bytes": 449
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/endpoint_comparison.csv",
+      "bytes": 3453
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/figures/fixed_100k_val300_raw_seeds.svg",
+      "bytes": 82199
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/figures/paired_monitor30_learning_curves.svg",
+      "bytes": 158995
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/figures/update_diagnostics_comparison.svg",
+      "bytes": 173536
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/paired_endpoint_changes.csv",
+      "bytes": 315
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/training_episode_bins.csv",
+      "bytes": 50202
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/update_bins.csv",
+      "bytes": 22925
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analysis/validation_points.csv",
+      "bytes": 9326
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/analyze_r1.py",
+      "bytes": 40039
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/audit_final_evidence.py",
+      "bytes": 18474
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/batch_state.json",
+      "bytes": 5305
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/build_final_report.py",
+      "bytes": 34578
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/control_comparability_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/control_comparability_final.stdout.txt",
+      "bytes": 3598
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/diag_budget.json",
+      "bytes": 55887
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_prepare.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_prepare.stdout.txt",
+      "bytes": 98
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_prepare.worker.json",
+      "bytes": 441
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile.worker.json",
+      "bytes": 453
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_compile_clarified.worker.json",
+      "bytes": 453
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff.worker.json",
+      "bytes": 450
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/final_publication_tooling_ruff_clarified.worker.json",
+      "bytes": 450
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/prepare_final_publication.py",
+      "bytes": 10518
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/fixed_100k_index0_trajectories.csv.gz",
+      "bytes": 451895
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/fixed_diagnostics_summary.csv",
+      "bytes": 5631
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/training_episodes.csv.gz",
+      "bytes": 122516
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/public_evidence/validation_episodes.csv.gz",
+      "bytes": 280240
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/pytest_all.xml",
+      "bytes": 72906
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/pytest_all_counts.json",
+      "bytes": 8206
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/pytest_phase_a.xml",
+      "bytes": 2210
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/pytest_phase_a_counts.json",
+      "bytes": 350
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_actual_results_plot_png.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_actual_results_plot_png.stdout.txt",
+      "bytes": 171
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_actual_results_plot_png.worker.json",
+      "bytes": 666
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_analyzer_numpy_serialization_check.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_analyzer_numpy_serialization_check.stdout.txt",
+      "bytes": 240
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_analyzer_numpy_serialization_check.worker.json",
+      "bytes": 2395
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_compileall.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_compileall.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_compileall.worker.json",
+      "bytes": 495
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis.stderr.txt",
+      "bytes": 1428
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis.worker.json",
+      "bytes": 486
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.stdout.txt",
+      "bytes": 5551
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_analysis_retry_serialization.worker.json",
+      "bytes": 485
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit.stderr.txt",
+      "bytes": 1425
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit.worker.json",
+      "bytes": 459
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.stdout.txt",
+      "bytes": 227
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_evidence_audit_retry.worker.json",
+      "bytes": 460
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_report_generation.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_report_generation.stdout.txt",
+      "bytes": 955
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_report_generation.worker.json",
+      "bytes": 434
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_report_generation_clarified.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_report_generation_clarified.stdout.txt",
+      "bytes": 955
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_final_report_generation_clarified.worker.json",
+      "bytes": 434
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_phase_a.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_phase_a.stdout.txt",
+      "bytes": 101
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_phase_a.worker.json",
+      "bytes": 683
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_pytest_all.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_pytest_all.stdout.txt",
+      "bytes": 751
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_pytest_all.worker.json",
+      "bytes": 636
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff.stdout.txt",
+      "bytes": 25954
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff.worker.json",
+      "bytes": 472
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_final.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_final.worker.json",
+      "bytes": 472
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_recheck.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_recheck.stdout.txt",
+      "bytes": 1305
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_report_builder_ruff_manual_recheck.worker.json",
+      "bytes": 472
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_ruff.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_ruff.stdout.txt",
+      "bytes": 7476
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_ruff.worker.json",
+      "bytes": 492
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_scientific_batch.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_scientific_batch.worker.json",
+      "bytes": 647
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_static_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_static_final.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_static_final.worker.json",
+      "bytes": 492
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_targeted_final.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_targeted_final.stdout.txt",
+      "bytes": 101
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/r1_targeted_final.worker.json",
+      "bytes": 679
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/repair_goal_diagnostic_roundoff_counterexample.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/repair_goal_diagnostic_roundoff_counterexample.stdout.txt",
+      "bytes": 2598
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/repair_harness_targeted.stderr.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/repair_harness_targeted.stdout.txt",
+      "bytes": 1060
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/storage_usage.json",
+      "bytes": 804
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/targeted_final.xml",
+      "bytes": 7940
+    },
+    {
+      "path": "results/stage2_b0_repair_r1/watch_actual_worker.py",
+      "bytes": 2159
+    }
+  ],
+  "measured_candidate_bytes_excluding_this_plan": 1821902,
+  "local_only": [
+    "results/stage2_b0_repair_r1/analysis/r1_analysis.json",
+    "results/stage2_b0_repair_r1/analysis/final_evidence_audit.json",
+    "results/stage2_b0_repair_r1/analysis/final_fixed_diagnostics.json",
+    "results/stage2_b0_repair_r1/analysis/termination_strata.csv",
+    "results/stage2_b0_repair_r1/validation_manifest.json",
+    "results/stage2_b0_repair_r1/frozen_replay_result.json",
+    "results/stage2_b0_repair_r1/offline/v1_offline_analysis.json",
+    "results/stage2_b0_repair_r1/public_evidence/training_episodes.csv",
+    "results/stage2_b0_repair_r1/public_evidence/validation_episodes.csv",
+    "results/stage2_b0_repair_r1/public_evidence/selected_validation_trajectories.csv.gz",
+    "results/stage2_b0_repair_r1/commands.jsonl",
+    "results/stage2_b0_repair_r1/r1_scientific_batch.stdout.txt",
+    "results/stage2_b0_repair_r1/protocol_read.stdout.txt",
+    "results/stage2_b0_repair_r1/protocol_science_read.stdout.txt",
+    "results/stage2_b0_repair_r1/models/",
+    "results/stage2_b0_repair_r1/local_snapshots/",
+    "results/stage2_b0_repair_r1/diagnostic_replay/",
+    "results/stage2_b0_repair_r1/math/critic_rollouts/",
+    "results/stage2_b0_repair_r1/seed_*/latest_resume.pt",
+    "results/stage2_b0_repair_r1/seed_*/segments/*/*.jsonl",
+    "results/stage2_b0_repair_r1/development/",
+    "results/stage2_b0_repair_r1/runtime/"
+  ],
+  "original_commands_unchanged": true,
+  "scientific_files_modified": false,
+  "extra_file_digests_generated": false,
+  "git_add_commit_push_performed": false,
+  "note": "Report claims remain those of actual R1 results; this is publication planning only."
+}

@@ -1424,6 +1424,87 @@
       "warmup_control_transitions": 0,
       "created_at": "2026-10-07T14:44:23.947441+00:00",
       "finished_at": "2026-10-07T14:44:24.123337+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s11_R01_horizontal_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:20.896394+00:00",
+      "finished_at": "2026-10-07T16:25:22.534869+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s11_R02_deeper_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:22.549952+00:00",
+      "finished_at": "2026-10-07T16:25:24.150184+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s11_R03_shallower_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:24.165474+00:00",
+      "finished_at": "2026-10-07T16:25:25.757462+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s22_R01_horizontal_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:25.776497+00:00",
+      "finished_at": "2026-10-07T16:25:27.367480+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s22_R02_deeper_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:27.382721+00:00",
+      "finished_at": "2026-10-07T16:25:29.055662+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s22_R03_shallower_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:29.070435+00:00",
+      "finished_at": "2026-10-07T16:25:30.730935+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s33_R01_horizontal_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:30.757490+00:00",
+      "finished_at": "2026-10-07T16:25:32.436466+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s33_R02_deeper_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 1000,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:32.451772+00:00",
+      "finished_at": "2026-10-07T16:25:34.116916+00:00"
+    },
+    {
+      "trajectory_id": "r1_final_s33_R03_shallower_empty",
+      "status": "COMPLETED",
+      "reserved_transitions": 1000,
+      "actual_transitions": 641,
+      "warmup_control_transitions": 5,
+      "created_at": "2026-10-07T16:25:34.136157+00:00",
+      "finished_at": "2026-10-07T16:25:35.206927+00:00"
     }
   ],
   "scientific_training_steps": 0,

@@ -1,0 +1,14 @@
+{
+  "status": "EXITED",
+  "worker_pid": 2792,
+  "command": [
+    ".venv-b1/Scripts/python.exe",
+    "results/stage2_b0_repair_r1/audit_final_evidence.py",
+    "--trusted-local"
+  ],
+  "start_utc": "2026-10-07T16:25:42.661175+00:00",
+  "code_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+  "note": "PID is the actual direct child, not the outer launcher.",
+  "actual_worker_exit_code": 1,
+  "end_utc": "2026-10-07T16:25:44.476746+00:00"
+}

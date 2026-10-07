@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_repair_r1\audit_final_evidence.py", line 304, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_repair_r1\audit_final_evidence.py", line 273, in main
+    state, completion = completion_gate()
+                        ~~~~~~~~~~~~~~~^^
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_repair_r1\audit_final_evidence.py", line 74, in completion_gate
+    require(command.get('exit_code') == 0 and command.get('actual_worker_pid') == LAUNCHER_PID
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and command.get('code_commit') == state['experiment_code_commit']
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+            and command.get('end_utc') == launcher['end_utc'],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            'commands.jsonl实际结束记录与启动器回执不一致。')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\FL+RL\AUV_CODEX_HANDOFF_V2_COMPLETE\results\stage2_b0_repair_r1\audit_final_evidence.py", line 37, in require
+    raise ValueError(message)
+ValueError: commands.jsonl实际结束记录与启动器回执不一致。

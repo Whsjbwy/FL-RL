@@ -1,0 +1,2169 @@
+{
+  "task": "STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1",
+  "generated_at": "2026-10-07T16:48:16.470860+00:00",
+  "batch_status": "COMPLETED",
+  "experiment_code_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+  "tested_code_commit": "ca4e67b88941a19ee1974be8150b58e7a443e5dd",
+  "tested_to_experiment_protected_git_diff": [],
+  "branch": "codex/stage2-b0-repair-r1-public",
+  "historical_control_commit": "45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898",
+  "branch_decision": {
+    "registration_id": "STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1",
+    "decision_timing": "AFTER_REGISTERED_DIAGNOSIS_BEFORE_NEW_SCIENTIFIC_TRAINING",
+    "selected_branch": "L2_COMMON_LEARNING_RATE",
+    "confirmed_L1_defects": [],
+    "unresolved_key_error_or_protocol_conflict": false,
+    "scope_note": "No confirmed L1 in reviewed formula/input/reward/event/update scope; not a universal bug-absence proof.",
+    "control_reused": "V1_FIRST_100K_ONLY",
+    "control_comparability_evidence": "results/stage2_b0_repair_r1/control_comparability.json",
+    "new_learning_rate": 0.0001,
+    "original_default_learning_rate": 0.0003,
+    "only_scientific_parameter_changed": "learning_rate",
+    "from_zero_seeds": [
+      11,
+      22,
+      33
+    ],
+    "transition_budget_per_seed": 100000,
+    "new_scientific_transition_budget": 300000,
+    "expected_updates_per_seed_not_measured": 90001,
+    "cv_training_authorized": false,
+    "repair_round": 1,
+    "remaining_L2_or_L3_rounds_after_this_round": 1,
+    "remaining_round_automatically_authorized": false,
+    "evidence": [
+      "results/stage2_b0_repair_r1/offline/V1_OFFLINE_READOUT.md",
+      "results/stage2_b0_repair_r1/replay_mechanism_evidence.json",
+      "results/stage2_b0_repair_r1/frozen_replay_result.json",
+      "results/stage2_b0_repair_r1/math/math_result.json",
+      "results/stage2_b0_repair_r1/math/actual_failure_input_review.json",
+      "results/stage2_b0_repair_r1/math/critic_result.json"
+    ],
+    "scientific_training_steps_at_decision": 0,
+    "scientific_training_updates_at_decision": 0,
+    "new_expected_result": "Test whether lower common optimization step size preserves later obstacle-free completion capability; improvement is not assumed."
+  },
+  "control_comparability": "PASS",
+  "actual_seed_counts": {
+    "11": {
+      "transitions": 100000,
+      "complete_sac_updates": 90001,
+      "optimizer_steps": 360004,
+      "first_update_transition": 10000,
+      "last_update_transition": 100000
+    },
+    "22": {
+      "transitions": 100000,
+      "complete_sac_updates": 90001,
+      "optimizer_steps": 360004,
+      "first_update_transition": 10000,
+      "last_update_transition": 100000
+    },
+    "33": {
+      "transitions": 100000,
+      "complete_sac_updates": 90001,
+      "optimizer_steps": 360004,
+      "first_update_transition": 10000,
+      "last_update_transition": 100000
+    }
+  },
+  "scientific_training_steps": 300000,
+  "scientific_training_updates": 270003,
+  "scientific_optimizer_steps": 1080012,
+  "reused_c_steps": 300000,
+  "reused_c_updates": 270003,
+  "historical_v1_total_steps_not_new": 900000,
+  "validation_env_transitions": 1091711,
+  "training_warmup_controls": 2505,
+  "validation_warmup_controls": 6300,
+  "frozen_diagnostic_trajectories": 167,
+  "frozen_diagnostic_controls": 65056,
+  "frozen_diagnostic_warmup_controls": 385,
+  "failed_scientific_attempts": 0,
+  "scientific_recomputed_steps": 0,
+  "final_cases": [
+    {
+      "trajectory_id": "r1_final_s11_R01_horizontal_empty",
+      "seed": 11,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 5.516751946061189,
+      "minimum_goal_time_s": 129.48257516457923,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s11_R02_deeper_empty",
+      "seed": 11,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 8.61661571827612,
+      "minimum_goal_time_s": 149.20231604751874,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s11_R03_shallower_empty",
+      "seed": 11,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 4.915249247928565,
+      "minimum_goal_time_s": 169.06120431069354,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s22_R01_horizontal_empty",
+      "seed": 22,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 11.411800934094881,
+      "minimum_goal_time_s": 63.549999999998526,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s22_R02_deeper_empty",
+      "seed": 22,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 14.287459865027609,
+      "minimum_goal_time_s": 162.75000000000276,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s22_R03_shallower_empty",
+      "seed": 22,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 17.90477250766877,
+      "minimum_goal_time_s": 63.59999999999852,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s33_R01_horizontal_empty",
+      "seed": 33,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 3.3802213484960224,
+      "minimum_goal_time_s": 77.32092095433109,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s33_R02_deeper_empty",
+      "seed": 33,
+      "failure_type": "task_horizon",
+      "transitions": 1000,
+      "minimum_goal_distance_m": 11.13902474071093,
+      "minimum_goal_time_s": 177.92657434041473,
+      "boundary_subtypes": [],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    },
+    {
+      "trajectory_id": "r1_final_s33_R03_shallower_empty",
+      "seed": 33,
+      "failure_type": "operational_boundary_failure",
+      "transitions": 641,
+      "minimum_goal_distance_m": 20.87533752921786,
+      "minimum_goal_time_s": 66.42300676024969,
+      "boundary_subtypes": [
+        "position_D_upper"
+      ],
+      "goal_event_consistent": true,
+      "actor_parameters_unchanged": true
+    }
+  ],
+  "endpoint_comparison": [
+    {
+      "group": "C_3e-4",
+      "training_seed": 11,
+      "at_transition": 100000,
+      "episodes": 300,
+      "goal_success": 35,
+      "collision": 0,
+      "operational_boundary_failure": 88,
+      "task_horizon": 177,
+      "success_rate": 0.11666666666666667,
+      "boundary_rate": 0.29333333333333333,
+      "timeout_rate": 0.59,
+      "boundary_subtypes": {
+        "NOT_RECORDED": 88
+      },
+      "mean_reward": 51.05664878499601,
+      "reward_components": {
+        "progress": {
+          "n": 300,
+          "mean": 49.80043871662476,
+          "sample_sd": 16.405824744059768
+        },
+        "goal": {
+          "n": 300,
+          "mean": 11.666666666666666,
+          "sample_sd": 32.15590505108515
+        },
+        "time": {
+          "n": 300,
+          "mean": -7.744240558378333,
+          "sample_sd": 3.3746952959767818
+        },
+        "smoothness": {
+          "n": 300,
+          "mean": -2.6662160399170616,
+          "sample_sd": 2.7904908996801243
+        }
+      },
+      "mean_minimum_goal_distance_m": null,
+      "minimum_goal_distance_measured_n": 0,
+      "near_goal_10m_episode_count": null,
+      "success_missing_goal_entry_diagnostic": null
+    },
+    {
+      "group": "C_3e-4",
+      "training_seed": 22,
+      "at_transition": 100000,
+      "episodes": 300,
+      "goal_success": 5,
+      "collision": 0,
+      "operational_boundary_failure": 295,
+      "task_horizon": 0,
+      "success_rate": 0.016666666666666666,
+      "boundary_rate": 0.9833333333333333,
+      "timeout_rate": 0.0,
+      "boundary_subtypes": {
+        "NOT_RECORDED": 295
+      },
+      "mean_reward": 50.20442430020902,
+      "reward_components": {
+        "progress": {
+          "n": 300,
+          "mean": 53.45607979586241,
+          "sample_sd": 6.955224096136807
+        },
+        "goal": {
+          "n": 300,
+          "mean": 1.6666666666666667,
+          "sample_sd": 12.823299585640942
+        },
+        "time": {
+          "n": 300,
+          "mean": -2.9313141474303834,
+          "sample_sd": 0.5764255312008971
+        },
+        "smoothness": {
+          "n": 300,
+          "mean": -1.987008014889685,
+          "sample_sd": 1.4312340274301352
+        }
+      },
+      "mean_minimum_goal_distance_m": null,
+      "minimum_goal_distance_measured_n": 0,
+      "near_goal_10m_episode_count": null,
+      "success_missing_goal_entry_diagnostic": null
+    },
+    {
+      "group": "C_3e-4",
+      "training_seed": 33,
+      "at_transition": 100000,
+      "episodes": 300,
+      "goal_success": 14,
+      "collision": 0,
+      "operational_boundary_failure": 37,
+      "task_horizon": 249,
+      "success_rate": 0.04666666666666667,
+      "boundary_rate": 0.12333333333333334,
+      "timeout_rate": 0.83,
+      "boundary_subtypes": {
+        "NOT_RECORDED": 37
+      },
+      "mean_reward": 42.04067928034263,
+      "reward_components": {
+        "progress": {
+          "n": 300,
+          "mean": 49.4943294309344,
+          "sample_sd": 11.379908648567401
+        },
+        "goal": {
+          "n": 300,
+          "mean": 4.666666666666667,
+          "sample_sd": 21.12763147146889
+        },
+        "time": {
+          "n": 300,
+          "mean": -9.374168605680213,
+          "sample_sd": 1.5375712897768103
+        },
+        "smoothness": {
+          "n": 300,
+          "mean": -2.7461482115781743,
+          "sample_sd": 2.0994404536897076
+        }
+      },
+      "mean_minimum_goal_distance_m": null,
+      "minimum_goal_distance_measured_n": 0,
+      "near_goal_10m_episode_count": null,
+      "success_missing_goal_entry_diagnostic": null
+    },
+    {
+      "group": "R1_1e-4",
+      "training_seed": 11,
+      "at_transition": 100000,
+      "episodes": 300,
+      "goal_success": 19,
+      "collision": 0,
+      "operational_boundary_failure": 23,
+      "task_horizon": 258,
+      "success_rate": 0.06333333333333334,
+      "boundary_rate": 0.07666666666666666,
+      "timeout_rate": 0.86,
+      "boundary_subtypes": {
+        "pitch_lower": 16,
+        "position_D_upper": 6,
+        "position_D_lower": 1
+      },
+      "mean_reward": 41.85309133787214,
+      "reward_components": {
+        "progress": {
+          "n": 300,
+          "mean": 48.72889794992254,
+          "sample_sd": 9.080216725793615
+        },
+        "goal": {
+          "n": 300,
+          "mean": 6.333333333333333,
+          "sample_sd": 24.39684903901178
+        },
+        "time": {
+          "n": 300,
+          "mean": -9.536820591171045,
+          "sample_sd": 1.4571379627199135
+        },
+        "smoothness": {
+          "n": 300,
+          "mean": -3.6723193542126533,
+          "sample_sd": 3.3989611288892676
+        }
+      },
+      "mean_minimum_goal_distance_m": 5.838945815876586,
+      "minimum_goal_distance_measured_n": 300,
+      "near_goal_10m_episode_count": 282,
+      "success_missing_goal_entry_diagnostic": 0
+    },
+    {
+      "group": "R1_1e-4",
+      "training_seed": 22,
+      "at_transition": 100000,
+      "episodes": 300,
+      "goal_success": 1,
+      "collision": 0,
+      "operational_boundary_failure": 2,
+      "task_horizon": 297,
+      "success_rate": 0.0033333333333333335,
+      "boundary_rate": 0.006666666666666667,
+      "timeout_rate": 0.99,
+      "boundary_subtypes": {
+        "position_D_upper": 1,
+        "position_E_lower": 1
+      },
+      "mean_reward": 26.626099263969802,
+      "reward_components": {
+        "progress": {
+          "n": 300,
+          "mean": 45.35570630789269,
+          "sample_sd": 8.365680030935419
+        },
+        "goal": {
+          "n": 300,
+          "mean": 0.3333333333333333,
+          "sample_sd": 5.773502691896258
+        },
+        "time": {
+          "n": 300,
+          "mean": -9.949554850124306,
+          "sample_sd": 0.5038963098168108
+        },
+        "smoothness": {
+          "n": 300,
+          "mean": -9.113385527131841,
+          "sample_sd": 5.7864497269842765
+        }
+      },
+      "mean_minimum_goal_distance_m": 13.575291166709116,
+      "minimum_goal_distance_measured_n": 300,
+      "near_goal_10m_episode_count": 77,
+      "success_missing_goal_entry_diagnostic": 0
+    },
+    {
+      "group": "R1_1e-4",
+      "training_seed": 33,
+      "at_transition": 100000,
+      "episodes": 300,
+      "goal_success": 6,
+      "collision": 0,
+      "operational_boundary_failure": 110,
+      "task_horizon": 184,
+      "success_rate": 0.02,
+      "boundary_rate": 0.36666666666666664,
+      "timeout_rate": 0.6133333333333333,
+      "boundary_subtypes": {
+        "position_D_upper": 108,
+        "position_N_upper": 2
+      },
+      "mean_reward": 35.960773476863174,
+      "reward_components": {
+        "progress": {
+          "n": 300,
+          "mean": 43.36096841801834,
+          "sample_sd": 10.731234730255878
+        },
+        "goal": {
+          "n": 300,
+          "mean": 2.0,
+          "sample_sd": 14.023391829177733
+        },
+        "time": {
+          "n": 300,
+          "mean": -8.324802909841894,
+          "sample_sd": 2.41064451772387
+        },
+        "smoothness": {
+          "n": 300,
+          "mean": -1.0753920313132823,
+          "sample_sd": 1.3346859064113947
+        }
+      },
+      "mean_minimum_goal_distance_m": 11.476089227775049,
+      "minimum_goal_distance_measured_n": 300,
+      "near_goal_10m_episode_count": 157,
+      "success_missing_goal_entry_diagnostic": 0
+    }
+  ],
+  "across_training_seed_mean_sample_sd": {
+    "C_3e-4": {
+      "success_rate": {
+        "n": 3,
+        "mean": 0.06,
+        "sample_sd": 0.05131601439446884
+      },
+      "boundary_rate": {
+        "n": 3,
+        "mean": 0.4666666666666666,
+        "sample_sd": 0.45544849690533973
+      },
+      "timeout_rate": {
+        "n": 3,
+        "mean": 0.47333333333333333,
+        "sample_sd": 0.4271221527073178
+      },
+      "mean_reward": {
+        "n": 3,
+        "mean": 47.76725078851589,
+        "sample_sd": 4.97762870971549
+      }
+    },
+    "R1_1e-4": {
+      "success_rate": {
+        "n": 3,
+        "mean": 0.02888888888888889,
+        "sample_sd": 0.030971910810591897
+      },
+      "boundary_rate": {
+        "n": 3,
+        "mean": 0.15,
+        "sample_sd": 0.19087517736293877
+      },
+      "timeout_rate": {
+        "n": 3,
+        "mean": 0.8211111111111111,
+        "sample_sd": 0.19132094423691232
+      },
+      "mean_reward": {
+        "n": 3,
+        "mean": 34.81332135956837,
+        "sample_sd": 7.678073109562345
+      }
+    }
+  },
+  "paired_endpoint_changes": [
+    {
+      "training_seed": 11,
+      "success_rate_change": -0.05333333333333333,
+      "boundary_rate_change": -0.21666666666666667,
+      "timeout_rate_change": 0.27,
+      "reward_change": -9.20355744712387
+    },
+    {
+      "training_seed": 22,
+      "success_rate_change": -0.013333333333333332,
+      "boundary_rate_change": -0.9766666666666666,
+      "timeout_rate_change": 0.99,
+      "reward_change": -23.578325036239217
+    },
+    {
+      "training_seed": 33,
+      "success_rate_change": -0.02666666666666667,
+      "boundary_rate_change": 0.2433333333333333,
+      "timeout_rate_change": -0.21666666666666667,
+      "reward_change": -6.0799058034794555
+    }
+  ],
+  "monitor30": [
+    {
+      "group": "C_3e-4",
+      "seed": 11,
+      "at_transition": 0,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": 5.857558522503198,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 11,
+      "at_transition": 25000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 4,
+        "collision": 0,
+        "operational_boundary_failure": 1,
+        "task_horizon": 25
+      },
+      "success_rate": 0.13333333333333333,
+      "mean_reward": 58.79437881371989,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 11,
+      "at_transition": 50000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 7,
+        "collision": 0,
+        "operational_boundary_failure": 14,
+        "task_horizon": 9
+      },
+      "success_rate": 0.23333333333333334,
+      "mean_reward": 66.1162601519345,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 11,
+      "at_transition": 75000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 11,
+        "collision": 0,
+        "operational_boundary_failure": 4,
+        "task_horizon": 15
+      },
+      "success_rate": 0.36666666666666664,
+      "mean_reward": 83.982977142413,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 11,
+      "at_transition": 100000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 3,
+        "collision": 0,
+        "operational_boundary_failure": 6,
+        "task_horizon": 21
+      },
+      "success_rate": 0.1,
+      "mean_reward": 53.02968164146944,
+      "subset_at_100k_is_part_of_val300": true
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 22,
+      "at_transition": 0,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": -10.807191226896673,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 22,
+      "at_transition": 25000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": 31.415989524932833,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 22,
+      "at_transition": 50000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 9,
+        "collision": 0,
+        "operational_boundary_failure": 12,
+        "task_horizon": 9
+      },
+      "success_rate": 0.3,
+      "mean_reward": 71.9800688864478,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 22,
+      "at_transition": 75000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 1,
+        "collision": 0,
+        "operational_boundary_failure": 0,
+        "task_horizon": 29
+      },
+      "success_rate": 0.03333333333333333,
+      "mean_reward": 41.85480624377714,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 22,
+      "at_transition": 100000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": 49.40734372019145,
+      "subset_at_100k_is_part_of_val300": true
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 33,
+      "at_transition": 0,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": 18.541955995655115,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 33,
+      "at_transition": 25000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 1,
+        "collision": 0,
+        "operational_boundary_failure": 10,
+        "task_horizon": 19
+      },
+      "success_rate": 0.03333333333333333,
+      "mean_reward": 41.23526684961357,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 33,
+      "at_transition": 50000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 10,
+        "collision": 0,
+        "operational_boundary_failure": 4,
+        "task_horizon": 16
+      },
+      "success_rate": 0.3333333333333333,
+      "mean_reward": 78.93948959087973,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 33,
+      "at_transition": 75000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 5,
+        "collision": 0,
+        "operational_boundary_failure": 13,
+        "task_horizon": 12
+      },
+      "success_rate": 0.16666666666666666,
+      "mean_reward": 43.726735405602895,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "C_3e-4",
+      "seed": 33,
+      "at_transition": 100000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 1,
+        "collision": 0,
+        "operational_boundary_failure": 4,
+        "task_horizon": 25
+      },
+      "success_rate": 0.03333333333333333,
+      "mean_reward": 40.52117116290248,
+      "subset_at_100k_is_part_of_val300": true
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 11,
+      "at_transition": 0,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": 5.857558522503198,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 11,
+      "at_transition": 25000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 0,
+        "task_horizon": 30
+      },
+      "success_rate": 0.0,
+      "mean_reward": 42.96902518440628,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 11,
+      "at_transition": 50000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 3,
+        "collision": 0,
+        "operational_boundary_failure": 6,
+        "task_horizon": 21
+      },
+      "success_rate": 0.1,
+      "mean_reward": 43.75268627376991,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 11,
+      "at_transition": 75000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 0,
+        "task_horizon": 30
+      },
+      "success_rate": 0.0,
+      "mean_reward": 38.38281767825424,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 11,
+      "at_transition": 100000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 3,
+        "collision": 0,
+        "operational_boundary_failure": 0,
+        "task_horizon": 27
+      },
+      "success_rate": 0.1,
+      "mean_reward": 47.20757911678895,
+      "subset_at_100k_is_part_of_val300": true
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 22,
+      "at_transition": 0,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": -10.807191226896673,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 22,
+      "at_transition": 25000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 1,
+        "collision": 0,
+        "operational_boundary_failure": 29,
+        "task_horizon": 0
+      },
+      "success_rate": 0.03333333333333333,
+      "mean_reward": 41.4501420904225,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 22,
+      "at_transition": 50000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 16,
+        "task_horizon": 14
+      },
+      "success_rate": 0.0,
+      "mean_reward": 30.438426284075152,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 22,
+      "at_transition": 75000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 3,
+        "collision": 0,
+        "operational_boundary_failure": 5,
+        "task_horizon": 22
+      },
+      "success_rate": 0.1,
+      "mean_reward": 42.57867016994995,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 22,
+      "at_transition": 100000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 0,
+        "task_horizon": 30
+      },
+      "success_rate": 0.0,
+      "mean_reward": 28.334552369254645,
+      "subset_at_100k_is_part_of_val300": true
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 33,
+      "at_transition": 0,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 30,
+        "task_horizon": 0
+      },
+      "success_rate": 0.0,
+      "mean_reward": 18.541955995655115,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 33,
+      "at_transition": 25000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 3,
+        "collision": 0,
+        "operational_boundary_failure": 11,
+        "task_horizon": 16
+      },
+      "success_rate": 0.1,
+      "mean_reward": 48.653341023847354,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 33,
+      "at_transition": 50000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 0,
+        "collision": 0,
+        "operational_boundary_failure": 15,
+        "task_horizon": 15
+      },
+      "success_rate": 0.0,
+      "mean_reward": 28.623074078567544,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 33,
+      "at_transition": 75000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 5,
+        "collision": 0,
+        "operational_boundary_failure": 9,
+        "task_horizon": 16
+      },
+      "success_rate": 0.16666666666666666,
+      "mean_reward": 56.42222551610171,
+      "subset_at_100k_is_part_of_val300": false
+    },
+    {
+      "group": "R1_1e-4",
+      "seed": 33,
+      "at_transition": 100000,
+      "n": 30,
+      "event_counts": {
+        "goal_success": 1,
+        "collision": 0,
+        "operational_boundary_failure": 12,
+        "task_horizon": 17
+      },
+      "success_rate": 0.03333333333333333,
+      "mean_reward": 40.996298986952475,
+      "subset_at_100k_is_part_of_val300": true
+    }
+  ],
+  "final_r1_termination_strata": [
+    {
+      "training_seed": 11,
+      "termination": "goal_success",
+      "episode_count": 19,
+      "episode_control_transitions": 9307,
+      "boundary_subtypes": {},
+      "entered_10m_count": 19,
+      "entered_2m_count": 19,
+      "reward": {
+        "n": 19,
+        "mean": 151.41828875307831,
+        "sample_sd": 3.6632390054754573
+      },
+      "reward_components": {
+        "progress": {
+          "n": 19,
+          "mean": 59.03828110846759,
+          "sample_sd": 6.122582691453728
+        },
+        "goal": {
+          "n": 19,
+          "mean": 100.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 19,
+          "mean": -4.8934592879081364,
+          "sample_sd": 2.3996729483858306
+        },
+        "smoothness": {
+          "n": 19,
+          "mean": -2.726533067481169,
+          "sample_sd": 1.9976194387206916
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 19,
+          "mean": 61.03828110846761,
+          "sample_sd": 6.122582691453728,
+          "measured_episodes": 19,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 19,
+          "mean": 1.9999999999999996,
+          "sample_sd": 2.742548012934891e-15,
+          "measured_episodes": 19,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 19,
+          "mean": 1.9999999999999996,
+          "sample_sd": 2.742548012934891e-15,
+          "measured_episodes": 19,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 19,
+          "mean": 97.86918575816264,
+          "sample_sd": 47.993458967716144,
+          "measured_episodes": 19,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 19,
+          "mean": 61.50460418489995,
+          "sample_sd": 10.468860475708402,
+          "measured_episodes": 19,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_goal_entry_time_s": {
+          "n": 19,
+          "mean": 97.86918575816264,
+          "sample_sd": 47.993458967716144,
+          "measured_episodes": 19,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        }
+      }
+    },
+    {
+      "training_seed": 11,
+      "termination": "operational_boundary_failure",
+      "episode_count": 23,
+      "episode_control_transitions": 18819,
+      "boundary_subtypes": {
+        "pitch_lower": 16,
+        "position_D_upper": 6,
+        "position_D_lower": 1
+      },
+      "entered_10m_count": 23,
+      "entered_2m_count": 0,
+      "reward": {
+        "n": 23,
+        "mean": 42.81783757657531,
+        "sample_sd": 8.64105746340511
+      },
+      "reward_components": {
+        "progress": {
+          "n": 23,
+          "mean": 52.61951896736059,
+          "sample_sd": 7.9799616838910525
+        },
+        "goal": {
+          "n": 23,
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 23,
+          "mean": -8.176976125257553,
+          "sample_sd": 1.0371265921349366
+        },
+        "smoothness": {
+          "n": 23,
+          "mean": -1.6247052655277696,
+          "sample_sd": 2.0681525439212862
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 23,
+          "mean": 64.46183585206266,
+          "sample_sd": 8.012250390695895,
+          "measured_episodes": 23,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 23,
+          "mean": 11.842316884702054,
+          "sample_sd": 2.481482200370075,
+          "measured_episodes": 23,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 23,
+          "mean": 4.394628197666259,
+          "sample_sd": 1.6915007599985448,
+          "measured_episodes": 23,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 23,
+          "mean": 96.14174219427798,
+          "sample_sd": 15.13077089789036,
+          "measured_episodes": 23,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 23,
+          "mean": 62.70069339809081,
+          "sample_sd": 8.759016686192192,
+          "measured_episodes": 23,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_goal_entry_time_s": {
+          "n": 0,
+          "mean": null,
+          "sample_sd": null,
+          "measured_episodes": 23,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 23
+        }
+      }
+    },
+    {
+      "training_seed": 11,
+      "termination": "task_horizon",
+      "episode_count": 258,
+      "episode_control_transitions": 258000,
+      "boundary_subtypes": {},
+      "entered_10m_count": 240,
+      "entered_2m_count": 0,
+      "reward": {
+        "n": 258,
+        "mean": 33.69833197981364,
+        "sample_sd": 9.134157232546338
+      },
+      "reward_components": {
+        "progress": {
+          "n": 258,
+          "mean": 47.622841502583654,
+          "sample_sd": 8.798166137488746
+        },
+        "goal": {
+          "n": 258,
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 258,
+          "mean": -10.000000000000524,
+          "sample_sd": 0.0
+        },
+        "smoothness": {
+          "n": 258,
+          "mean": -3.924509522769438,
+          "sample_sd": 3.505727747096145
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 258,
+          "mean": 64.86167935611195,
+          "sample_sd": 6.053694756368992,
+          "measured_episodes": 258,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 258,
+          "mean": 17.238837853528292,
+          "sample_sd": 6.366212385544481,
+          "measured_episodes": 258,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 258,
+          "mean": 6.250415876808728,
+          "sample_sd": 2.3900356420425948,
+          "measured_episodes": 258,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 258,
+          "mean": 128.99865995535805,
+          "sample_sd": 45.684720241451124,
+          "measured_episodes": 258,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 240,
+          "mean": 81.3434416048009,
+          "sample_sd": 27.40063050713579,
+          "measured_episodes": 258,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 18
+        },
+        "first_goal_entry_time_s": {
+          "n": 0,
+          "mean": null,
+          "sample_sd": null,
+          "measured_episodes": 258,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 258
+        }
+      }
+    },
+    {
+      "training_seed": 22,
+      "termination": "goal_success",
+      "episode_count": 1,
+      "episode_control_transitions": 543,
+      "boundary_subtypes": {},
+      "entered_10m_count": 1,
+      "entered_2m_count": 1,
+      "reward": {
+        "n": 1,
+        "mean": 149.31920703234536,
+        "sample_sd": null
+      },
+      "reward_components": {
+        "progress": {
+          "n": 1,
+          "mean": 57.63237610787814,
+          "sample_sd": null
+        },
+        "goal": {
+          "n": 1,
+          "mean": 100.0,
+          "sample_sd": null
+        },
+        "time": {
+          "n": 1,
+          "mean": -5.422200591213918,
+          "sample_sd": null
+        },
+        "smoothness": {
+          "n": 1,
+          "mean": -2.8909684843188463,
+          "sample_sd": null
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 1,
+          "mean": 59.63237610787809,
+          "sample_sd": null,
+          "measured_episodes": 1,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 1,
+          "mean": 2.000000000000001,
+          "sample_sd": null,
+          "measured_episodes": 1,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 1,
+          "mean": 2.000000000000001,
+          "sample_sd": null,
+          "measured_episodes": 1,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 1,
+          "mean": 108.44401182427772,
+          "sample_sd": null,
+          "measured_episodes": 1,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 1,
+          "mean": 95.59583978202805,
+          "sample_sd": null,
+          "measured_episodes": 1,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_goal_entry_time_s": {
+          "n": 1,
+          "mean": 108.44401182427772,
+          "sample_sd": null,
+          "measured_episodes": 1,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        }
+      }
+    },
+    {
+      "training_seed": 22,
+      "termination": "operational_boundary_failure",
+      "episode_count": 2,
+      "episode_control_transitions": 945,
+      "boundary_subtypes": {
+        "position_D_upper": 1,
+        "position_E_lower": 1
+      },
+      "entered_10m_count": 0,
+      "entered_2m_count": 0,
+      "reward": {
+        "n": 2,
+        "mean": 31.53304566006681,
+        "sample_sd": 33.731504186521214
+      },
+      "reward_components": {
+        "progress": {
+          "n": 2,
+          "mean": 38.068641017212016,
+          "sample_sd": 36.26429868861506
+        },
+        "goal": {
+          "n": 2,
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 2,
+          "mean": -4.722127222961088,
+          "sample_sd": 0.12173840210939668
+        },
+        "smoothness": {
+          "n": 2,
+          "mean": -1.813468134184168,
+          "sample_sd": 2.4110560999844903
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 2,
+          "mean": 71.42753484425641,
+          "sample_sd": 20.09755821102829,
+          "measured_episodes": 2,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 2,
+          "mean": 33.35889382704438,
+          "sample_sd": 16.166740477586796,
+          "measured_episodes": 2,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 2,
+          "mean": 27.015994111750715,
+          "sample_sd": 8.438722909155393,
+          "measured_episodes": 2,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 2,
+          "mean": 69.37499999999814,
+          "sample_sd": 27.11754505850256,
+          "measured_episodes": 2,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 0,
+          "mean": null,
+          "sample_sd": null,
+          "measured_episodes": 2,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 2
+        },
+        "first_goal_entry_time_s": {
+          "n": 0,
+          "mean": null,
+          "sample_sd": null,
+          "measured_episodes": 2,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 2
+        }
+      }
+    },
+    {
+      "training_seed": 22,
+      "termination": "task_horizon",
+      "episode_count": 297,
+      "episode_control_transitions": 297000,
+      "boundary_subtypes": {},
+      "entered_10m_count": 76,
+      "entered_2m_count": 0,
+      "reward": {
+        "n": 297,
+        "mean": 26.17994774693086,
+        "sample_sd": 8.822834296541995
+      },
+      "reward_components": {
+        "progress": {
+          "n": 297,
+          "mean": 45.36344186607913,
+          "sample_sd": 8.085973782976636
+        },
+        "goal": {
+          "n": 297,
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 297,
+          "mean": -10.000000000000524,
+          "sample_sd": 0.0
+        },
+        "smoothness": {
+          "n": 297,
+          "mean": -9.183494119147694,
+          "sample_sd": 5.771214700825149
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 297,
+          "mean": 64.5595131102317,
+          "sample_sd": 6.162832636235937,
+          "measured_episodes": 297,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 297,
+          "mean": 19.196071244152574,
+          "sample_sd": 4.848182454371066,
+          "measured_episodes": 297,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 297,
+          "mean": 13.523755426899776,
+          "sample_sd": 4.499954605363051,
+          "measured_episodes": 297,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 297,
+          "mean": 112.55765723896745,
+          "sample_sd": 45.55809695577054,
+          "measured_episodes": 297,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 76,
+          "mean": 80.82698685934581,
+          "sample_sd": 31.02207153290311,
+          "measured_episodes": 297,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 221
+        },
+        "first_goal_entry_time_s": {
+          "n": 0,
+          "mean": null,
+          "sample_sd": null,
+          "measured_episodes": 297,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 297
+        }
+      }
+    },
+    {
+      "training_seed": 33,
+      "termination": "goal_success",
+      "episode_count": 6,
+      "episode_control_transitions": 4401,
+      "boundary_subtypes": {},
+      "entered_10m_count": 6,
+      "entered_2m_count": 6,
+      "reward": {
+        "n": 6,
+        "mean": 155.78910065220495,
+        "sample_sd": 3.990370884939497
+      },
+      "reward_components": {
+        "progress": {
+          "n": 6,
+          "mean": 63.376590415956265,
+          "sample_sd": 5.249111887803471
+        },
+        "goal": {
+          "n": 6,
+          "mean": 100.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 6,
+          "mean": -7.3288550051667585,
+          "sample_sd": 2.9184455429970924
+        },
+        "smoothness": {
+          "n": 6,
+          "mean": -0.25863475858455737,
+          "sample_sd": 0.09064931138361193
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 6,
+          "mean": 65.37659041595627,
+          "sample_sd": 5.2491118878034975,
+          "measured_episodes": 6,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 6,
+          "mean": 1.9999999999999984,
+          "sample_sd": 4.0930958301304454e-15,
+          "measured_episodes": 6,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 6,
+          "mean": 1.9999999999999984,
+          "sample_sd": 4.0930958301304454e-15,
+          "measured_episodes": 6,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 6,
+          "mean": 146.57710010333517,
+          "sample_sd": 58.368910859941685,
+          "measured_episodes": 6,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 6,
+          "mean": 62.33995010683791,
+          "sample_sd": 7.040243407279496,
+          "measured_episodes": 6,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_goal_entry_time_s": {
+          "n": 6,
+          "mean": 146.57710010333517,
+          "sample_sd": 58.368910859941685,
+          "measured_episodes": 6,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        }
+      }
+    },
+    {
+      "training_seed": 33,
+      "termination": "operational_boundary_failure",
+      "episode_count": 110,
+      "episode_control_transitions": 61400,
+      "boundary_subtypes": {
+        "position_D_upper": 108,
+        "position_N_upper": 2
+      },
+      "entered_10m_count": 28,
+      "entered_2m_count": 0,
+      "reward": {
+        "n": 110,
+        "mean": 34.21685959618393,
+        "sample_sd": 11.12487203573575
+      },
+      "reward_components": {
+        "progress": {
+          "n": 110,
+          "mean": 40.83303084928898,
+          "sample_sd": 10.94682751821365
+        },
+        "goal": {
+          "n": 110,
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 110,
+          "mean": -5.576979481104285,
+          "sample_sd": 1.7715840781792775
+        },
+        "smoothness": {
+          "n": 110,
+          "mean": -1.039191772000794,
+          "sample_sd": 1.283474226857116
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 110,
+          "mean": 65.47950652599779,
+          "sample_sd": 7.204202088205482,
+          "measured_episodes": 110,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 110,
+          "mean": 24.646475676708814,
+          "sample_sd": 7.323696740221171,
+          "measured_episodes": 110,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 110,
+          "mean": 16.863869783103077,
+          "sample_sd": 9.533015473845145,
+          "measured_episodes": 110,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 110,
+          "mean": 74.2209783965186,
+          "sample_sd": 14.453758050992127,
+          "measured_episodes": 110,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 28,
+          "mean": 73.95430498586838,
+          "sample_sd": 10.430690975052165,
+          "measured_episodes": 110,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 82
+        },
+        "first_goal_entry_time_s": {
+          "n": 0,
+          "mean": null,
+          "sample_sd": null,
+          "measured_episodes": 110,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 110
+        }
+      }
+    },
+    {
+      "training_seed": 33,
+      "termination": "task_horizon",
+      "episode_count": 184,
+      "episode_control_transitions": 184000,
+      "boundary_subtypes": {},
+      "entered_10m_count": 123,
+      "entered_2m_count": 0,
+      "reward": {
+        "n": 184,
+        "mean": 33.09588523676892,
+        "sample_sd": 10.416319467369497
+      },
+      "reward_components": {
+        "progress": {
+          "n": 184,
+          "mean": 44.219552116782474,
+          "sample_sd": 9.915146278521783
+        },
+        "goal": {
+          "n": 184,
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "time": {
+          "n": 184,
+          "mean": -10.000000000000524,
+          "sample_sd": 0.0
+        },
+        "smoothness": {
+          "n": 184,
+          "mean": -1.1236668800129892,
+          "sample_sd": 1.3799136620801828
+        }
+      },
+      "target_distance_and_time": {
+        "initial_distance_m": {
+          "n": 184,
+          "mean": 64.03074771293322,
+          "sample_sd": 5.640060134746557,
+          "measured_episodes": 184,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "final_distance_m": {
+          "n": 184,
+          "mean": 19.81119559615074,
+          "sample_sd": 7.597841320781214,
+          "measured_episodes": 184,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_m": {
+          "n": 184,
+          "mean": 8.564136370604217,
+          "sample_sd": 3.639830734883867,
+          "measured_episodes": 184,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "minimum_goal_distance_time_s": {
+          "n": 184,
+          "mean": 124.13030223824488,
+          "sample_sd": 43.97371576405581,
+          "measured_episodes": 184,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 0
+        },
+        "first_within_10m_time_s": {
+          "n": 123,
+          "mean": 97.89677292371772,
+          "sample_sd": 43.91554140731826,
+          "measured_episodes": 184,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 61
+        },
+        "first_goal_entry_time_s": {
+          "n": 0,
+          "mean": null,
+          "sample_sd": null,
+          "measured_episodes": 184,
+          "unmeasured_episodes": 0,
+          "measured_null_episodes": 184
+        }
+      }
+    }
+  ],
+  "small_models": [
+    {
+      "seed": 11,
+      "transition": 25000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 15001,
+      "optimizer_steps": 60004,
+      "alpha": 0.05214959755539894
+    },
+    {
+      "seed": 11,
+      "transition": 50000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 40001,
+      "optimizer_steps": 160004,
+      "alpha": 0.006505426485091448
+    },
+    {
+      "seed": 11,
+      "transition": 75000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 65001,
+      "optimizer_steps": 260004,
+      "alpha": 0.005155305843800306
+    },
+    {
+      "seed": 11,
+      "transition": 100000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 90001,
+      "optimizer_steps": 360004,
+      "alpha": 0.005010297987610102
+    },
+    {
+      "seed": 22,
+      "transition": 25000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 15001,
+      "optimizer_steps": 60004,
+      "alpha": 0.05213074013590813
+    },
+    {
+      "seed": 22,
+      "transition": 50000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 40001,
+      "optimizer_steps": 160004,
+      "alpha": 0.006566398777067661
+    },
+    {
+      "seed": 22,
+      "transition": 75000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 65001,
+      "optimizer_steps": 260004,
+      "alpha": 0.006591586396098137
+    },
+    {
+      "seed": 22,
+      "transition": 100000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 90001,
+      "optimizer_steps": 360004,
+      "alpha": 0.005177892278879881
+    },
+    {
+      "seed": 33,
+      "transition": 25000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 15001,
+      "optimizer_steps": 60004,
+      "alpha": 0.05201101303100586
+    },
+    {
+      "seed": 33,
+      "transition": 50000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 40001,
+      "optimizer_steps": 160004,
+      "alpha": 0.0070956917479634285
+    },
+    {
+      "seed": 33,
+      "transition": 75000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 65001,
+      "optimizer_steps": 260004,
+      "alpha": 0.0047211903147399426
+    },
+    {
+      "seed": 33,
+      "transition": 100000,
+      "status": "PASS",
+      "bytes": 2551558,
+      "complete_sac_updates": 90001,
+      "optimizer_steps": 360004,
+      "alpha": 0.004841775167733431
+    }
+  ],
+  "actual_completion_gate": {
+    "status": "PASS",
+    "actual_computation_pid": 37516,
+    "actual_computation_exit_code": 0,
+    "launcher_pid": 38168,
+    "launcher_exit_code": 0,
+    "actual_process_receipt": "results/stage2_b0_repair_r1/actual_training_worker_exit.json",
+    "launcher_receipt": "results/stage2_b0_repair_r1/r1_scientific_batch.worker.json",
+    "confirmed_command_record": {
+      "name": "r1_scientific_batch",
+      "command": [
+        ".venv-b1/Scripts/python.exe",
+        "scripts/run_b0_training.py",
+        "--repair-registration",
+        "configs/stage2_b0_repair_r1.yaml",
+        "--execute",
+        "--run-kind",
+        "scientific_training",
+        "--transition-budget",
+        "300000",
+        "--output-dir",
+        "results/stage2_b0_repair_r1"
+      ],
+      "cwd": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE",
+      "start_utc": "2026-10-07T15:05:38.111411+00:00",
+      "end_utc": "2026-10-07T16:24:49.784429+00:00",
+      "exit_code": 0,
+      "actual_worker_pid": 38168,
+      "code_commit": "9029d60a3d88210e9113936b5da4f604bbf8c202",
+      "recording_interpreter": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Scripts\\python.exe"
+    },
+    "launcher_end_utc": "2026-10-07T16:24:49.783705+00:00",
+    "command_end_utc": "2026-10-07T16:24:49.784429+00:00",
+    "timestamp_rule": "start <= launcher end <= commands end; recorder uses separate clock reads",
+    "note": "Windows进程句柄记录实际计算进程退出；启动器退出另行核对，不互相替代。"
+  },
+  "elapsed": {
+    "training_seconds": 3599.7556227991154,
+    "evaluation_seconds": 1111.9271015999984,
+    "checkpoint_seconds": 15.384584100003849
+  },
+  "tests": {
+    "repository": {
+      "passed": 621,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "phase_a_external": {
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "independent_r1_numerics": {
+      "passed": 18,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "new_scientific_tests": 60,
+  "scientific_tests_retired": 0,
+  "original_tolerances_and_ruff_rules_unchanged": true,
+  "final_suite_computation_observer": {
+    "counts": {
+      "ordinary_update_calls": 89,
+      "adam_calls": 401,
+      "adam_returns": 401,
+      "ordinary_update_returns": 84,
+      "explicit_batch_complete_update_returns": 62,
+      "world_calls": 2196,
+      "world_returns": 2188,
+      "b0_env_calls": 60,
+      "b0_env_returns": 55,
+      "finite_env_calls": 1049,
+      "finite_env_returns": 1047,
+      "sgd_calls": 1,
+      "sgd_returns": 1
+    },
+    "explicit_batch_update_nodes": {
+      "tests/test_b0_device.py::test_target_device_tensor_and_complete_sac_update": 1,
+      "tests/test_b0_device.py::test_same_device_checkpoint_preserves_adam_step_location": 3,
+      "tests/test_b3_integration.py::test_sac_o08_o09_cost_executed_invariant": 2,
+      "tests/test_b3_integration.py::test_sac_terminal_nan_full_update": 1,
+      "tests/test_b4_learning.py::test_b4_ni03_through_ni10_full_update[NI04_lambda_zero]": 2,
+      "tests/test_b4_learning.py::test_b4_ni03_through_ni10_full_update[NI04_lambda1000]": 2,
+      "tests/test_b4_learning.py::test_b4_lambda_change_no_actor_effect": 2,
+      "tests/test_b4_learning.py::test_b4_single_replay_draw": 1,
+      "tests/test_b4_learning.py::test_cost_bound_diagnostic_only": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C01_online]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C01_target]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C02_adam]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C03_C04_C05_lambda]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C_rng]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C_diagnostics]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C_B3_all]": 1,
+      "tests/test_b4_learning.py::test_b4_c06_next_lambda_and_optimizer_update": 3,
+      "tests/test_b4_learning.py::test_b4_runner_mid_episode_checkpoint": 3,
+      "tests/test_b4_learning.py::test_cost_diagnostics_above_one": 1,
+      "tests/test_b5_actor.py::test_lambda_zero_exact_nonempty_adam_degeneration": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[models]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[optimizers]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[log_alpha]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[actor_rng]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[replay]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[counters]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_q]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_target]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_optimizer]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_rng]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[multiplier]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[actor_components]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_next_update_and_tenth_episode": 3,
+      "tests/test_b5_integration.py::test_b4_migration_and_old_checkpoint_unchanged": 2,
+      "tests/test_b5_integration.py::test_migration_rejects_incompatible[used]": 1,
+      "tests/test_b5_integration.py::test_ordinary_independent_no_monkeypatch": 2,
+      "tests/test_b5_integration.py::test_b4_update_order_reused": 1,
+      "tests/test_b5_integration.py::test_executed_action_does_not_enter_learning": 2,
+      "tests/test_b5_integration.py::test_reward_and_temperature_cost_independence": 2,
+      "tests/test_b5_integration.py::test_runner_full_resume_and_b4_migration": 3,
+      "tests/test_b5_integration.py::test_lambda_lifecycle_is_original": 1,
+      "tests/test_b5_integration.py::test_lambda_zero_full_b4_update_identity": 3
+    },
+    "complete_update_nodes": {
+      "tests/test_b0_device.py::test_target_device_tensor_and_complete_sac_update": 1,
+      "tests/test_b0_device.py::test_same_device_checkpoint_preserves_adam_step_location": 3,
+      "tests/test_b3_integration.py::test_sac_o02_o03_exact_boundary": 2,
+      "tests/test_b3_integration.py::test_sac_o08_o09_cost_executed_invariant": 2,
+      "tests/test_b3_integration.py::test_sac_c01_c02_models[C01_actor]": 1,
+      "tests/test_b3_integration.py::test_sac_c01_c02_models[C02_q1]": 1,
+      "tests/test_b3_integration.py::test_sac_c01_c02_models[C02_q2]": 1,
+      "tests/test_b3_integration.py::test_sac_c01_c02_models[C02_target1]": 1,
+      "tests/test_b3_integration.py::test_sac_c01_c02_models[C02_target2]": 1,
+      "tests/test_b3_integration.py::test_sac_c03_adam": 1,
+      "tests/test_b3_integration.py::test_sac_c04_alpha": 1,
+      "tests/test_b3_integration.py::test_sac_c05_counters": 1,
+      "tests/test_b3_integration.py::test_sac_c06_full_replay_rng_next_update": 3,
+      "tests/test_b3_integration.py::test_sac_runner_mid_episode_resume": 3,
+      "tests/test_b3_integration.py::test_sac_checkpoint_source_mismatch": 1,
+      "tests/test_b3_integration.py::test_sac_terminal_nan_full_update": 1,
+      "tests/test_b4_learning.py::test_b4_ni03_through_ni10_full_update[NI04_lambda_zero]": 3,
+      "tests/test_b4_learning.py::test_b4_ni03_through_ni10_full_update[NI04_lambda1000]": 3,
+      "tests/test_b4_learning.py::test_b4_lambda_change_no_actor_effect": 2,
+      "tests/test_b4_learning.py::test_b4_single_replay_draw": 2,
+      "tests/test_b4_learning.py::test_cost_bound_diagnostic_only": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C01_online]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C01_target]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C02_adam]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C03_C04_C05_lambda]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C_rng]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C_diagnostics]": 1,
+      "tests/test_b4_learning.py::test_b4_checkpoint_parts[C_B3_all]": 1,
+      "tests/test_b4_learning.py::test_b4_c06_next_lambda_and_optimizer_update": 3,
+      "tests/test_b4_learning.py::test_b4_c07_migration_marked": 1,
+      "tests/test_b4_learning.py::test_b4_runner_mid_episode_checkpoint": 3,
+      "tests/test_b4_learning.py::test_cost_diagnostics_above_one": 1,
+      "tests/test_b5_actor.py::test_lambda_zero_exact_nonempty_adam_degeneration": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[models]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[optimizers]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[log_alpha]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[actor_rng]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[replay]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[counters]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_q]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_target]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_optimizer]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[cost_rng]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[multiplier]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_parts[actor_components]": 1,
+      "tests/test_b5_integration.py::test_checkpoint_next_update_and_tenth_episode": 3,
+      "tests/test_b5_integration.py::test_b4_migration_and_old_checkpoint_unchanged": 2,
+      "tests/test_b5_integration.py::test_migration_rejects_incompatible[used]": 1,
+      "tests/test_b5_integration.py::test_ordinary_independent_no_monkeypatch": 3,
+      "tests/test_b5_integration.py::test_b4_update_order_reused": 1,
+      "tests/test_b5_integration.py::test_executed_action_does_not_enter_learning": 2,
+      "tests/test_b5_integration.py::test_reward_and_temperature_cost_independence": 2,
+      "tests/test_b5_integration.py::test_runner_full_resume_and_b4_migration": 3,
+      "tests/test_b5_integration.py::test_lambda_lifecycle_is_original": 1,
+      "tests/test_b5_integration.py::test_lambda_zero_full_b4_update_identity": 3
+    },
+    "pytest_exit_code": 0,
+    "purpose": "unit/integration tests, not scientific training",
+    "nested_counts_must_not_be_added": true,
+    "scientific_training_steps": 0,
+    "scientific_training_updates": 0
+  },
+  "synthetic_accounting_note": "最终全仓实际观测84次完整ordinary更新，其中62次显式合成batch；不可把嵌套计数相加。另有独立数学检查的Actor步，早期定向调试未全程部署计数观察器，总合成操作数不冒充已完整测得。",
+  "mechanism_evidence": [
+    {
+      "hypothesis": "所有boundary都是pitch或终态等于30度表示错误clip",
+      "level": "NOT_SUPPORTED",
+      "evidence": "V1原18例有8个pitch；选定重放另有位置限制，事件独立定位一致。R1全Val300有16 pitch和119位置边界。",
+      "limitation": "V1全Val300没有子型字段，不能补造全量历史分类。",
+      "action": "不修改边界/终止"
+    },
+    {
+      "hypothesis": "实际进入2m目标球后漏判成功",
+      "level": "NOT_SUPPORTED",
+      "evidence": "213578个独立0.05s执行分段无首次事件不一致/漏判；R1终点26成功均有first2m，874失败均无first2m。",
+      "limitation": "限登记重放和本轮测得轨迹，不是所有可能状态的证明。",
+      "action": "不放大成功半径"
+    },
+    {
+      "hypothesis": "yaw/pitch/执行响应及目标捕获存在多组件控制困难",
+      "level": "SUPPORTED_MECHANISM",
+      "evidence": "30个冻结反事实分支各从同快照开始，8个接管成功；不同案例由yaw或pitch替换改善，部分仍超时或触发其他边界。",
+      "limitation": "接管成功不是learned策略成功，也不能证明全部失败仅一个原因。",
+      "action": "保留轨迹，不给B0增加控制器"
+    },
+    {
+      "hypothesis": "Replay几乎没有成功相关经验",
+      "level": "NOT_SUPPORTED",
+      "evidence": "旧首100k成功episode转移占9.932%、5.714%、8.370%；成功终点17/12/15不能代表所有成功相关转移。",
+      "limitation": "当前300k Replay仍不等于历史100k训练时的随机状态。",
+      "action": "不更换Replay/采样律"
+    },
+    {
+      "hypothesis": "课程切换导致100k以前全部退化",
+      "level": "NOT_SUPPORTED",
+      "evidence": "旧monitor30在50k或75k后到100k明显下降，发生于CV切换以前。",
+      "limitation": "后续CV可以进一步影响策略，但不能倒推为此前退化原因。",
+      "action": "本轮不重训CV"
+    },
+    {
+      "hypothesis": "降低公共学习率至1e-4恢复固定100k任务完成能力",
+      "level": "NOT_SUPPORTED",
+      "evidence": "预登记三seed固定100k Val300成功数全部下降，跨seed均值6.00%降至2.8889%；九个固定R01–R03仍0成功。",
+      "limitation": "只否定本轮具体修复候选的改善，不证明学习率在所有预算/配置下无作用。",
+      "action": "不自动第二候选/加预算"
+    },
+    {
+      "hypothesis": "critic误排序或熵动态是后期退化的完整根因",
+      "level": "PLAUSIBLE_HYPOTHESIS",
+      "evidence": "旧alpha下降、Q-loss增加；新较低LR仍未完成简单任务。300k冻结critic对部分动作排序不同。",
+      "limitation": "V1历史缺50k/75k及100k critic；60条50步随机soft-return尾项未测，不能当完整Q真值。",
+      "action": "建议只用现有中间权重做下轮有界诊断"
+    },
+    {
+      "hypothesis": "已确认训练输入/动作/奖励/SAC梯度的L1错误",
+      "level": "NOT_SUPPORTED",
+      "evidence": "18个独立数值测试、六个实际失败输入和213578分段重放在审阅范围一致。",
+      "limitation": "没有确证L1，不等于全域无缺陷证明；诊断工具的roundoff/JSON/时戳记录问题已单独修复。",
+      "action": "不改科学内核，只启用登记的单因素配置"
+    }
+  ],
+  "reviewed_confirmed_scientific_l1_defects": [],
+  "scientific_core_modified": [],
+  "post_training_protected_git_diff": [],
+  "numerical_scientific_failures": 0,
+  "results_tool_failures_preserved": [
+    "r1_final_analysis: NumPy event array JSON serialization, after all nine replays completed; retry reused summaries",
+    "r1_final_evidence_audit: separate actual timestamp reads wrongly required to be equal; ordered UTC check repaired",
+    "diagnostic observer goal-root roundoff: retained minimal counterexample, original world event unchanged",
+    "comparability tool mistook split/identity_note publishing annotations for scenario geometry; raw first failure retained"
+  ],
+  "stage2_scientific_go_established": false,
+  "stage2_conditional_go_established": false,
+  "final_research_hypothesis_no_go_declared": false,
+  "stage3_entry": "NO-GO / HOLD",
+  "stage2_decision_reason": "多个seed仍未稳定完成登记简单可达任务；降低LR候选没有改善固定终点。第一轮L2已完成，有限修复前提尚未耗尽，不能宣布预测/风险/联邦假设失败。",
+  "repair_round": 1,
+  "remaining_l2_or_l3_rounds": 1,
+  "next_round_authorized": false,
+  "next_single_suggested_task": "用已保存25k/50k/75k/100k Actor+critic做有界近目标价值/控制诊断并预登记最后一轮单因素R2；须另行授权。",
+  "cv_retraining_steps": 0,
+  "test_id_runs": 0,
+  "ood_runs": 0,
+  "federated_work_started": false,
+  "official_throughput_benchmark_completed": false,
+  "publication": {
+    "training_episodes": {
+      "rows": 1036,
+      "raw_bytes": 649621,
+      "public_gzip_bytes": 122516,
+      "raw_file_retained_locally": true
+    },
+    "validation_episodes": {
+      "rows": 2520,
+      "raw_bytes": 1936975,
+      "public_gzip_bytes": 280240,
+      "raw_file_retained_locally": true
+    },
+    "trajectory_publication_subset": {
+      "selection": "fixed 100k, preregistered index 0, all three C/R1 seed pairs; no outcome selection",
+      "control_node_records": {
+        "C_3e-4_seed_11": 1001,
+        "C_3e-4_seed_22": 264,
+        "C_3e-4_seed_33": 1001,
+        "R1_1e-4_seed_11": 1001,
+        "R1_1e-4_seed_22": 1001,
+        "R1_1e-4_seed_33": 336
+      },
+      "public_gzip_bytes": 451895,
+      "complete_selected_trajectory_archive_retained_locally": true,
+      "archive_file": "public_evidence/selected_validation_trajectories.csv.gz"
+    }
+  },
+  "protocol_word_uploaded": false,
+  "model_and_replay_uploaded": false,
+  "extra_hash_or_zip_sealing_performed": false
+}
