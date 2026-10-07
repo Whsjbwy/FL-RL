@@ -99,9 +99,10 @@ class SegmentLog:
     """缓冲保留原始episode/update，恢复开新段并明确旧尾部的有效序号。"""
 
     def __init__(self, output: Path, seed: int, *, parent: Path | None,
-                 cutoff: int | None) -> None:
+                 cutoff: int | None, registration_id: str = REGISTRATION_ID) -> None:
         """不覆盖旧日志；checkpoint之后未确认的旧尾部保留而不重复合并。"""
         self.output, self.seed = output, seed
+        self.registration_id = registration_id
         self.seed_dir = output / f'seed_{seed}'
         self.seed_dir.mkdir(parents=True, exist_ok=True)
         self.metadata_path = self.seed_dir / 'segments.json'
@@ -125,7 +126,7 @@ class SegmentLog:
         if kind == 'episode':
             record.pop('trajectory', None)
         record.update(training_seed=self.seed, segment_id=self.segment_id,
-                      registration_id=REGISTRATION_ID)
+                      registration_id=self.registration_id)
         if kind not in self.streams:
             self.streams[kind] = (self.directory / f'{kind}.jsonl').open(
                 'a', encoding='utf-8', buffering=1024 * 1024)

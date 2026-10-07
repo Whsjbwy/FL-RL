@@ -1,0 +1,51 @@
+{
+  "status": "PREREGISTERED_MATH_AND_FAILURE_INPUT_REVIEW_COMPLETED",
+  "pytest": {
+    "passed": 18,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "junit": "results/stage2_b0_repair_r1/math/numerics.xml"
+  },
+  "ruff_exit_code": 0,
+  "production_math_modified": false,
+  "confirmed_implementation_defects_in_this_scope": [],
+  "tests": "tests/test_b0_r1_numerics.py",
+  "source": "LOCAL native Eq43,44,47,48,49,52,53,54",
+  "accounting_this_directed_run_only": {
+    "synthetic_actor_optimizer_steps": 1,
+    "synthetic_complete_sac_updates": 0,
+    "non_learning_world_transitions": 2,
+    "rejected_post_termination_world_step_calls": 1,
+    "scientific_training_steps": 0,
+    "scientific_training_updates": 0
+  },
+  "limitations": [
+    "Not a proof of learnedcriticaccuracy",
+    "Actual6selectedfailureinputsagree;not exhaustiveparameter/scenario proof",
+    "No50k/75kweights and no100kcritic were retained;no inventedreconstruction"
+  ],
+  "recorded_at": "2026-10-07T14:38:30.707216+00:00",
+  "failure_snapshot_review": {
+    "count": 6,
+    "raw234_max_absolute_error": 0.0,
+    "covariance_max_absolute": 0.0,
+    "evidence": "results/stage2_b0_repair_r1/math/actual_failure_input_review.json"
+  },
+  "frozen_critic_review": {
+    "exit_code": 0,
+    "trajectories": 60,
+    "control_transitions": 3000,
+    "warmup_control_transitions": 0,
+    "scientific_training_steps": 0,
+    "scientific_training_updates": 0,
+    "gradient_operations": 0,
+    "training_replay_writes": 0,
+    "actor_and_critic_parameters_unchanged": true,
+    "evidence": "results/stage2_b0_repair_r1/math/critic_result.json",
+    "interpretation": "INSUFFICIENT_EVIDENCE for exactQcalibration/causationof50kto100kdecline; finite50stepsoftpartialsomitremainingtail"
+  },
+  "review_conclusion": "No confirmedL1implementationdefect or keyprotocolconflict was demonstrated in reviewed formulas/source/failureinput/event/gradient scope. This is not proof of absence in all states or proof of learnedQaccuracy.",
+  "final_reviewed_at": "2026-10-07T14:47:12.303538+00:00"
+}

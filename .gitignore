@@ -50,7 +50,12 @@ artifacts/
 /results/stage2_b0_repair_r1/runtime/
 /results/stage2_b0_repair_r1/development/
 /results/stage2_b0_repair_r1/diagnostic_traces/
+/results/stage2_b0_repair_r1/diagnostic_replay/
+/results/stage2_b0_repair_r1/frozen_replay_result.json
+/results/stage2_b0_repair_r1/offline/v1_offline_analysis.json
+/results/stage2_b0_repair_r1/math/critic_rollouts/
 /results/stage2_b0_repair_r1/protocol_read.stdout.txt
+/results/stage2_b0_repair_r1/protocol_science_read.stdout.txt
 /results/stage2_b0_repair_r1/seed_*/segments/*/update.jsonl
 /results/stage2_b0_repair_r1/seed_*/segments/*/episode.jsonl
 /results/stage2_b0_repair_r1/seed_*/segments/*/validation.jsonl

@@ -1,0 +1,32 @@
+{
+  "registration_id": "STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1",
+  "decision_timing": "AFTER_REGISTERED_DIAGNOSIS_BEFORE_NEW_SCIENTIFIC_TRAINING",
+  "selected_branch": "L2_COMMON_LEARNING_RATE",
+  "confirmed_L1_defects": [],
+  "unresolved_key_error_or_protocol_conflict": false,
+  "scope_note": "No confirmed L1 in reviewed formula/input/reward/event/update scope; not a universal bug-absence proof.",
+  "control_reused": "V1_FIRST_100K_ONLY",
+  "control_comparability_evidence": "results/stage2_b0_repair_r1/control_comparability.json",
+  "new_learning_rate": 0.0001,
+  "original_default_learning_rate": 0.0003,
+  "only_scientific_parameter_changed": "learning_rate",
+  "from_zero_seeds": [11, 22, 33],
+  "transition_budget_per_seed": 100000,
+  "new_scientific_transition_budget": 300000,
+  "expected_updates_per_seed_not_measured": 90001,
+  "cv_training_authorized": false,
+  "repair_round": 1,
+  "remaining_L2_or_L3_rounds_after_this_round": 1,
+  "remaining_round_automatically_authorized": false,
+  "evidence": [
+    "results/stage2_b0_repair_r1/offline/V1_OFFLINE_READOUT.md",
+    "results/stage2_b0_repair_r1/replay_mechanism_evidence.json",
+    "results/stage2_b0_repair_r1/frozen_replay_result.json",
+    "results/stage2_b0_repair_r1/math/math_result.json",
+    "results/stage2_b0_repair_r1/math/actual_failure_input_review.json",
+    "results/stage2_b0_repair_r1/math/critic_result.json"
+  ],
+  "scientific_training_steps_at_decision": 0,
+  "scientific_training_updates_at_decision": 0,
+  "new_expected_result": "Test whether lower common optimization step size preserves later obstacle-free completion capability; improvement is not assumed."
+}

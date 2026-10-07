@@ -1,0 +1,32 @@
+{
+  "selected_success_controls": [
+    {
+      "seed": 11,
+      "profile": "obstacle_free",
+      "index": 9
+    },
+    {
+      "seed": 11,
+      "profile": "cv_train_v1",
+      "index": 117
+    },
+    {
+      "seed": 22,
+      "profile": "obstacle_free",
+      "index": 73
+    },
+    {
+      "seed": 22,
+      "profile": "cv_train_v1",
+      "index": 267
+    },
+    {
+      "seed": 33,
+      "profile": "obstacle_free",
+      "index": 28
+    }
+  ],
+  "fixed_core": 63,
+  "max_extra_success": 6,
+  "max_counterfactual": 30
+}

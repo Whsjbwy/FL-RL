@@ -1,0 +1,100 @@
+{
+  "snapshots": [
+    {
+      "source_trajectory_id": "val_s11_m100000_obstacle_free_i0",
+      "model_transition": 100000,
+      "training_seed": 11,
+      "task_step": 292,
+      "goal_body_m": [
+        7.282186190564679,
+        -3.396450036334933,
+        5.863401445190724
+      ],
+      "goal_distance_m": 9.947139542141507,
+      "observation_max_abs_error": 0.0,
+      "observed_covariance_max_abs": 0.0,
+      "interpretation": "Independent current-state encoding; no learned-quality claim."
+    },
+    {
+      "source_trajectory_id": "val_s11_m300000_cv_train_v1_i0",
+      "model_transition": 300000,
+      "training_seed": 11,
+      "task_step": 467,
+      "goal_body_m": [
+        7.687156374996105,
+        22.948324301682497,
+        -0.18591170517199834
+      ],
+      "goal_distance_m": 24.202324775751496,
+      "observation_max_abs_error": 0.0,
+      "observed_covariance_max_abs": 0.0,
+      "interpretation": "Independent current-state encoding; no learned-quality claim."
+    },
+    {
+      "source_trajectory_id": "val_s22_m100000_obstacle_free_i0",
+      "model_transition": 100000,
+      "training_seed": 22,
+      "task_step": 214,
+      "goal_body_m": [
+        9.202629109113301,
+        -3.2044123543565037,
+        0.24412164390706848
+      ],
+      "goal_distance_m": 9.747627220697145,
+      "observation_max_abs_error": 0.0,
+      "observed_covariance_max_abs": 0.0,
+      "interpretation": "Independent current-state encoding; no learned-quality claim."
+    },
+    {
+      "source_trajectory_id": "val_s22_m300000_cv_train_v1_i0",
+      "model_transition": 300000,
+      "training_seed": 22,
+      "task_step": 62,
+      "goal_body_m": [
+        35.51901262306307,
+        1.5977710985121862,
+        22.349713279403737
+      ],
+      "goal_distance_m": 41.99598568758817,
+      "observation_max_abs_error": 0.0,
+      "observed_covariance_max_abs": 0.0,
+      "interpretation": "Independent current-state encoding; no learned-quality claim."
+    },
+    {
+      "source_trajectory_id": "val_s33_m100000_obstacle_free_i0",
+      "model_transition": 100000,
+      "training_seed": 33,
+      "task_step": 356,
+      "goal_body_m": [
+        8.887480408795268,
+        4.398128434044239,
+        0.08087053103999238
+      ],
+      "goal_distance_m": 9.916520648990694,
+      "observation_max_abs_error": 0.0,
+      "observed_covariance_max_abs": 0.0,
+      "interpretation": "Independent current-state encoding; no learned-quality claim."
+    },
+    {
+      "source_trajectory_id": "val_s33_m300000_cv_train_v1_i0",
+      "model_transition": 300000,
+      "training_seed": 33,
+      "task_step": 50,
+      "goal_body_m": [
+        43.844019951926505,
+        -5.263403281998179,
+        3.740688251685729
+      ],
+      "goal_distance_m": 44.316974719064234,
+      "observation_max_abs_error": 0.0,
+      "observed_covariance_max_abs": 0.0,
+      "interpretation": "Independent current-state encoding; no learned-quality claim."
+    }
+  ],
+  "tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "independently_recomputed": true,
+  "scientific_training_steps": 0
+}

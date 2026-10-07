@@ -77,6 +77,15 @@ class B0HarnessConfig:
                 raise ValueError('工程 learning_starts 只允许缩减。')
         elif self.external_max_steps is not None:
             raise ValueError('生产配置不得使用工程外部截断。')
+        # 仅已登记R1空场景复测允许唯一公共学习率候选；原生产默认值及其他参数不变。
+        if (self.run_kind == 'scientific_training'
+                and self.research_registration == 'STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1'
+                and self.task_profile == 'obstacle_free' and self.training_seed in (11, 22, 33)
+                and self.transition_budget == 100000 and self.num_envs == 2
+                and self.validation_interval == 25000 and self.checkpoint_interval == 25000
+                and self.validation_episodes == 30 and self.validation_max_steps == 1000
+                and self.sac.learning_rate == 1e-4):
+            ignored.add('learning_rate')
         if any(actual[k] != default[k] for k in actual.keys() - ignored):
             raise ValueError('禁止修改冻结的生产 SAC 参数或网络 batch 规模。')
 

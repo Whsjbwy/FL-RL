@@ -1,0 +1,44 @@
+registration_id: STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1
+registration_document: docs/STAGE2_B0_REPAIR_R1.md
+run_kind: scientific_training
+method: B0_FULL_STATE_ORDINARY_SAC
+branch: L2_COMMON_LEARNING_RATE
+repair_round: 1
+project_config: configs/stage0.yaml
+scenario_config: configs/train_scenario_v1.yaml
+output_directory: results/stage2_b0_repair_r1
+training_seeds: [11, 22, 33]
+task_profile: obstacle_free
+transition_budget_per_seed: 100000
+total_transition_budget: 300000
+hard_new_training_limit: 600000
+control_group: REUSE_V1_FIRST_100K
+control_experiment_commit: 45f3cc87bb79f69ef5257d6bbd5c92bfbea8b898
+num_envs: 2
+device: cuda
+validation:
+  root_seed: 20261006
+  base_indices: {first: 0, last: 299}
+  monitor_indices: {first: 0, last: 29}
+  monitor_steps: [0, 25000, 50000, 75000]
+  full_steps: [100000]
+  task_horizon: 1000
+  deterministic: true
+  trajectory_indices: [0, 1, 2]
+  earliest_failure_trajectory: true
+checkpoint_interval: 25000
+logging_flush_records: 100
+small_model_steps: [25000, 50000, 75000, 100000]
+primary_checkpoint: final
+sac:
+  gamma: 0.999
+  tau: 0.005
+  learning_rate: 0.0001
+  batch_size: 256
+  replay_capacity: 500000
+  learning_starts: 10000
+  utd: 1
+  initial_alpha: 0.2
+  target_entropy: -3.0
+branch_decision_file: results/stage2_b0_repair_r1/branch_decision.json
+comparability_file: results/stage2_b0_repair_r1/control_comparability.json

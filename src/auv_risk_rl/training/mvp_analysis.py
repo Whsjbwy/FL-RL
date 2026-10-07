@@ -155,7 +155,8 @@ def _contained_path(root: Path, relative: str) -> Path:
 
 
 def confirmed_records(root: Path, seed: int, code_version: str,
-                      diagnostics: dict[str, Any]) -> Iterator[tuple[str, dict[str, Any]]]:
+                      diagnostics: dict[str, Any], *, registration_id: str = REGISTRATION_ID,
+                      ) -> Iterator[tuple[str, dict[str, Any]]]:
     """只采用segment登记的安全checkpoint日志cutoff；重算尾部不进入权威结果。"""
     inventory = root / f'seed_{seed}' / 'segments.json'
     if not inventory.exists():
@@ -194,7 +195,7 @@ def confirmed_records(root: Path, seed: int, code_version: str,
                         target = diagnostics['excluded_unconfirmed_rows']
                         target[kind] = target.get(kind, 0) + 1
                         continue
-                    expected = dict(registration_id=REGISTRATION_ID, run_kind='scientific_training',
+                    expected = dict(registration_id=registration_id, run_kind='scientific_training',
                                     method=METHOD, training_seed=seed, segment_id=segment_id,
                                     code_version=code_version)
                     if any(row.get(key) != value for key, value in expected.items()):

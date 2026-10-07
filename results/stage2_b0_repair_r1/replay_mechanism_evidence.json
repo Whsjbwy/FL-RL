@@ -1,0 +1,720 @@
+{
+  "registration_id": "STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1",
+  "groups": {
+    "original_fixed": {
+      "count": 18,
+      "transitions": 12580,
+      "events": {
+        "task_horizon": 10,
+        "operational_boundary_failure": 8
+      },
+      "boundary_subtypes": {
+        "pitch_lower": 3,
+        "pitch_upper": 5
+      },
+      "independent_event_mismatches": 0,
+      "entered_goal_ball": 0
+    },
+    "VAL_0_1_2": {
+      "count": 36,
+      "transitions": 20932,
+      "events": {
+        "task_horizon": 15,
+        "operational_boundary_failure": 20,
+        "collision": 1
+      },
+      "boundary_subtypes": {
+        "position_D_lower": 1,
+        "pitch_lower": 12,
+        "position_E_upper": 3,
+        "position_N_lower": 1,
+        "position_D_upper": 1,
+        "pitch_upper": 2
+      },
+      "independent_event_mismatches": 0,
+      "entered_goal_ball": 0
+    },
+    "FIRST_SUCCESS_BY_INDEX": {
+      "count": 5,
+      "transitions": 2893,
+      "events": {
+        "goal_success": 5
+      },
+      "boundary_subtypes": {},
+      "independent_event_mismatches": 0,
+      "entered_goal_ball": 5
+    },
+    "postcv_empty_fixed": {
+      "count": 9,
+      "transitions": 7931,
+      "events": {
+        "task_horizon": 5,
+        "operational_boundary_failure": 4
+      },
+      "boundary_subtypes": {
+        "position_D_lower": 2,
+        "position_E_upper": 1,
+        "position_N_upper": 1
+      },
+      "independent_event_mismatches": 0,
+      "entered_goal_ball": 0
+    },
+    "FIXED_COUNTERFACTUAL": {
+      "count": 30,
+      "transitions": 9079,
+      "events": {
+        "task_horizon": 8,
+        "operational_boundary_failure": 14,
+        "goal_success": 8
+      },
+      "boundary_subtypes": {
+        "pitch_lower": 5,
+        "position_D_upper": 1,
+        "pitch_upper": 5,
+        "position_D_lower": 1,
+        "position_E_upper": 1,
+        "position_N_upper": 1
+      },
+      "independent_event_mismatches": 0,
+      "entered_goal_ball": 8
+    }
+  },
+  "fixed_v1_direct_comparisons": [
+    {
+      "trajectory_id": "original_fixed_s11_m100000_R01_horizontal_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s11_m100000_R02_deeper_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s11_m100000_R03_shallower_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s11_m300000_R04_head_on_lateral_offset",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s11_m300000_R05_crossing",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s11_m300000_R06_head_on_vertical_offset",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s22_m100000_R01_horizontal_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s22_m100000_R02_deeper_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s22_m100000_R03_shallower_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s22_m300000_R04_head_on_lateral_offset",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s22_m300000_R05_crossing",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s22_m300000_R06_head_on_vertical_offset",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s33_m100000_R01_horizontal_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s33_m100000_R02_deeper_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s33_m100000_R03_shallower_empty",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s33_m300000_R04_head_on_lateral_offset",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s33_m300000_R05_crossing",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "original_fixed_s33_m300000_R06_head_on_vertical_offset",
+      "transitions_equal": true,
+      "event_equal": true,
+      "final_goal_distance_abs_error": 0.0,
+      "reward_abs_error": 0.0
+    }
+  ],
+  "validation_v1_direct_comparisons": [
+    {
+      "trajectory_id": "val_s11_m100000_obstacle_free_i0",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s11_m100000_obstacle_free_i1",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s11_m100000_obstacle_free_i2",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s11_m300000_cv_train_v1_i0",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s11_m300000_cv_train_v1_i1",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s11_m300000_cv_train_v1_i2",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m100000_obstacle_free_i0",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m100000_obstacle_free_i1",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m100000_obstacle_free_i2",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m300000_cv_train_v1_i0",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m300000_cv_train_v1_i1",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m300000_cv_train_v1_i2",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s33_m100000_obstacle_free_i0",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s33_m100000_obstacle_free_i1",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s33_m100000_obstacle_free_i2",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s33_m300000_cv_train_v1_i0",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s33_m300000_cv_train_v1_i1",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s33_m300000_cv_train_v1_i2",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s11_m100000_obstacle_free_i9",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s11_m300000_cv_train_v1_i117",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m100000_obstacle_free_i73",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s22_m300000_cv_train_v1_i267",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    },
+    {
+      "trajectory_id": "val_s33_m100000_obstacle_free_i28",
+      "event_equal": true,
+      "transitions_equal": true,
+      "reward_abs_error": 0.0,
+      "final_goal_distance_abs_error": 0.0
+    }
+  ],
+  "frozen_counterfactuals": [
+    {
+      "source": "val_s11_m100000_obstacle_free_i0",
+      "snapshot_step": 292,
+      "snapshot_selection": "FIRST_GOAL_DISTANCE_LE_10_M",
+      "snapshot_initial_states_identical": true,
+      "original_continuation_matches_source_exactly": true,
+      "outcomes": [
+        {
+          "branch": "original",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 708,
+          "minimum_goal_distance_m": 5.805205648845071,
+          "reward": -6.489824209867246
+        },
+        {
+          "branch": "los",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_lower"
+          ],
+          "transitions": 13,
+          "minimum_goal_distance_m": 7.707930581774884,
+          "reward": 2.0354629023060276
+        },
+        {
+          "branch": "pitch_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_lower"
+          ],
+          "transitions": 13,
+          "minimum_goal_distance_m": 8.033202680861013,
+          "reward": 1.7501685129895495
+        },
+        {
+          "branch": "surge_only",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 708,
+          "minimum_goal_distance_m": 4.226877441959319,
+          "reward": -11.24308269872153
+        },
+        {
+          "branch": "yaw_only",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 708,
+          "minimum_goal_distance_m": 4.4019069944483755,
+          "reward": -2.664986960445165
+        }
+      ],
+      "claim": "接管分支仅为冻结案例机制诊断，不计学习策略成功"
+    },
+    {
+      "source": "val_s11_m300000_cv_train_v1_i0",
+      "snapshot_step": 467,
+      "snapshot_selection": "FIRST_ABS_PITCH_GE_20_DEG",
+      "snapshot_initial_states_identical": true,
+      "original_continuation_matches_source_exactly": true,
+      "outcomes": [
+        {
+          "branch": "original",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_lower"
+          ],
+          "transitions": 118,
+          "minimum_goal_distance_m": 11.985815122179597,
+          "reward": 10.689004091864852
+        },
+        {
+          "branch": "los",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 103,
+          "minimum_goal_distance_m": 1.9999999999999944,
+          "reward": 121.0554090756591
+        },
+        {
+          "branch": "pitch_only",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 533,
+          "minimum_goal_distance_m": 12.136603803286913,
+          "reward": -20.053023325722833
+        },
+        {
+          "branch": "surge_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "position_D_upper"
+          ],
+          "transitions": 261,
+          "minimum_goal_distance_m": 15.893765687095522,
+          "reward": -23.737212372382107
+        },
+        {
+          "branch": "yaw_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_upper"
+          ],
+          "transitions": 236,
+          "minimum_goal_distance_m": 3.281233983871897,
+          "reward": 15.364247006863677
+        }
+      ],
+      "claim": "接管分支仅为冻结案例机制诊断，不计学习策略成功"
+    },
+    {
+      "source": "val_s22_m100000_obstacle_free_i0",
+      "snapshot_step": 214,
+      "snapshot_selection": "FIRST_GOAL_DISTANCE_LE_10_M",
+      "snapshot_initial_states_identical": true,
+      "original_continuation_matches_source_exactly": true,
+      "outcomes": [
+        {
+          "branch": "original",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_lower"
+          ],
+          "transitions": 49,
+          "minimum_goal_distance_m": 2.4337518278537025,
+          "reward": 5.007732094664642
+        },
+        {
+          "branch": "los",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 32,
+          "minimum_goal_distance_m": 1.9999999999999931,
+          "reward": 107.41966162982973
+        },
+        {
+          "branch": "pitch_only",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 786,
+          "minimum_goal_distance_m": 2.110424386256007,
+          "reward": -20.160804486828184
+        },
+        {
+          "branch": "surge_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_lower"
+          ],
+          "transitions": 70,
+          "minimum_goal_distance_m": 3.1946215462155005,
+          "reward": -3.7757713770077297
+        },
+        {
+          "branch": "yaw_only",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 29,
+          "minimum_goal_distance_m": 1.9999999999999953,
+          "reward": 107.4520830274262
+        }
+      ],
+      "claim": "接管分支仅为冻结案例机制诊断，不计学习策略成功"
+    },
+    {
+      "source": "val_s22_m300000_cv_train_v1_i0",
+      "snapshot_step": 62,
+      "snapshot_selection": "FIRST_ABS_PITCH_GE_20_DEG",
+      "snapshot_initial_states_identical": true,
+      "original_continuation_matches_source_exactly": true,
+      "outcomes": [
+        {
+          "branch": "original",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_upper"
+          ],
+          "transitions": 74,
+          "minimum_goal_distance_m": 27.334171084607252,
+          "reward": 12.920160926779635
+        },
+        {
+          "branch": "los",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 168,
+          "minimum_goal_distance_m": 1.9999999999999993,
+          "reward": 138.28973526129369
+        },
+        {
+          "branch": "pitch_only",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 938,
+          "minimum_goal_distance_m": 4.379258549250747,
+          "reward": 25.944071310148498
+        },
+        {
+          "branch": "surge_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_upper"
+          ],
+          "transitions": 85,
+          "minimum_goal_distance_m": 28.804889054424446,
+          "reward": 11.51036831088392
+        },
+        {
+          "branch": "yaw_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "position_D_lower"
+          ],
+          "transitions": 183,
+          "minimum_goal_distance_m": 21.606992703466666,
+          "reward": 18.564461778092014
+        }
+      ],
+      "claim": "接管分支仅为冻结案例机制诊断，不计学习策略成功"
+    },
+    {
+      "source": "val_s33_m100000_obstacle_free_i0",
+      "snapshot_step": 356,
+      "snapshot_selection": "FIRST_GOAL_DISTANCE_LE_10_M",
+      "snapshot_initial_states_identical": true,
+      "original_continuation_matches_source_exactly": true,
+      "outcomes": [
+        {
+          "branch": "original",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 644,
+          "minimum_goal_distance_m": 2.6036429611276537,
+          "reward": -2.771649875186541
+        },
+        {
+          "branch": "los",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 35,
+          "minimum_goal_distance_m": 1.9999999999999978,
+          "reward": 107.5397130796419
+        },
+        {
+          "branch": "pitch_only",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 230,
+          "minimum_goal_distance_m": 2.000000000000002,
+          "reward": 105.61792183340636
+        },
+        {
+          "branch": "surge_only",
+          "event": "task_horizon",
+          "boundary_subtypes": [],
+          "transitions": 644,
+          "minimum_goal_distance_m": 2.5011796892986977,
+          "reward": -1.9353314586331074
+        },
+        {
+          "branch": "yaw_only",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 54,
+          "minimum_goal_distance_m": 2.000000000000001,
+          "reward": 107.33609959453548
+        }
+      ],
+      "claim": "接管分支仅为冻结案例机制诊断，不计学习策略成功"
+    },
+    {
+      "source": "val_s33_m300000_cv_train_v1_i0",
+      "snapshot_step": 50,
+      "snapshot_selection": "CONTROL_STEP_50_FALLBACK",
+      "snapshot_initial_states_identical": true,
+      "original_continuation_matches_source_exactly": true,
+      "outcomes": [
+        {
+          "branch": "original",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "position_E_upper"
+          ],
+          "transitions": 457,
+          "minimum_goal_distance_m": 20.68096186080696,
+          "reward": -0.7258791464448426
+        },
+        {
+          "branch": "los",
+          "event": "goal_success",
+          "boundary_subtypes": [],
+          "transitions": 176,
+          "minimum_goal_distance_m": 2.000000000000002,
+          "reward": 140.55113222954827
+        },
+        {
+          "branch": "pitch_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "position_N_upper"
+          ],
+          "transitions": 484,
+          "minimum_goal_distance_m": 14.799026747902854,
+          "reward": 12.626424223180855
+        },
+        {
+          "branch": "surge_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_upper"
+          ],
+          "transitions": 259,
+          "minimum_goal_distance_m": 17.055260509973596,
+          "reward": 21.83579278567255
+        },
+        {
+          "branch": "yaw_only",
+          "event": "operational_boundary_failure",
+          "boundary_subtypes": [
+            "pitch_upper"
+          ],
+          "transitions": 281,
+          "minimum_goal_distance_m": 8.671759155233886,
+          "reward": 30.906030854128137
+        }
+      ],
+      "claim": "接管分支仅为冻结案例机制诊断，不计学习策略成功"
+    }
+  ],
+  "max_observation_error": 0.0,
+  "max_command_error": 0.0,
+  "max_reward_reference_error": 2.7755575615628914e-17,
+  "max_progress_telescoping_error": 1.3500311979441904e-13,
+  "independent_segment_count": 213578,
+  "independent_event_mismatch_count": 0,
+  "missed_goal_count": 0,
+  "actor_parameters_unchanged": true,
+  "evidence_grade": "SUPPORTED_MECHANISM_WITHIN_REGISTERED_CASES",
+  "scientific_training_updates": 0,
+  "training_replay_writes": 0,
+  "limitations": [
+    "有限冻结案例不是全体Val/训练episode细分边界的统计代表。",
+    "成功/失败接管只支持该快照因果诊断，不是新导航方法结果。",
+    "50k/75k权重和100kcritic缺失，不能给其Q精确校准结论。",
+    "无L1在此处表示已核对范围未发现，不证明任意潜在实现均无误。"
+  ]
+}

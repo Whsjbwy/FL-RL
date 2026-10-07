@@ -1,0 +1,38 @@
+{
+  "registered_at": "2026-10-07T14:44:08.358695+00:00",
+  "diagnostic_root_seed": 20261007,
+  "effective_seeds": {
+    "11": [
+      2468301863682682619,
+      8136798886391329811,
+      5370956514775662145,
+      6433107792399457303
+    ],
+    "22": [
+      6342607452694620001,
+      1686462958854424640,
+      8525514077206157264,
+      5175881554621396178
+    ],
+    "33": [
+      7148931874108001801,
+      173105915166942866,
+      8124374091158114688,
+      4236876615251117707
+    ]
+  },
+  "branches": [
+    "original",
+    "los",
+    "pitch_only",
+    "surge_only",
+    "yaw_only"
+  ],
+  "branch_coupling": "same repeated diagnostic stream for each fixed initial action",
+  "maximum_control_transitions": 3000,
+  "maximum_trajectories": 60,
+  "initial_action_entropy": false,
+  "subsequent_entropy": "t>=1, gamma**t*(-alpha*logpi_t)",
+  "frozen_model_scope": "FINAL300K_ONLY",
+  "no_train_replay_write": true
+}

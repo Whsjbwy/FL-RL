@@ -37,11 +37,22 @@ def main() -> int:
     with (output / f"{args.name}.stdout.txt").open("wb") as stdout, (
         output / f"{args.name}.stderr.txt"
     ).open("wb") as stderr:
-        process = subprocess.run(command, cwd=root, env=env, stdout=stdout, stderr=stderr,
-                                 check=False)
+        process = subprocess.Popen(command, cwd=root, env=env, stdout=stdout, stderr=stderr)
+        identity_path = output / f'{args.name}.worker.json'
+        identity = dict(status='RUNNING', worker_pid=process.pid, command=command,
+                        start_utc=start, code_commit=version,
+                        note='PID is the actual direct child, not the outer launcher.')
+        identity_path.write_text(json.dumps(identity, ensure_ascii=False, indent=2) + '\n',
+                                 encoding='utf-8')
+        print(json.dumps(identity, ensure_ascii=False), flush=True)
+        return_code = process.wait()
+        identity.update(status='EXITED', actual_worker_exit_code=return_code,
+                        end_utc=datetime.now(UTC).isoformat())
+        identity_path.write_text(json.dumps(identity, ensure_ascii=False, indent=2) + '\n',
+                                 encoding='utf-8')
     record = dict(name=args.name, command=command, cwd=str(root),
                   start_utc=start, end_utc=datetime.now(UTC).isoformat(),
-                  exit_code=process.returncode, code_commit=version,
+                  exit_code=return_code, actual_worker_pid=process.pid, code_commit=version,
                   recording_interpreter=sys.executable)
     with (output / "commands.jsonl").open("a", encoding="utf-8") as stream:
         stream.write(json.dumps(record, ensure_ascii=False) + "\n")
@@ -49,7 +60,7 @@ def main() -> int:
     for channel, limit in (("stdout", 5000), ("stderr", 2000)):
         print((output / f"{args.name}.{channel}.txt").read_text(
             encoding="utf-8", errors="replace")[-limit:])
-    return process.returncode
+    return return_code
 
 
 if __name__ == "__main__":

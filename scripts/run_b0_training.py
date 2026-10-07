@@ -61,8 +61,29 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--resume", type=Path)
     parser.add_argument("--trusted-local", action="store_true")
     parser.add_argument("--mvp-registration", type=Path)
+    parser.add_argument("--repair-registration", type=Path)
     parser.add_argument("--resume-batch", action="store_true")
     args = parser.parse_args(argv)
+    if args.repair_registration is not None:
+        from auv_risk_rl.training.repair_registration import validate_registration
+
+        if args.mvp_registration is not None or args.resume is not None or args.trusted_local:
+            parser.error('R1登记不能与V1或任意单模型恢复入口混用')
+        try:
+            registration = validate_registration(
+                ROOT, args.repair_registration, run_kind=args.run_kind,
+                budget=args.transition_budget, output=args.output_dir, execute=args.execute)
+        except ValueError as error:
+            parser.error(str(error))
+        if not args.execute:
+            print(json.dumps(dict(status='PREFLIGHT_ONLY', registration=registration,
+                                  code_version=git_code_version()), ensure_ascii=False, indent=2))
+            return 0
+        from auv_risk_rl.training.repair_r1 import run_repair_batch
+
+        summary = run_repair_batch(ROOT, registration, resume=args.resume_batch)
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        return 0
     if args.mvp_registration is not None:
         from auv_risk_rl.training.mvp_batch import finalize_results, run_batch
         from auv_risk_rl.training.mvp_registration import validate_registration

@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "world_calls": 3,
+    "world_returns": 3
+  },
+  "explicit_batch_update_nodes": {},
+  "complete_update_nodes": {},
+  "pytest_exit_code": 0,
+  "purpose": "unit/integration tests, not scientific training",
+  "nested_counts_must_not_be_added": true,
+  "scientific_training_steps": 0,
+  "scientific_training_updates": 0
+}

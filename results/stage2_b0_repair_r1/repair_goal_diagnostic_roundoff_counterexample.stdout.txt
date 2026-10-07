@@ -1,0 +1,41 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+__________ test_diagnostic_goal_entry_survives_event_prefix_roundoff __________
+
+project_config = ProjectConfig(protocol_version='v2.0', config_version='stage0_v2', stage='S0', environment=EnvironmentConfig(position_..., pitch_rate_grid_rad_s=(-0.25, 0.0, 0.25)), cost=CostConfig(discount_gamma=0.999, planned_horizon_control_steps=1000))
+
+    def test_diagnostic_goal_entry_survives_event_prefix_roundoff(project_config: Any) -> None:
+        """合成事件前缀略超球面；日志须用原提议根和已执行fraction，不改世界事件。"""
+        start = SimpleNamespace(position_ned_m=np.array([3.0, 0.0, 0.0]))
+        end = SimpleNamespace(position_ned_m=np.array([1.0, 0.0, 0.0]))
+        fraction = 0.5-1.0e-12
+        proposal = SimpleNamespace(auv_end_state=end, event=SimpleNamespace(
+            fraction=fraction, event=SimpleNamespace(reason='success')))
+    
+        class WorldFixture:
+            """只返回预登记标量提议，不执行物理环境或科研transition。"""
+            def _propose_integration_step(self, *args: Any) -> Any:
+                return proposal
+    
+        env = SimpleNamespace(world=WorldFixture(), config=project_config,
+                              goal_position_ned_m=np.zeros(3))
+        diagnostic = dict(episode_origin_timestamp_s=0.0, minimum_goal_distance_m=3.0,
+                          minimum_goal_distance_time_s=0.0, first_within_10m_time_s=0.0,
+                          first_goal_entry_time_s=None, boundary_constraints=[], boundary_subtype=None)
+        prefix = start.position_ned_m+fraction*(end.position_ned_m-start.position_ned_m)
+        assert _first_ball_entry(start.position_ned_m, prefix, np.zeros(3), 2.0) is None
+        with observe_world_step(env, diagnostic):
+            returned = env.world._propose_integration_step(start, (), None, 0.0)
+        assert returned is proposal
+>       assert diagnostic['first_goal_entry_time_s'] == pytest.approx(
+            0.5*project_config.dynamics.integration_dt_s, abs=1.0e-10)
+E       assert None == 0.025 ± 1.0e-10
+E         
+E         comparison failed
+E         Obtained: None
+E         Expected: 0.025 ± 1.0e-10
+
+tests\test_b0_repair_r1.py:257: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_b0_repair_r1.py::test_diagnostic_goal_entry_survives_event_prefix_roundoff
+1 failed in 1.71s

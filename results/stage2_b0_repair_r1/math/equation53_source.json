@@ -1,0 +1,17 @@
+{
+  "source": "handoff/protocol/LOCAL_v2_0.docx",
+  "word_package_part": "word/document.xml",
+  "word_table_zero_index": 63,
+  "equation_id": 53,
+  "native_tokens_search_only": "L α = E − α e n t log π + H t a r ,   α e n t = e ℓ α ,   H t a r = − 3 (53)",
+  "native_outer_expectation_structure": [
+    "negative sign",
+    "alpha with subscript ent",
+    "nested parentheses"
+  ],
+  "native_inner_parenthesis_tokens": "log π + H t a r",
+  "unambiguous_scalar_transcription": "L_alpha = E[-exp(ell_alpha)*(log_pi + H_tar)]; H_tar=-3",
+  "source_read_at": "2026-10-07T14:38:30.706229+00:00",
+  "full_protocol_not_published": true,
+  "no_file_digest_computed": true
+}

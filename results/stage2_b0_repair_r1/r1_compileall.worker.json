@@ -1,0 +1,19 @@
+{
+  "status": "EXITED",
+  "worker_pid": 34644,
+  "command": [
+    ".venv-b1/Scripts/python.exe",
+    "-m",
+    "compileall",
+    "-q",
+    "src",
+    "tests",
+    "scripts",
+    "results/stage2_b0_repair_r1"
+  ],
+  "start_utc": "2026-10-07T15:00:08.896375+00:00",
+  "code_commit": "ca4e67b88941a19ee1974be8150b58e7a443e5dd",
+  "note": "PID is the actual direct child, not the outer launcher.",
+  "actual_worker_exit_code": 0,
+  "end_utc": "2026-10-07T15:00:09.396743+00:00"
+}
