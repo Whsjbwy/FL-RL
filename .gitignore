@@ -47,6 +47,15 @@ artifacts/
 /results/stage2_b0_mvp_v1/test_temp_*/
 /results/stage2_b0_mvp_v1/test_cache_*/
 /results/stage2_b0_mvp_v1/runtime/
+/results/stage2_b0_repair_r1/runtime/
+/results/stage2_b0_repair_r1/development/
+/results/stage2_b0_repair_r1/diagnostic_traces/
+/results/stage2_b0_repair_r1/protocol_read.stdout.txt
+/results/stage2_b0_repair_r1/seed_*/segments/*/update.jsonl
+/results/stage2_b0_repair_r1/seed_*/segments/*/episode.jsonl
+/results/stage2_b0_repair_r1/seed_*/segments/*/validation.jsonl
+/results/stage2_b0_repair_r1/batch.lock
+/results/stage2_b0_repair_r1/**/*.partial
 /results/stage2_b0_mvp_v1/seed_*/segments/*/update.jsonl
 # 本批原始JSONL留本机；公开逐episode CSV和选定轨迹gzip可独立重绘。
 /results/stage2_b0_mvp_v1/seed_*/segments/*/episode.jsonl

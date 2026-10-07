@@ -7,10 +7,11 @@
 原 START_HERE/FIRST_TASK/CODEX_EXECUTION_PLAN 和旧 Gate 是历史交接资料，不代表当前状态。
 不再运行额外文件摘要封存、fresh-copy/ZIP 验收或 provenance rebase；用 Git 提交、
 版本化配置和真实运行记录定位版本。随机派生和稳定场景 ID 的算法行为保持不变。
-当前授权为STAGE2_B0_MVP_BATCH_V1：seed11/22/33各连续100k无障碍+200kCV，
-每seed300k、计划总900k。登记见docs/STAGE2_B0_MVP_V1.md；固定Val与课程调度，
-登记和被测代码提交后直接运行本批。不得按结果增预算/换seed/调参；不启动Stage3、
-正式throughput benchmark、B1–B5比较或联邦工作。
+当前授权为STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1，登记见docs/STAGE2_B0_REPAIR_R1.md。
+先已有数据与有界冻结重放，后按独立证据只选择L1修复复测、唯一lr1e-4 L2对照或
+关键冲突停止三者之一。新学习仅空场景seed11/22/33各100k，C可比时复用V1；
+C不可比且登记后总新增不得超过600k。不得自动第二候选、重跑CV、改reward/边界/采样律。
+V1已完成900k是真实历史，不作为本轮新计数；不进入Stage3、Test/OOD或联邦。
 
 每个有实际修改的已授权任务结束时，只提交本任务文件并推送至
 `https://github.com/Whsjbwy/FL-RL.git` 的工作分支；失败工作明确标 WIP/未通过。
@@ -32,7 +33,7 @@
 
 已存在动力学、CV、感知/KF、234维输入、任务接口、风险/验证器、普通及约束SAC、
 成本与lambda、TRAIN_SCENARIO_V1。以源码和本次验收为准，历史 PASS 不冒充当前结果。
-本轮只授权登记的B0科研批次；历史准备smoke不冒充科研结果，联邦实现仍未授权。
+本轮只授权登记的B0失败诊断及条件修复复测；历史准备smoke不冒充科研结果，联邦实现仍未授权。
 不得删科学测试凑历史总数。
 
 ## 禁止静默改动的语义
