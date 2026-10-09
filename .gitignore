@@ -134,3 +134,14 @@ artifacts/
 !/results/stage2_b0_repair_r1/r1_scientific_batch.stderr.txt
 !/results/stage2_b0_repair_r1/r1_scientific_batch.worker.json
 !/results/stage2_b0_repair_r1/targeted_final.xml
+# R2模型/完整Replay/详细运行数据本机保留；必要小证据与程序仍可提交。
+/results/stage2_b0_r2/C300/seed_*/
+/results/stage2_b0_r2/G200/seed_*/
+/results/stage2_b0_r2/validation_manifest.json
+/results/stage2_b0_r2/batch.lock
+/results/stage2_b0_r2/**/*.partial
+/results/stage2_b0_r2/runtime/
+/results/stage2_b0_r2/development/
+/results/stage2_b0_r2/test_temp_*/
+/results/stage2_b0_r2/commands.jsonl
+/results/stage2_b0_r2/protocol_read.stdout.txt

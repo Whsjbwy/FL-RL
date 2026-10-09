@@ -6,7 +6,7 @@ import math
 from collections.abc import Callable, Iterator
 from contextlib import contextmanager
 from copy import deepcopy
-from dataclasses import replace
+from dataclasses import asdict, replace
 from threading import RLock
 from time import perf_counter
 from typing import Any
@@ -15,6 +15,7 @@ import numpy as np
 import torch
 
 from auv_risk_rl.config import ProjectConfig
+from auv_risk_rl.env.local_task import LocalTaskConfig
 from auv_risk_rl.env.scenario_generator import (
     LocalTrainingScenarioGenerator,
     TrainingScenario,
@@ -179,6 +180,7 @@ class FixedValidationPool:
         first_failure_retained = False
         current: dict[str, Any] | None = None
         started_at = perf_counter()
+        task_config = asdict(getattr(harness.config, 'task', LocalTaskConfig()))
         try:
             for index in range(count):
                 scenario = self.scenario(profile, index)
@@ -200,6 +202,7 @@ class FixedValidationPool:
                         reward_components={}, path_length_m=0.0,
                         path_length_definition='CONTROL_NODE_POLYLINE', minimum_clearance_m=None,
                         action_saturation_count=0, warmup=deepcopy(warmup),
+                        task_config=task_config.copy(),
                         initial_position_ned_m=env.world.auv_state.position_ned_m.tolist(),
                         goal_position_ned_m=scenario.goal_position_ned_m.tolist())
                     initial_distance = float(np.linalg.norm(
@@ -280,6 +283,7 @@ class FixedValidationPool:
             at_transition=harness.transitions, profile=profile, task_profile=profile,
             count=count, full=full, validation_kind='Val300' if full else 'monitor30',
             validation_root_seed=self.root_seed, indices=list(range(count)), episodes=episodes,
+            task_config=task_config,
             evaluation_env_transitions=environment_steps, warmup_control_transitions=warmup_steps,
             wall_clock_seconds=perf_counter()-started_at, training_state_unchanged=True,
             potential_sensor_rng='fixed_environment_seed/world_tick/obstacle_id',

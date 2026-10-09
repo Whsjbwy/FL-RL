@@ -3,6 +3,7 @@
 from dataclasses import asdict, dataclass, field, replace
 from typing import Any
 
+from auv_risk_rl.env.local_task import LocalTaskConfig
 from auv_risk_rl.rl.config import SACConfig
 from auv_risk_rl.seeding import SeedManager
 
@@ -33,6 +34,7 @@ class B0HarnessConfig:
     scenario_root_seed: int | None = None
     research_registration: str | None = None
     sac: SACConfig = field(default_factory=SACConfig)
+    task: LocalTaskConfig = field(default_factory=LocalTaskConfig)
     method: str = 'B0_FULL_STATE_ORDINARY_SAC'
 
     def __post_init__(self) -> None:
@@ -77,6 +79,18 @@ class B0HarnessConfig:
                 raise ValueError('工程 learning_starts 只允许缩减。')
         elif self.external_max_steps is not None:
             raise ValueError('生产配置不得使用工程外部截断。')
+        if not isinstance(self.task, LocalTaskConfig):
+            raise TypeError('task必须是明确的LocalTaskConfig，不接受未解析配置。')
+        # R2唯一奖励候选只改变到达项；共同默认、失败项与原R1学习率决议不变。
+        default_task = LocalTaskConfig()
+        r2_goal_candidate = (
+            self.run_kind == 'scientific_training'
+            and self.research_registration == 'STAGE2_B0_R2_CONTROLLED_REWARD_AND_BUDGET'
+            and self.task_profile == 'obstacle_free' and self.training_seed in (11, 22, 33)
+            and self.transition_budget == 300000 and self.num_envs == 2
+            and self.task == replace(default_task, w_goal=200.0))
+        if self.task != default_task and not r2_goal_candidate:
+            raise ValueError('非默认任务奖励仅允许已登记R2的w_goal=200单因素候选。')
         # 仅已登记R1空场景复测允许唯一公共学习率候选；原生产默认值及其他参数不变。
         if (self.run_kind == 'scientific_training'
                 and self.research_registration == 'STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1'

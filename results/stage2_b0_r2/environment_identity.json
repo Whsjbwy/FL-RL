@@ -1,0 +1,85 @@
+{
+  "executable": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Scripts\\python.exe",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pytorch": "2.11.0+cu130",
+  "torch_file": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\.venv-b1\\Lib\\site-packages\\torch\\__init__.py",
+  "cuda_build": "13.0",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "device_capability": [
+    12,
+    0
+  ],
+  "cuda_smoke_result": 8.0,
+  "cuda_synchronized": true,
+  "dependencies": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.3",
+    "pytest": "9.1.1",
+    "ruff": "0.6.0",
+    "torch": "2.11.0+cu130"
+  },
+  "observed_at_utc": "2026-10-09T10:47:55.393805+00:00",
+  "git": {
+    "branch": {
+      "exit_code": 0,
+      "output": "codex/stage2-b0-r2"
+    },
+    "status": {
+      "exit_code": 0,
+      "output": "M .gitignore\n M AGENTS.md\n M scripts/run_b0_training.py\n M src/auv_risk_rl/training/config.py\n M src/auv_risk_rl/training/fixed_validation.py\n M src/auv_risk_rl/training/harness.py\n M src/auv_risk_rl/training/scenarios.py\n?? results/stage2_b0_r2/\n?? src/auv_risk_rl/training/r2_registration.py\n?? src/auv_risk_rl/training/repair_r2.py\n?? tests/test_b0_r2.py\n?? tests/test_b0_r2_diagnostics.py\n?? tests/test_b0_r2_reward.py"
+    },
+    "head": {
+      "exit_code": 0,
+      "output": "07e9e5abadd1077278c2b7572956d7314f4300e6"
+    },
+    "log": {
+      "exit_code": 0,
+      "output": "07e9e5a Preregister final B0 R2 reward and 300k budget comparison before new results\nf476b1b Record verified R1 GitHub publication receipt\n000c4c3 Report completed R1 B0 trial: lower learning rate does not improve completion\n9029d60 Publish minimal R1 code, registration and diagnostic evidence\nf89bfa4 Freeze bounded B0 R1 failure diagnosis before new results\nbe873f0 Record verified publication of completed B0 MVP results"
+    },
+    "remote": {
+      "exit_code": 0,
+      "output": "origin\thttps://github.com/Whsjbwy/FL-RL.git (fetch)\norigin\thttps://github.com/Whsjbwy/FL-RL.git (push)"
+    },
+    "r1_local_ref": {
+      "exit_code": 0,
+      "output": "f476b1bd139214c19523c6aeef51f01dad021224"
+    },
+    "receipt": {
+      "exit_code": 0,
+      "output": "f476b1b Record verified R1 GitHub publication receipt\n results/stage2_b0_repair_r1/PUBLICATION.json | 26 ++++++++++++++++++++++++++\n 1 file changed, 26 insertions(+)"
+    }
+  },
+  "pip_check_exit_code": 0,
+  "pip_check_output": "No broken requirements found.",
+  "existing_environment_reused": true,
+  "new_dependencies_installed": false,
+  "cuda_probe": "8 float32 elements, forward only, synchronize; not training",
+  "launcher_warning": "Existing venv launcher warns about F:/Anaconda3 path; actual interpreter/dependencies/CUDA checks completed.",
+  "remote_ref_query": {
+    "command": [
+      "git",
+      "-c",
+      "safe.directory=D:/FL+RL/AUV_CODEX_HANDOFF_V2_COMPLETE",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "main",
+      "codex/stage2-b0-repair-r1-public"
+    ],
+    "cwd": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE",
+    "start_utc": "2026-10-09T10:37:48.0850781Z",
+    "end_utc": "2026-10-09T10:37:49.5211773Z",
+    "exit_code": 0,
+    "read_only_remote_query": true,
+    "reason_for_escalation": "sandbox getaddrinfo thread failed",
+    "branch_or_remote_changed": false,
+    "observed_remote_refs": {
+      "refs/heads/codex/stage2-b0-repair-r1-public": "000c4c3bda7fc4f66b0a79da98c8da4f2ef30110",
+      "refs/heads/main": "be72a6ba1947d1f0346d44335e99c94e0a9f8bf6"
+    },
+    "local_r1_receipt_not_on_remote_r1": true
+  }
+}

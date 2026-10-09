@@ -55,4 +55,5 @@ class B0ScenarioSource:
         """逐值交给 B0，共同世界不重新随机化。"""
         return B0NavigationEnv(self.project, scenario.initial_auv_state,
                                scenario.initial_obstacle_states,
-                               scenario.goal_position_ned_m, scenario.scenario_id)
+                               scenario.goal_position_ned_m, scenario.scenario_id,
+                               task_config=self.config.task)

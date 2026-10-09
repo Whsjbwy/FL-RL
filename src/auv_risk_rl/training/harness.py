@@ -16,6 +16,7 @@ import torch
 
 from auv_risk_rl.config import ProjectConfig
 from auv_risk_rl.env.b0_navigation import B0NavigationEnv
+from auv_risk_rl.env.local_task import LocalTaskConfig
 from auv_risk_rl.env.scenario_generator import TrainingScenario, TrainingScenarioConfig
 from auv_risk_rl.rl.agent import OrdinarySACAgent
 from auv_risk_rl.training.config import B0HarnessConfig
@@ -106,6 +107,8 @@ class B0TrainingHarness:
         env = self.env_factory(scenario)
         if type(self.agent) is OrdinarySACAgent and type(env) is not B0NavigationEnv:
             raise TypeError('真实B0必须使用原B0NavigationEnv，不能启用执行过滤环境。')
+        if type(env) is B0NavigationEnv and env.task_config != self.config.task:
+            raise ValueError('B0环境任务奖励必须与已登记训练配置一致。')
         return env
 
     def _task_profile(self) -> str:
@@ -149,6 +152,7 @@ class B0TrainingHarness:
                 'task_timeout': failure_type == 'task_horizon',
                 'external_truncation': failure_type == 'external_truncation',
                 'path_length_definition': 'CONTROL_NODE_POLYLINE',
+                'task_config': asdict(self.config.task),
                 'config': self.config.to_dict()}
 
     def _assert_can_step(self) -> None:
@@ -303,6 +307,7 @@ class B0TrainingHarness:
                            path_length_m=0.0, path_length_definition='CONTROL_NODE_POLYLINE',
                            minimum_clearance_m=None, action_saturation_count=0,
                            warmup=deepcopy(warmup), config=self.config.to_dict(),
+                           task_config=asdict(self.config.task),
                            method=self.config.method, run_kind=self.config.run_kind,
                            code_version=self.code_version)
             trajectory = []
@@ -373,12 +378,20 @@ class B0TrainingHarness:
 
     def load_state_dict(self, state: dict[str, Any]) -> None:
         """先检验方法、run_kind、配置和 Git 版本；不接受工程产物作为科研续点。"""
-        if (state.get('format') != self.FORMAT or state.get('config') != self.config.to_dict()
+        recorded_config = deepcopy(state.get('config'))
+        if isinstance(recorded_config, dict) and 'task' not in recorded_config:
+            # 历史默认续点仅补原默认奖励身份；w_goal=200仍与该状态不匹配。
+            recorded_config['task'] = asdict(LocalTaskConfig())
+        if (state.get('format') != self.FORMAT or recorded_config != self.config.to_dict()
                 or state.get('torch_version') != str(torch.__version__)
                 or state.get('project_config') != self.project_config.to_dict()
                 or state.get('scenario_config') != asdict(self.scenario_config)
                 or state.get('code_version') != self.code_version):
             raise ValueError('完整恢复的运行身份、配置、方法、Torch 及 Git 版本必须一致。')
+        for slot in state['scheduler']['slots']:
+            env = slot.get('env')
+            if type(env) is B0NavigationEnv and env.task_config != self.config.task:
+                raise ValueError('完整恢复中的B0环境奖励与登记配置不一致。')
         self.agent.load_state_dict(state['agent'])
         for key, value in state['scheduler'].items():
             setattr(self, key, deepcopy(value))
