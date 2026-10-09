@@ -1,0 +1,167 @@
+{
+  "generated_at_utc": "2026-10-09T11:15:58.985081+00:00",
+  "recommended_existing_files": [
+    {
+      "path": "results/stage2_b0_r2/prepare_publication.py",
+      "bytes": 14276
+    },
+    {
+      "path": "results/stage2_b0_r2/COMMANDS.txt",
+      "bytes": 6812
+    },
+    {
+      "path": "results/stage2_b0_r2/TEST_RESULTS_SUMMARY.json",
+      "bytes": 2423
+    },
+    {
+      "path": "results/stage2_b0_r2/PRETRAIN_RESULT.json",
+      "bytes": 4326
+    },
+    {
+      "path": "results/stage2_b0_r2/PUBLIC_ENVIRONMENT_SUMMARY.json",
+      "bytes": 4047
+    },
+    {
+      "path": "results/stage2_b0_r2/PRETRAIN_MODEL_REWARD_AUDIT.json",
+      "bytes": 66576
+    },
+    {
+      "path": "results/stage2_b0_r2/PRETRAIN_MODEL_REWARD_AUDIT.md",
+      "bytes": 4151
+    },
+    {
+      "path": "results/stage2_b0_r2/preflight_analysis.py",
+      "bytes": 23827
+    },
+    {
+      "path": "results/stage2_b0_r2/environment_preflight.py",
+      "bytes": 11139
+    },
+    {
+      "path": "results/stage2_b0_r2/record_command.py",
+      "bytes": 3314
+    },
+    {
+      "path": "results/stage2_b0_r2/watch_actual_worker.py",
+      "bytes": 2159
+    },
+    {
+      "path": "results/stage2_b0_r2/pytest_counts.py",
+      "bytes": 3091
+    },
+    {
+      "path": "results/stage2_b0_r2/pytest_all.xml",
+      "bytes": 81556
+    },
+    {
+      "path": "results/stage2_b0_r2/pytest_phase_a.xml",
+      "bytes": 2210
+    },
+    {
+      "path": "results/stage2_b0_r2/pytest_all_counts.json",
+      "bytes": 8206
+    },
+    {
+      "path": "results/stage2_b0_r2/RUNNING_RECEIPT.json",
+      "bytes": 1223
+    },
+    {
+      "path": "results/stage2_b0_r2/RESULT_TOOLS_REVIEW.json",
+      "bytes": 9721
+    },
+    {
+      "path": "results/stage2_b0_r2/RUN_OPERATIONS.md",
+      "bytes": 3322
+    },
+    {
+      "path": "results/stage2_b0_r2/analyze_r2.py",
+      "bytes": 58253
+    },
+    {
+      "path": "results/stage2_b0_r2/check_analysis_tool.py",
+      "bytes": 9708
+    },
+    {
+      "path": "results/stage2_b0_r2/final_diagnostics.py",
+      "bytes": 26057
+    },
+    {
+      "path": "results/stage2_b0_r2/launcher_identity.json",
+      "bytes": 558
+    },
+    {
+      "path": "results/stage2_b0_r2/final_pytest_all.stdout.txt",
+      "bytes": 832
+    },
+    {
+      "path": "results/stage2_b0_r2/final_pytest_all.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_r2/final_pytest_all.worker.json",
+      "bytes": 671
+    },
+    {
+      "path": "results/stage2_b0_r2/final_phase_a.stdout.txt",
+      "bytes": 101
+    },
+    {
+      "path": "results/stage2_b0_r2/final_phase_a.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_r2/final_phase_a.worker.json",
+      "bytes": 668
+    },
+    {
+      "path": "results/stage2_b0_r2/final_ruff.stdout.txt",
+      "bytes": 19
+    },
+    {
+      "path": "results/stage2_b0_r2/final_ruff.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_r2/final_ruff.worker.json",
+      "bytes": 526
+    },
+    {
+      "path": "results/stage2_b0_r2/final_compileall.stdout.txt",
+      "bytes": 0
+    },
+    {
+      "path": "results/stage2_b0_r2/final_compileall.stderr.txt",
+      "bytes": 56
+    },
+    {
+      "path": "results/stage2_b0_r2/final_compileall.worker.json",
+      "bytes": 529
+    }
+  ],
+  "missing_future_artifacts": [
+    "analysis/R2_RESULT.json",
+    "analysis/R2_RESULT_REPORT.md",
+    "storage_usage.json"
+  ],
+  "total_existing_bytes": 350525,
+  "requires_manual_staging_review": true,
+  "git_operations_performed": false,
+  "hashes_generated": false,
+  "excludes": [
+    "C300/seed_*/ full Replay/segments",
+    "G200/seed_*/ full Replay/segments",
+    "models and checkpoints",
+    "validation_manifest.json",
+    "runtime/",
+    "test_temp_*/",
+    "protocol Word/full extracted text",
+    "raw commands.jsonl",
+    "raw GPU process lists",
+    "redundant environment probe stdout/stderr",
+    "development/ temporary copies and raw fixture output",
+    "partial_analysis/",
+    "live batch_state.json",
+    "live actual_training_worker_exit.json / WAITING"
+  ],
+  "note": "Explicit small-file suggestion, not git add and not a scientific Gate. Future result files require size/content review before publication."
+}

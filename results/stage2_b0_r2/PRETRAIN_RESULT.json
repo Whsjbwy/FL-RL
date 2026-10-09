@@ -1,0 +1,126 @@
+{
+  "generated_at_utc": "2026-10-09T10:53:52.982532+00:00",
+  "status": "PRETRAIN_ENGINEERING_CHECKS_PASS",
+  "tested_code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+  "branch": "codex/stage2-b0-r2",
+  "github_repository": "https://github.com/Whsjbwy/FL-RL",
+  "github_code_commit": "https://github.com/Whsjbwy/FL-RL/commit/929f26af249cbd070dd4913bdf2eb316ae489d2d",
+  "code_push_confirmed": true,
+  "remote_refs": [
+    [
+      "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "refs/heads/codex/stage2-b0-r2"
+    ]
+  ],
+  "test_results": {
+    "final_pytest_all": {
+      "status": "PASS",
+      "worker_receipt": "final_pytest_all.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:03.033072+00:00",
+      "end_utc": "2026-10-09T10:49:56.429559+00:00",
+      "junit_file": "pytest_all.xml",
+      "junit_counts": {
+        "total": 688,
+        "passed": 688,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "final_phase_a": {
+      "status": "PASS",
+      "worker_receipt": "final_phase_a.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:44.384720+00:00",
+      "end_utc": "2026-10-09T10:49:47.046003+00:00",
+      "junit_file": "pytest_phase_a.xml",
+      "junit_counts": {
+        "total": 13,
+        "passed": 13,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "final_ruff": {
+      "status": "PASS",
+      "worker_receipt": "final_ruff.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:44.267193+00:00",
+      "end_utc": "2026-10-09T10:49:44.420375+00:00",
+      "junit_file": null,
+      "junit_counts": null
+    },
+    "final_compileall": {
+      "status": "PASS",
+      "worker_receipt": "final_compileall.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:44.253532+00:00",
+      "end_utc": "2026-10-09T10:49:44.561849+00:00",
+      "junit_file": null,
+      "junit_counts": null
+    }
+  },
+  "audit": {
+    "path": "PRETRAIN_MODEL_REWARD_AUDIT.json",
+    "actual_code_commit": "07e9e5abadd1077278c2b7572956d7314f4300e6",
+    "actual_exit_code": 0,
+    "confirmed_critical_L1_defects": [],
+    "unresolved_scientific_conflicts": [],
+    "training_permitted": true
+  },
+  "failure_history": [
+    {
+      "name": "initial_scoped_ruff",
+      "exit_code": 1,
+      "record": "r2_initial_scoped_ruff.worker.json",
+      "raw_output": "r2_initial_scoped_ruff.stdout.txt",
+      "resolution": "Manual import/long-line corrections; final Ruff independently rerun."
+    },
+    {
+      "name": "review_r2_missing_checkpoint_red",
+      "junit_counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "errors": 0,
+        "skipped": 0
+      },
+      "local_record": "development/review_r2_missing_checkpoint_red.xml",
+      "note": "Historical development result retained unchanged; not counted as a passing final test."
+    },
+    {
+      "name": "reward_tests_initial",
+      "junit_counts": {
+        "total": 43,
+        "passed": 42,
+        "failed": 1,
+        "errors": 0,
+        "skipped": 0
+      },
+      "local_record": "development/reward_tests_initial.xml",
+      "note": "Historical development result retained unchanged; not counted as a passing final test."
+    }
+  ],
+  "scientific_batch_snapshot": {
+    "observed_at_utc": "2026-10-09T10:53:52.982540+00:00",
+    "status": "RUNNING",
+    "experiment_code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+    "actual_computation_pid": 40700,
+    "launcher_pid": 24628,
+    "direct_child_pid": 22276,
+    "worker_exit_code": null,
+    "current_run": "C300_seed11",
+    "completed_runs": [],
+    "actual_training_transitions": 16900,
+    "actual_sac_updates": 6901,
+    "note": "Running snapshot only; not the final six-run result or scientific Gate."
+  },
+  "scientific_stage2_decision": "AWAITING_COMPLETED_R2_RESULT_ANALYSIS",
+  "extra_file_hashes_generated": false
+}

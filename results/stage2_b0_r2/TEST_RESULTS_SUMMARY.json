@@ -1,0 +1,77 @@
+{
+  "generated_at_utc": "2026-10-09T10:53:52.977580+00:00",
+  "checks": {
+    "final_pytest_all": {
+      "status": "PASS",
+      "worker_receipt": "final_pytest_all.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:03.033072+00:00",
+      "end_utc": "2026-10-09T10:49:56.429559+00:00",
+      "junit_file": "pytest_all.xml",
+      "junit_counts": {
+        "total": 688,
+        "passed": 688,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "final_phase_a": {
+      "status": "PASS",
+      "worker_receipt": "final_phase_a.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:44.384720+00:00",
+      "end_utc": "2026-10-09T10:49:47.046003+00:00",
+      "junit_file": "pytest_phase_a.xml",
+      "junit_counts": {
+        "total": 13,
+        "passed": 13,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "final_ruff": {
+      "status": "PASS",
+      "worker_receipt": "final_ruff.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:44.267193+00:00",
+      "end_utc": "2026-10-09T10:49:44.420375+00:00",
+      "junit_file": null,
+      "junit_counts": null
+    },
+    "final_compileall": {
+      "status": "PASS",
+      "worker_receipt": "final_compileall.worker.json",
+      "exit_code": 0,
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "start_utc": "2026-10-09T10:49:44.253532+00:00",
+      "end_utc": "2026-10-09T10:49:44.561849+00:00",
+      "junit_file": null,
+      "junit_counts": null
+    }
+  },
+  "all_final_checks_pass": true,
+  "observation_counters_file": "pytest_all_counts.json",
+  "counter_note": "Nested env/World calls must not be added; optimizer unit tests are not scientific navigation training.",
+  "development_missing_checkpoint_reproducer": {
+    "before": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "after": {
+      "total": 39,
+      "passed": 39,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "scope": "No scientific training; mock recovery and actual paired initialization"
+  }
+}

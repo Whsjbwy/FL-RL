@@ -1,0 +1,26 @@
+{
+  "observed_at_utc": "2026-10-09T11:03:36.8283232Z",
+  "receipt_kind": "RUNNING_SNAPSHOT_NOT_FINAL_RESULT",
+  "registration_id": "STAGE2_B0_R2_CONTROLLED_REWARD_AND_BUDGET",
+  "experiment_code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+  "branch": "codex/stage2-b0-r2",
+  "current_run": "C300_seed11",
+  "current_operation": "TRAINING",
+  "actual_training_transitions": 43800,
+  "actual_sac_updates": 33801,
+  "completed_runs": [],
+  "actual_computation_pid": 40700,
+  "last_progress_at": "2026-10-09T11:03:35.9227740Z",
+  "reliable_checkpoint": "D:\\FL+RL\\AUV_CODEX_HANDOFF_V2_COMPLETE\\results\\stage2_b0_r2\\C300\\seed_11\\latest_resume.pt",
+  "reliable_checkpoint_transition": 25000,
+  "last_worker_exit_observation": {
+    "status": "WAITING",
+    "actual_computation_pid": 40700,
+    "monitored_at_utc": "2026-10-09T18:51:30.789679+08:00",
+    "mechanism": "read-only Windows process handle; actual batch_state PID"
+  },
+  "temporary_followup_automation_id": "r2",
+  "followup_explicitly_authorized": true,
+  "scientific_decision": "PENDING_FULL_BATCH_AND_ANALYSIS",
+  "note": "Dated execution receipt; live state and confirmed logs are authoritative. No final SR is inferred."
+}

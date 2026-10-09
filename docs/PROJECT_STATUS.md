@@ -1,4 +1,23 @@
-# 当前结果：STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1
+# 当前执行：STAGE2_B0_R2_CONTROLLED_REWARD_AND_BUDGET
+
+2026-10-09本机：**R2 BATCH RUNNING，尚无终点科学结论。**
+最后一轮常规L2：C300(goal100)与G200(goal200)，均原lr3e-4，从零seed11/22/33各300k全程无障碍。
+六run顺序已登记，不重跑R1、不继续CV、不增加第三候选；结果不好也保留。
+运行前登记07e9e5a已发布；实际被测/科研代码929f26af249cbd070dd4913bdf2eb316ae489d2d已push并核对远端。
+本轮最终全仓688 passed，外置PhaseA13 passed；0失败/错误/跳过，Ruff0.6/compileall exit0。
+复用Python3.13.5/Torch2.11.0+cu130/RTX5060；CUDA实际运算/pip check通过，未重装。
+reward配置显式传入训练/固定评价/日志/checkpoint，原全局默认100与物理/SAC规则保持。
+当前真实批次PID40700，启动器24628、venv直接子进程22276；独立只读watcher捕获真实worker退出码。
+实时进度及真实计数以results/stage2_b0_r2/batch_state.json、确认日志、进程结束回执为准。
+用户另行明确授权临时每小时跟进（automation id: r2）；本批次完成分析与发布后停止，
+状态不变时安静，不重复启动训练、不自动重试失败或追加预算。
+不能将RUNNING或计划180万transitions写成COMPLETED，Stage2 GO仍未建立。
+运行安排docs/STAGE2_B0_R2.md；本轮离线审核未发现新关键科学L1或实质协议冲突。
+原R1/V1与所有唯一数据/模型保留；模型/Replay/Word不上传，无额外摘要/ZIP封存。
+**本轮完成后仅作Stage2科学判断；不自动CV、Stage3、OOD/Test或联邦。**
+
+---
+# 历史结果：STAGE2_B0_FAILURE_DIAGNOSIS_AND_REPAIR_R1
 
 2026-10-08本机：**R1 BATCH COMPLETED；学习率候选未改善固定100k完成能力。**
 科学Stage2 GO未建立，CONDITIONAL GO原因未确认；Stage3进入NO-GO/HOLD。

@@ -1,0 +1,18 @@
+{
+  "status": "EXITED",
+  "direct_child_pid": 8172,
+  "command": [
+    ".venv-b1/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "handoff/reference_tests/test_phase_a_conformance.py",
+    "-q",
+    "--basetemp=results/stage2_b0_r2/test_temp_phase_a_20261009",
+    "--junitxml=results/stage2_b0_r2/pytest_phase_a.xml"
+  ],
+  "start_utc": "2026-10-09T10:49:44.384720+00:00",
+  "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+  "note": "Direct child PID may be a Windows venv redirector; training computation PID comes from batch_state and separate watcher.",
+  "direct_child_exit_code": 0,
+  "end_utc": "2026-10-09T10:49:47.046003+00:00"
+}

@@ -1,0 +1,235 @@
+{
+  "reviewed_at_utc": "2026-10-09T11:12:02.4988702Z",
+  "status": "RESULT_TOOLS_REVIEW_COMPLETE_NO_CURRENT_EXECUTION_BLOCKER",
+  "scientific_gate": "NOT_ASSIGNED_RUNNING_BATCH",
+  "science_code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+  "reviewed_files": [
+    "results/stage2_b0_r2/analyze_r2.py",
+    "results/stage2_b0_r2/final_diagnostics.py"
+  ],
+  "actual_command_receipts": [
+    {
+      "status": "EXITED",
+      "direct_child_pid": 32932,
+      "command": [
+        ".venv-b1/Scripts/python.exe",
+        "-B",
+        "results/stage2_b0_r2/development/review_snapshot_schema.py"
+      ],
+      "start_utc": "2026-10-09T19:08:11.412054+08:00",
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "note": "Direct child PID may be a Windows venv redirector; training computation PID comes from batch_state and separate watcher.",
+      "direct_child_exit_code": 0,
+      "end_utc": "2026-10-09T19:08:16.456589+08:00"
+    },
+    {
+      "status": "EXITED",
+      "direct_child_pid": 36088,
+      "command": [
+        ".venv-b1/Scripts/python.exe",
+        "-B",
+        "results/stage2_b0_r2/analyze_r2.py",
+        "--partial"
+      ],
+      "start_utc": "2026-10-09T19:09:12.499747+08:00",
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "note": "Direct child PID may be a Windows venv redirector; training computation PID comes from batch_state and separate watcher.",
+      "direct_child_exit_code": 0,
+      "end_utc": "2026-10-09T19:09:20.433717+08:00"
+    },
+    {
+      "status": "EXITED",
+      "direct_child_pid": 38412,
+      "command": [
+        ".venv-b1/Scripts/python.exe",
+        "-B",
+        "results/stage2_b0_r2/final_diagnostics.py",
+        "--self-test-guards"
+      ],
+      "start_utc": "2026-10-09T19:09:32.23818+08:00",
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "note": "Direct child PID may be a Windows venv redirector; training computation PID comes from batch_state and separate watcher.",
+      "direct_child_exit_code": 0,
+      "end_utc": "2026-10-09T19:09:36.973667+08:00"
+    },
+    {
+      "status": "EXITED",
+      "direct_child_pid": 42568,
+      "command": [
+        ".venv-b1/Scripts/python.exe",
+        "-B",
+        "results/stage2_b0_r2/check_analysis_tool.py"
+      ],
+      "start_utc": "2026-10-09T19:10:36.717197+08:00",
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "note": "Direct child PID may be a Windows venv redirector; training computation PID comes from batch_state and separate watcher.",
+      "direct_child_exit_code": 0,
+      "end_utc": "2026-10-09T19:10:43.259212+08:00"
+    },
+    {
+      "status": "EXITED",
+      "direct_child_pid": 37160,
+      "command": [
+        ".venv-b1/Scripts/python.exe",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "results/stage2_b0_r2/analyze_r2.py",
+        "results/stage2_b0_r2/final_diagnostics.py",
+        "results/stage2_b0_r2/check_analysis_tool.py"
+      ],
+      "start_utc": "2026-10-09T19:12:01.539353+08:00",
+      "code_commit": "929f26af249cbd070dd4913bdf2eb316ae489d2d",
+      "note": "Direct child PID may be a Windows venv redirector; training computation PID comes from batch_state and separate watcher.",
+      "direct_child_exit_code": 0,
+      "end_utc": "2026-10-09T19:12:01.739948+08:00"
+    }
+  ],
+  "actual_partial_status": "PARTIAL_CONFIRMED_PREFIX_ONLY",
+  "actual_partial_counts": {
+    "confirmed_complete_sac_updates": 40001,
+    "confirmed_optimizer_steps": 160004,
+    "confirmed_logged_episode_transitions": 49764,
+    "actual_runtime_training_transitions": 58600,
+    "actual_runtime_sac_updates": 48601,
+    "confirmed_validation_transitions": 55693,
+    "confirmed_validation_warmup_control_transitions": 450,
+    "confirmed_logged_episode_warmup_control_transitions": 515,
+    "compact_episode_rows": 193,
+    "retained_control_node_rows": 6325,
+    "new_analysis_environment_transitions": 0,
+    "new_analysis_updates": 0
+  },
+  "actual_partial_runs": [
+    {
+      "group": "C300",
+      "seed": 11,
+      "max_confirmed_transition": 50000,
+      "confirmed_logged_episode_transitions": 49764,
+      "confirmed_complete_sac_updates": 40001,
+      "observed_validation_points": 3,
+      "missing_validation_points": 12
+    },
+    {
+      "group": "C300",
+      "seed": 22,
+      "max_confirmed_transition": 0,
+      "confirmed_logged_episode_transitions": 0,
+      "confirmed_complete_sac_updates": 0,
+      "observed_validation_points": 0,
+      "missing_validation_points": 15
+    },
+    {
+      "group": "C300",
+      "seed": 33,
+      "max_confirmed_transition": 0,
+      "confirmed_logged_episode_transitions": 0,
+      "confirmed_complete_sac_updates": 0,
+      "observed_validation_points": 0,
+      "missing_validation_points": 15
+    },
+    {
+      "group": "G200",
+      "seed": 11,
+      "max_confirmed_transition": 0,
+      "confirmed_logged_episode_transitions": 0,
+      "confirmed_complete_sac_updates": 0,
+      "observed_validation_points": 0,
+      "missing_validation_points": 15
+    },
+    {
+      "group": "G200",
+      "seed": 22,
+      "max_confirmed_transition": 0,
+      "confirmed_logged_episode_transitions": 0,
+      "confirmed_complete_sac_updates": 0,
+      "observed_validation_points": 0,
+      "missing_validation_points": 15
+    },
+    {
+      "group": "G200",
+      "seed": 33,
+      "max_confirmed_transition": 0,
+      "confirmed_logged_episode_transitions": 0,
+      "confirmed_complete_sac_updates": 0,
+      "observed_validation_points": 0,
+      "missing_validation_points": 15
+    }
+  ],
+  "actual_snapshot_check": {
+    "status": "READ_ONLY_SCHEMA_CHECK_PASS",
+    "path": "results/stage2_b0_r2/C300/models/seed_11_25000.pt",
+    "bytes": 2552262,
+    "transition": 25000,
+    "format": "b0-r2-network-snapshot-v1",
+    "counters": {
+      "environment_steps": 25000,
+      "gradient_updates": 15001,
+      "episodes": 70,
+      "actor": 15001,
+      "q1": 15001,
+      "q2": 15001,
+      "alpha": 15001
+    },
+    "network_names": [
+      "actor",
+      "q1",
+      "q2",
+      "target_q1",
+      "target_q2"
+    ],
+    "finite_cpu_float32_networks": true,
+    "actor_alias_exact": true,
+    "forward_calls": 0,
+    "environment_transitions": 0,
+    "rng_draws": 0
+  },
+  "findings": [
+    {
+      "item": "common100_reward",
+      "judgment": "Correct offline utility raw_return-(w_goal-100)*success; original reward components remain distinct; not a causal training-result claim"
+    },
+    {
+      "item": "validation_denominators",
+      "judgment": "monitor30 and Val300 use separate (step,full) keys; each checks complete30/300 fixed indices; aggregation keeps group/step/kind and n-1 seed SD"
+    },
+    {
+      "item": "completion_exit_gate",
+      "judgment": "Final analysis checks six completed runs plus actual held-handle PID exit0, direct-child exit0 and matching unique command receipt/time order; WAITING/RUNNING not accepted"
+    },
+    {
+      "item": "final_diagnostic_scope",
+      "judgment": "Inspected inference-only Actor/Q path, no Agent/Replay/optimizer; explicit completion and one-attempt guard. Terminal rollout not executed during review"
+    },
+    {
+      "item": "index_mapping",
+      "judgment": "Current actual validation log already has both index and scenario_index; explicit index mapping is compatibility defense, not an observed current scientific failure. Synthetic missing-redundant-field red/green records remain preserved"
+    },
+    {
+      "item": "failure_history",
+      "judgment": "Initial Ruff/recovery/reward fixtures preserved in PRETRAIN_RESULT and original local receipts; result-tool synthetic fixture/index-bridge failures retained in commands.jsonl. Not counted as final passing science tests"
+    },
+    {
+      "item": "unmeasured_training_fields",
+      "judgment": "Training records do not provide first5m/3m fields; aggregate retains unavailable/null and observed n0. Validation R2 diagnostic records contain the measured fields"
+    },
+    {
+      "item": "temperature_Q_semantics",
+      "judgment": "Temperature/loss/gradient plots are numerical diagnostics. Final online soft-Q predictions are explicitly not deterministic-return ground truth"
+    }
+  ],
+  "limitations": [
+    "One live partial read only. Raw reader parses unconfirmed append tails; no concurrent-tail failure occurred. Final analysis must wait for actual worker exit.",
+    "50k confirmed cutoff and active episode omission are explicit; live runtime counters are not promoted to confirmed final results.",
+    "25k schema is observed; no future300k values, final scientific Gate or fixed diagnostic rollout are certified.",
+    "No model forward, environment step, RNG draw, rollout or scientific gradient update was executed by this review. Pure dictionary tests and CPU tensor finite/schema checks are separate."
+  ],
+  "publication_notes": [
+    "Do not track live batch_state.json or WAITING actual_training_worker_exit.json as final evidence; use a dated RUNNING_RECEIPT.json.",
+    "Keep partial_analysis local; final compact outputs require manual size/content review.",
+    "prepare_publication.py old suggestion still lists mutable files and root-level future R2_RESULT paths; root must omit mutable paths and use actual analysis/ paths when publishing final outputs.",
+    "Exclude full Replay/PT/models/raw JSONL/588k validation manifest/Word full text/caches."
+  ],
+  "protected_files_modified_by_this_review": []
+}

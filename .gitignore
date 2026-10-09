@@ -145,3 +145,6 @@ artifacts/
 /results/stage2_b0_r2/test_temp_*/
 /results/stage2_b0_r2/commands.jsonl
 /results/stage2_b0_r2/protocol_read.stdout.txt
+/results/stage2_b0_r2/partial_analysis/
+/results/stage2_b0_r2/final_diagnostics/trajectories/
+/results/stage2_b0_r2/analysis/retained_trajectories.csv.gz

@@ -1,0 +1,104 @@
+{
+  "observed_at_utc": "2026-10-09T10:47:55.393502+00:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "pytorch": "2.11.0+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu": "AMD Ryzen 5 9600X 6-Core Processor",
+  "logical_cores": 12,
+  "ram": {
+    "total_bytes": 33460420608,
+    "available_bytes": 10794323968,
+    "memory_load_percent": 67,
+    "source": "Windows GlobalMemoryStatusEx"
+  },
+  "gpu_observation": {
+    "exit_code": 0,
+    "output": "NVIDIA GeForce RTX 5060, 596.21, 8151, 2711, 5185, 21",
+    "memory_units": "MiB as reported by nvidia-smi",
+    "gpu_utilization_is_observed_not_assumed_idle": true
+  },
+  "workspace_disk": {
+    "total_bytes": 696013287424,
+    "used_bytes": 576872427520,
+    "free_bytes": 119140859904
+  },
+  "replay_schema": {
+    "source": "src/auv_risk_rl/rl/replay.py:FIELDS",
+    "field_bytes": {
+      "obs": 936,
+      "next_obs": 936,
+      "nominal_action": 12,
+      "executed_action": 12,
+      "reward": 4,
+      "cost": 4,
+      "terminated": 1,
+      "truncated": 1,
+      "failure_type": 1,
+      "episode_id": 8,
+      "task_step": 8
+    },
+    "bytes_per_transition": 1923,
+    "raw_300k_bytes": 576900000,
+    "allocated_slots_at_300k": 303104,
+    "allocated_300k_array_bytes": 582868992,
+    "raw_500k_bytes": 961500000,
+    "replay_was_allocated": false
+  },
+  "storage_estimate": {
+    "method": "six independent 300k resumes; sequential run and one atomic temporary",
+    "historical_300k_checkpoint_file_sizes": [
+      {
+        "path": "results/stage2_b0_mvp_v1/seed_11/latest_resume.pt",
+        "bytes": 690093400
+      },
+      {
+        "path": "results/stage2_b0_mvp_v1/seed_22/latest_resume.pt",
+        "bytes": 688508888
+      },
+      {
+        "path": "results/stage2_b0_mvp_v1/seed_33/latest_resume.pt",
+        "bytes": 691262296
+      }
+    ],
+    "latest_checkpoint_upper_bytes_per_run": 691262296,
+    "six_latest_checkpoints_bytes": 4147573776,
+    "one_atomic_write_temporary_bytes": 691262296,
+    "log_reserve_bytes": 6442450944,
+    "log_reserve_is_estimate": true,
+    "small_model_count_estimate": 72,
+    "observed_small_model_bytes": 2551558,
+    "observed_small_model_schema": "R1 Actor plus q1/q2/target_q1/target_q2 and alpha",
+    "observed_small_model_files": [
+      "results/stage2_b0_repair_r1/models/seed_11_100000.pt",
+      "results/stage2_b0_repair_r1/models/seed_11_25000.pt",
+      "results/stage2_b0_repair_r1/models/seed_11_50000.pt",
+      "results/stage2_b0_repair_r1/models/seed_11_75000.pt",
+      "results/stage2_b0_repair_r1/models/seed_22_100000.pt",
+      "results/stage2_b0_repair_r1/models/seed_22_25000.pt",
+      "results/stage2_b0_repair_r1/models/seed_22_50000.pt",
+      "results/stage2_b0_repair_r1/models/seed_22_75000.pt",
+      "results/stage2_b0_repair_r1/models/seed_33_100000.pt",
+      "results/stage2_b0_repair_r1/models/seed_33_25000.pt",
+      "results/stage2_b0_repair_r1/models/seed_33_50000.pt",
+      "results/stage2_b0_repair_r1/models/seed_33_75000.pt"
+    ],
+    "small_models_reserved_bytes": 183712176,
+    "estimated_additional_bytes": 11464999192,
+    "estimated_additional_gib": 10.677612565457821,
+    "available_workspace_bytes": 119140859904,
+    "workspace_margin_after_estimate_bytes": 107675860712,
+    "sufficient_for_estimate": true,
+    "ram_meets_existing_5gib_entry_requirement": true,
+    "checkpoint_pickle_overhead_included_via_actual_historical_size": true,
+    "concurrent_six_run_ram_not_assumed": true,
+    "no_runtime_or_performance_claim": true
+  },
+  "pip_check_exit_code": 0,
+  "existing_environment_reused": true,
+  "cuda_probe": "8 float32 elements, forward only, synchronize; not training",
+  "cuda_probe_result": 8.0,
+  "cuda_probe_synchronized": true,
+  "caveat": "Resource observations and storage estimates, not throughput measurement."
+}
