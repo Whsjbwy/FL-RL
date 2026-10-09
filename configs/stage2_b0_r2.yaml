@@ -1,0 +1,43 @@
+registration_id: STAGE2_B0_R2_CONTROLLED_REWARD_AND_BUDGET
+registration_document: docs/STAGE2_B0_R2.md
+run_kind: scientific_training
+method: B0_FULL_STATE_ORDINARY_SAC
+repair_round: 2
+project_config: configs/stage0.yaml
+scenario_config: configs/train_scenario_v1.yaml
+output_directory: results/stage2_b0_r2
+training_seeds: [11, 22, 33]
+groups:
+  C300: {w_goal: 100.0}
+  G200: {w_goal: 200.0}
+run_order: [C300_seed11, C300_seed22, C300_seed33, G200_seed11, G200_seed22, G200_seed33]
+task_profile: obstacle_free
+transition_budget_per_run: 300000
+total_transition_budget: 1800000
+num_envs: 2
+device: cuda
+reward: {w_progress: 1.0, w_time: 0.01, w_smooth: 0.02}
+validation:
+  root_seed: 20261006
+  base_indices: {first: 0, last: 299}
+  monitor_indices: {first: 0, last: 29}
+  monitor_steps: [0, 25000, 50000, 75000, 100000, 125000, 150000, 175000, 200000, 225000, 250000, 275000, 300000]
+  full_steps: [100000, 300000]
+  full_is_additional_to_monitor: true
+  task_horizon: 1000
+  deterministic: true
+  trajectory_indices: [0, 1, 2]
+  earliest_failure_trajectory: true
+checkpoint_interval: 25000
+logging_flush_records: 100
+primary_checkpoint: final
+sac:
+  gamma: 0.999
+  tau: 0.005
+  learning_rate: 0.0003
+  batch_size: 256
+  replay_capacity: 500000
+  learning_starts: 10000
+  utd: 1
+  initial_alpha: 0.2
+  target_entropy: -3.0
